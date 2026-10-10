@@ -388,7 +388,7 @@ require_once __DIR__ . '/includes/data.php';
                         <li><strong>Kilit Ekranında Arama:</strong> <code>FullScreenIntent</code> ve <code>CallStyle</code> ile gelen aramada GSM çağrısı gibi tam ekran bildirim.</li>
                         <li><strong>QR ile hızlı giriş:</strong> portaldaki QR kodu okutmak sunucu adresini ve hesabı tek adımda ayarlar.</li>
                         <li><strong>Davet linki:</strong> e-postayla gelen giriş linki doğrudan uygulamayı açar.</li>
-                        <li><strong>Sohbette fotoğraf:</strong> uygulama içinden fotoğraf çekip gönderme ve tam ekran fotoğraf görüntüleyici.</li>
+                        <li><strong>Sohbette fotoğraf (v1.0.59):</strong> uygulama içinden fotoğraf çekip gönderme, ana ekranda kesintisiz önizleme ve uzun basarak kendi mesajını silebilme.</li>
                         <li><strong>Arama sırasında resim içinde resim (PiP)</strong>, kenardan kenara ekran ve yatay/dikey kullanım.</li>
                         <li><strong>Oturum iptali:</strong> şifre sıfırlanınca veya sunucu oturumu kapatınca uygulama otomatik çıkış yapar.</li>
                     </ul>
@@ -401,7 +401,7 @@ require_once __DIR__ . '/includes/data.php';
                         <li><strong>Lock Screen Call Notification:</strong> <code>FullScreenIntent</code> and <code>CallStyle</code> trigger a native full-screen incoming call UI.</li>
                         <li><strong>QR quick login:</strong> scanning the QR code in the portal sets up the server and account in one step.</li>
                         <li><strong>Invitation link:</strong> the sign-in link sent by e-mail opens the app directly.</li>
-                        <li><strong>Photos in chat:</strong> take and send photos from inside the app, with a full-screen photo viewer.</li>
+                        <li><strong>Photos in chat (v1.0.59):</strong> send and view photos in chat, seamless main screen rendering, and long-press to delete own messages.</li>
                         <li><strong>Picture-in-picture during calls</strong>, edge-to-edge layout and both orientations.</li>
                         <li><strong>Session revocation:</strong> the app signs out automatically when the password is reset or the server revokes the session.</li>
                     </ul>
@@ -414,11 +414,11 @@ require_once __DIR__ . '/includes/data.php';
                         <li><strong>Sperrbildschirm-Anruf:</strong> <code>FullScreenIntent</code> und <code>CallStyle</code> aktivieren die native Vollbild-Anrufoberfläche.</li>
                         <li><strong>QR-Schnellanmeldung:</strong> Das Scannen des QR-Codes im Portal richtet Server und Konto in einem Schritt ein.</li>
                         <li><strong>Einladungslink:</strong> Der per E-Mail gesendete Anmeldelink öffnet direkt die App.</li>
-                        <li><strong>Fotos im Chat:</strong> Fotos in der App aufnehmen und senden, mit Vollbild-Fotoansicht.</li>
+                        <li><strong>Fotos im Chat (v1.0.59):</strong> Fotos im Chat senden und anzeigen, verbesserte Hauptbildschirmanzeige und langes Drücken zum Löschen eigener Nachrichten.</li>
                         <li><strong>Bild-in-Bild während Anrufen</strong>, randloses Layout und Hoch- wie Querformat.</li>
                         <li><strong>Sitzungswiderruf:</strong> Die App meldet sich automatisch ab, wenn das Passwort zurückgesetzt oder die Sitzung vom Server widerrufen wird.</li>
                     </ul>
-                </div><div data-lang="az"><ul><li><strong>Təmiz Kotlin &amp; Jetpack:</strong> 100% yerli Android arxitektura komponentləri (Coroutines, ViewModel, Room, LiveData).</li><li><strong>Başsız (Headless) WebRTC Mühərriki:</strong> Android aparat sürətləndirməli AudioTrack və Opus kodek inteqrasiyası.</li><li><strong>FCM Yüksək Prioritetli Push:</strong> Telefon kilidli olduqda və ya dərin yuxu (Doze Mode) rejimində batareyanı sərf etmədən dərhal oyatma.</li><li><strong>Kilid Ekranında Zəng:</strong> <code>FullScreenIntent</code> və <code>CallStyle</code> ilə gələn zəngdə GSM zəngi kimi tam ekran bildiriş.</li><li><strong>QR ilə sürətli giriş:</strong> portaldakı QR kodu oxutmaq server ünvanını və hesabı bir addımda tənzimləyir.</li><li><strong>Dəvət linki:</strong> e-poçtla gələn giriş linki birbaşa tətbiqi açır.</li><li><strong>Söhbətdə şəkil:</strong> tətbiqin içindən şəkil çəkib göndərmə və tam ekran şəkil baxışı.</li><li><strong>Zəng zamanı şəkil içində şəkil (PiP)</strong>, kənardan-kənara ekran və üfüqi/şaquli istifadə.</li><li><strong>Sessiyanın ləğvi:</strong> parol sıfırlandıqda və ya server sessiyanı bağladıqda tətbiq avtomatik çıxış edir.</li></ul></div>
+                </div><div data-lang="az"><ul><li><strong>Təmiz Kotlin &amp; Jetpack:</strong> 100% yerli Android arxitektura komponentləri (Coroutines, ViewModel, Room, LiveData).</li><li><strong>Başsız (Headless) WebRTC Mühərriki:</strong> Android aparat sürətləndirməli AudioTrack və Opus kodek inteqrasiyası.</li><li><strong>FCM Yüksək Prioritetli Push:</strong> Telefon kilidli olduqda və ya dərin yuxu (Doze Mode) rejimində batareyanı sərf etmədən dərhal oyatma.</li><li><strong>Kilid Ekranında Zəng:</strong> <code>FullScreenIntent</code> və <code>CallStyle</code> ilə gələn zəngdə GSM zəngi kimi tam ekran bildiriş.</li><li><strong>QR ilə sürətli giriş:</strong> portaldakı QR kodu oxutmaq server ünvanını və hesabı bir addımda tənzimləyir.</li><li><strong>Dəvət linki:</strong> e-poçtla gələn giriş linki birbaşa tətbiqi açır.</li><li><strong>Söhbətdə şəkil (v1.0.59):</strong> tətbiqdən şəkil çəkib göndərmə, əsas ekranda fasiləsiz önbaxış və uzun basaraq öz mesajını silmə.</li><li><strong>Zəng zamanı şəkil içində şəkil (PiP)</strong>, kənardan-kənara ekran və üfüqi/şaquli istifadə.</li><li><strong>Sessiyanın ləğvi:</strong> parol sıfırlandıqda və ya server sessiyanı bağladıqda tətbiq avtomatik çıxış edir.</li></ul></div>
             </section>
 
             <section class="docs-section" id="ios">

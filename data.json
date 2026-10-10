@@ -11,9 +11,9 @@
     "website": "https://aipbx.bid",
     "repo": "https://github.com/mahirgul/AiPBX",
     "license": "MIT License",
-    "version": "1.11.1",
-    "androidVersion": "1.0.58",
-    "build": "58",
+    "version": "1.12.3",
+    "androidVersion": "1.0.59",
+    "build": "59",
     "releaseDate": "2026-10-10",
     "turnkeyCommand": "curl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash",
     "gitCloneCommand": "git clone https://github.com/mahirgul/AiPBX.git /opt/aipbx && cd /opt/aipbx && sudo bash install.sh",
@@ -68,10 +68,10 @@
     }
   ],
   "hero": {
-    "badgeTR": "✨ AiPBX 1.5 — Kurumsal IP Santral Platformu",
-    "badgeEN": "✨ AiPBX 1.5 — Enterprise IP Telephony Platform",
-    "badgeDE": "✨ AiPBX 1.5 — Enterprise IP-Telefonanlage",
-    "badgeAZ": "✨ AiPBX 1.5 — Korporativ IP Santral Platforması",
+    "badgeTR": "✨ AiPBX 1.12.3 — Kurumsal IP Santral Platformu",
+    "badgeEN": "✨ AiPBX 1.12.3 — Enterprise IP Telephony Platform",
+    "badgeDE": "✨ AiPBX 1.12.3 — Enterprise IP-Telefonanlage",
+    "badgeAZ": "✨ AiPBX 1.12.3 — Korporativ IP Santral Platforması",
     "titleTR": "Kurumsal IP Santral, Amacına Uygun Tasarlandı.",
     "titleEN": "Enterprise IP Telephony, Engineered with Purpose.",
     "titleDE": "Enterprise IP-Telefonie, Konsequent Durchdacht.",
@@ -84,17 +84,17 @@
   "flagshipFeatures": [
     {
       "id": "ai_voice_requests",
-      "badge": "Yapay Zekâ (v1.11)",
+      "badge": "Yapay Zekâ (v1.12)",
       "icon": "fa-robot",
       "color": "#7c3aed",
-      "titleTR": "Yapay Zekâ Sesli İstekler & Yerel STT/TTS",
-      "titleEN": "AI Voice Requests & On-Premises Speech Models",
-      "titleDE": "KI-Sprachanfragen & Lokale Sprachmodelle",
-      "titleAZ": "Süni İntellekt Səsli İstəklər & Yerli Modellər",
-      "descTR": "Arayanın ne istediğini canlı konuşmadan tanıyan sesli istekler (Voice Requests), CRM sorgulu dinamik değerli anonslar, sunucuda çalışan yerel Vosk STT ve Piper/Kokoro TTS modelleri. Sıfır bulut bağımlılığı ve KVKK/GDPR tam uyumlu.",
-      "descEN": "Callers speak their request naturally; on-premise speech recognition answers by voice, emails staff, and routes calls. Dynamic lookup announcements, Vosk STT, Piper/Kokoro TTS, and optional cloud AI (Gemini, OpenAI, ElevenLabs).",
-      "descDE": "Sprachanfragen (Voice Requests) erkennen Anruferanliegen live, antworten per Sprachmodell, benachrichtigen per E-Mail und leiten weiter. Lokale Vosk- und Piper/Kokoro-Modelle für maximale Datensouveränität.",
-      "descAZ": "Zəng edənin müraciətini canlı danışıqdan anlayan səsli istəklər (Voice Requests), dinamik anonslar, yerli Vosk STT və Piper/Kokoro TTS modelləri. Sıfır xarici bulud asılılığı və tam məxfilik."
+      "titleTR": "Yapay Zekâ Sesli İstekler, Whisper STT & TTS",
+      "titleEN": "AI Voice Requests, Whisper STT & Speech Models",
+      "titleDE": "KI-Sprachanfragen, Whisper-STT & Sprachmodelle",
+      "titleAZ": "Süni İntellekt Səsli İstəklər, Whisper STT & Səs Modelləri",
+      "descTR": "Arayanın ne istediğini canlı konuşmadan tanıyan sesli istekler (Voice Requests), CRM sorgulu dinamik anonslar, sunucuda int8 çalışan yerel Whisper STT (%7.6 WER) ve Vosk/Kokoro/Piper modelleri. İsteğe bağlı OpenAI, Groq, Deepgram, Azure, ElevenLabs ve Gemini bulut sağlayıcıları.",
+      "descEN": "Callers speak requests naturally; on-premise Whisper STT (CTranslate2 int8, 7.6% WER) and Vosk/Piper/Kokoro recognise and answer by voice, email staff, and route calls. Dynamic CRM lookup announcements, plus optional cloud STT providers (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
+      "descDE": "Sprachanfragen (Voice Requests) erkennen Anruferanliegen live per lokalem Whisper-STT (CTranslate2 int8, 7,6 % WER) oder Vosk/Piper/Kokoro, antworten per Stimme, mailen Mitarbeitern und leiten weiter. Optionale Cloud-STT-Anbieter (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
+      "descAZ": "Zəng edənin müraciətini canlı danışıqdan anlayan səsli istəklər (Voice Requests), CRM sorğulu dinamik anonslar, serverdə int8 işləyən yerli Whisper STT (7.6% WER) və Vosk/Kokoro/Piper modelləri. İstəyə görə OpenAI, Groq, Deepgram, Azure, ElevenLabs və Gemini bulud inteqrasiyaları."
     },
     {
       "id": "passkey",
@@ -208,6 +208,20 @@
       "descEN": "Granular 6-tier outbound call barring permissions, direct & remote voicemail (*97, *98, Voicemail-to-Email, MWI), flexible ring groups, and PIN-secured ConfBridge rooms.",
       "descDE": "6-stufige dynamische Wählberechtigungsgruppen, integrierte Voicemail (*97, *98, Voicemail-to-Email), Anrufgruppen (Ring Groups) und PIN-geschützte Konferenzräume.",
       "descAZ": "6 səviyyəli dinamik zəng icazəsi (Call Barring), daxili və uzaq səsli poçt (*97, *98, Voicemail-to-Email, MWI), zəng qrupları (Ring Groups) və PIN ilə qorunan konfrans otaqları."
+    },
+    {
+      "id": "i18n_portal",
+      "badge": "22 Dil %100",
+      "icon": "fa-language",
+      "color": "#2563eb",
+      "titleTR": "22 Dilde %100 Eksiksiz Web Portalı",
+      "titleEN": "100% Complete in 22 Portal Languages",
+      "titleDE": "100 % Vollständig in 22 Portalsprachen",
+      "titleAZ": "22 Dildə 100% Tam Veb Portalı",
+      "descTR": "Türkçe ve İngilizce'nin yanı sıra Almanca, Azerbaycan dili, Fransızca, İspanyolca, İtalyanca, Rusça, Felemenkçe, Lehçe ve diğer dillerde (4.244 dize) sıfır eksik çeviri. Küresel ekipler ve çok dilli işletmeler için tam yerelleştirilmiş yönetim.",
+      "descEN": "Fully translated in 22 languages (4,244 strings each) including Turkish, English, German, Azerbaijani, French, Spanish, Italian, Russian, Dutch, Polish, Czech, and more. Zero missing translations for global enterprises.",
+      "descDE": "Vollständig in 22 Sprachen übersetzt (je 4.244 Texte), darunter Deutsch, Englisch, Türkisch, Aserbaidschanisch, Französisch, Spanisch, Italienisch, Russisch, Niederländisch, Polnisch und mehr. Keine fehlenden Texte für globale Teams.",
+      "descAZ": "Türk və ingilis dilləri ilə yanaşı alman, azərbaycan, fransız, ispan, italyan, rus, holland, polyak, çex və digər bütün dillərdə (4.244 sətir) 100% tam tərcümə. Qlobal komandalar və çoxdilli müəssisələr üçün tam yerliləşdirilmiş idarəetmə."
     }
   ],
   "tables": {
