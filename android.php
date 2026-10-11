@@ -65,6 +65,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ip = $_SERVER['REMOTE_ADDR'] ?? '';
     $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
 
+    $groupReqMsgs = [
+        'tr' => 'Lütfen önce 1. Adımdaki kırmızı butona tıklayarak Google Grubu\'na katılın.',
+        'en' => 'Please first join the Google Group by clicking the Step 1 button.',
+        'de' => 'Bitte treten Sie zuerst über die Schaltfläche in Schritt 1 der Google-Gruppe bei.',
+        'az' => 'Zəhmət olmasa əvvəlcə 1-ci Addımdakı düyməyə klikləyərək Google Qrupuna qoşulun.'
+    ];
+
+    if (empty($_POST['group_confirmed']) || $_POST['group_confirmed'] !== '1') {
+        echo json_encode([
+            'success' => false,
+            'message' => $groupReqMsgs[$LANG] ?? $groupReqMsgs['tr']
+        ]);
+        exit;
+    }
+
     $errMsgs = [
         'tr' => 'Lütfen geçerli bir Google Play / Gmail e-posta adresi girin.',
         'en' => 'Please enter a valid Google Play / Gmail email address.',
@@ -81,17 +96,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $successMsgs = [
-        'tr' => 'Kaydınız başarıyla alındı! Projemize destek verdiğiniz için teşekkürler.',
-        'en' => 'Your registration was successful! Thank you for supporting our project.',
-        'de' => 'Ihre Registrierung war erfolgreich! Vielen Dank für Ihre Unterstützung.',
-        'az' => 'Qeydiyyatınız uğurla tamamlandı! Layihəmizə dəstək verdiyiniz üçün təşəkkür edirik.'
+        'tr' => 'Kaydınız başarıyla alındı! Demo santral hesabınız oluşturuluyor. 1. Adımda Google Grubu\'na katıldığınız Google hesabınızla aşağıdaki bağlantılardan uygulamayı hemen indirebilirsiniz.',
+        'en' => 'Registration received! Your demo PBX account is being created. You can now download the app below using the Google account you joined the group with.',
+        'de' => 'Registrierung erhalten! Ihr Demo-Konto wird erstellt. Sie können die App jetzt unten mit dem Google-Konto aus Schritt 1 herunterladen.',
+        'az' => 'Qeydiyyatınız qəbul edildi! Demo santral hesabınız yaradılır. 1-ci Addımda Google Qrupuna qoşulduğunuz Google hesabı ilə tətbiqi yükləyə bilərsiniz.'
     ];
 
     $alreadyMsgs = [
-        'tr' => 'Bu e-posta adresi zaten test listemizde kayıtlı.',
-        'en' => 'This email address is already on our tester list.',
-        'de' => 'Diese E-Mail-Adresse ist bereits in unserer Testerliste registriert.',
-        'az' => 'Bu e-poçt ünvanı artıq test siyahımızda qeydiyyatdan keçib.'
+        'tr' => 'Bu e-posta adresi zaten test listemizde kayıtlı. 1. Adımda gruba katıldıysanız aşağıdaki bağlantılardan doğrudan indirebilirsiniz.',
+        'en' => 'This email is already registered. If you joined the group in Step 1, you can download immediately below.',
+        'de' => 'Diese E-Mail-Adresse ist bereits registriert. Wenn Sie der Gruppe beigetreten sind, können Sie unten direkt herunterladen.',
+        'az' => 'Bu e-poçt ünvanı artıq qeydiyyatdan keçib. 1-ci Addımda qrupa qoşulmusunuzsa, dərhal yükləyə bilərsiniz.'
     ];
 
     try {
@@ -428,59 +443,102 @@ if ($isAdmin) {
                 </h1>
             </div>
 
-            <!-- KART 1: AiPBX Google Grubu (aipbx) -->
+            <!-- KART 1: 1. Adım — AiPBX Google Grubu (Zorunlu) -->
             <div class="docs-section" id="google-group" style="margin-bottom: 20px;">
-                <div class="android-card">
+                <div class="android-card" style="border: 2px solid rgba(234, 67, 53, 0.4); background: #ffffff;">
                     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
                         <div style="display: flex; align-items: center; gap: 12px;">
                             <span style="font-size: 2rem; line-height: 1;">👥</span>
                             <div>
-                                <h3 style="margin: 0; font-size: 1.18rem; font-weight: 800; color: #0f172a;">AiPBX Google Grubu (aipbx)</h3>
+                                <h3 style="margin: 0; font-size: 1.18rem; font-weight: 800; color: #0f172a;">
+                                    <?= t('1. Adım: AiPBX Google Grubu (Zorunlu)', 'Step 1: AiPBX Google Group (Required)', 'Schritt 1: AiPBX Google-Gruppe (Erforderlich)', az: '1-ci Addım: AiPBX Google Qrupu (Məcburi)') ?>
+                                </h3>
                                 <p style="margin: 2px 0 0; font-size: 0.85rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">groups.google.com/g/aipbx</p>
                             </div>
                         </div>
-                        <span class="tag-badge tag-green"><?= t('Anında Yetkilendirme', 'Instant Access', 'Sofortiger Zugang', az: 'Dərhal Giriş') ?></span>
+                        <span id="groupStepBadge" class="tag-badge" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5;">
+                            <i class="fa-solid fa-triangle-exclamation" style="margin-right:4px;"></i> <?= t('Önce Buraya Katılın', 'Join Here First', 'Zuerst beitreten', az: 'Əvvəlcə Bura Qoşulun') ?>
+                        </span>
                     </div>
 
-                    <p style="color: #475569; font-size: 0.92rem; margin-bottom: 18px; line-height: 1.55;" data-lang="tr">
-                        Google Grubu'na katıldığınız anda Android telefonunuzdaki Google Play Store hesabınız otomatik olarak test kullanıcısı olarak yetkilendirilir.
-                    </p>
-                    <p style="color: #475569; font-size: 0.92rem; margin-bottom: 18px; line-height: 1.55;" data-lang="en">
-                        Joining the Google Group automatically authorizes the Google Play Store account on your Android phone as a tester.
-                    </p>
-                    <p style="color: #475569; font-size: 0.92rem; margin-bottom: 18px; line-height: 1.55;" data-lang="de">
-                        Sobald Sie der Google-Gruppe beitreten, wird Ihr Google Play Store-Konto automatisch als Tester autorisiert.
-                    </p>
-                    <p style="color: #475569; font-size: 0.92rem; margin-bottom: 18px; line-height: 1.55;" data-lang="az">
-                        Google Qrupuna qoşulduğunuz anda Android telefonunuzdakı Google Play Store hesabınız avtomatik olaraq test istifadəçisi kimi aktivləşir.
-                    </p>
+                    <div style="background: #fff5f5; border-left: 4px solid #ea4335; padding: 12px 16px; border-radius: 6px; margin-bottom: 16px;">
+                        <p style="color: #991b1b; font-size: 0.92rem; margin: 0; line-height: 1.55; font-weight: 600;" data-lang="tr">
+                            ⚠️ Google Play kapalı test kuralları gereği, testçi yetkinizin açılması için Google Grubu'na katılmanız zorunludur. Alttaki forma mail yazsanız dahi, Google hesabınızla bu gruba katılmadığınız sürece Google Play Store uygulamayı indirmenize izin vermez.
+                        </p>
+                        <p style="color: #991b1b; font-size: 0.92rem; margin: 0; line-height: 1.55; font-weight: 600;" data-lang="en">
+                            ⚠️ Per Google Play Closed Testing rules, joining the Google Group is required to unlock tester access. Even if you submit your email below, Google Play will not allow you to download unless you join the group with your Google account.
+                        </p>
+                        <p style="color: #991b1b; font-size: 0.92rem; margin: 0; line-height: 1.55; font-weight: 600;" data-lang="de">
+                            ⚠️ Gemäß den Richtlinien für Google Play Closed Testing müssen Sie der Google-Gruppe beitreten. Ohne Beitritt mit Ihrem Google-Konto erlaubt der Play Store keinen Download.
+                        </p>
+                        <p style="color: #991b1b; font-size: 0.92rem; margin: 0; line-height: 1.55; font-weight: 600;" data-lang="az">
+                            ⚠️ Google Play qapalı test qaydalarına əsasən, testçi icazənizin açılması üçün Google Qrupuna qoşulmağınız məcburidir. Qrupa qoşulmadığınız halda Google Play tətbiqi yükləməyə icazə verməyəcək.
+                        </p>
+                    </div>
 
-                    <a href="<?= GOOGLE_GROUP_URL ?>" target="_blank" rel="noopener" class="btn-primary android-full-btn" style="background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%); box-shadow: 0 4px 16px rgba(234, 67, 53, 0.35); font-size: 0.95rem; padding: 12px 24px;">
-                        <i class="fa-brands fa-google" style="font-size: 1.1rem;"></i>
-                        <span><?= t('Google Grubuna Katıl', 'Join Google Group', 'Der Google-Gruppe beitreten', az: 'Google Qrupuna Qoşul') ?></span>
-                    </a>
+                    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                        <a href="<?= GOOGLE_GROUP_URL ?>" target="_blank" rel="noopener" id="btnJoinGroup" class="btn-primary android-full-btn" style="background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%); box-shadow: 0 4px 16px rgba(234, 67, 53, 0.35); font-size: 1rem; padding: 14px 26px; font-weight: 700;">
+                            <i class="fa-brands fa-google" style="font-size: 1.15rem;"></i>
+                            <span><?= t('1. Adım: Google Grubuna Katıl (Zorunlu) →', 'Step 1: Join Google Group (Required) →', 'Schritt 1: Google-Gruppe beitreten (Erforderlich) →', az: '1-ci Addım: Google Qrupuna Qoşul (Məcburi) →') ?></span>
+                        </a>
+                        <button type="button" id="btnAlreadyJoined" class="btn-secondary" style="font-size: 0.88rem; padding: 10px 16px; border: 1px dashed #94a3b8; background: transparent; color: #475569; cursor: pointer;">
+                            <i class="fa-solid fa-check-double" style="margin-right: 4px;"></i>
+                            <?= t('Zaten gruba katıldım, 2. Adıma geç', 'Already joined the group, proceed to Step 2', 'Bereits beigetreten, weiter zu Schritt 2', az: 'Artıq qrupa qoşulmuşam, 2-ci Addıma keç') ?>
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- KART 2: Google Play / Gmail E-posta Adresi * -->
+            <!-- KART 2: 2. Adım — Google Play / Gmail E-posta Adresi * -->
             <div class="docs-section" id="signup-form" style="margin-bottom: 20px;">
-                <div class="android-card">
+                <div class="android-card" id="step2Card" style="transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                        <h3 style="margin: 0; font-size: 1.15rem; font-weight: 800; color: #0f172a;">
+                            <?= t('2. Adım: Google Play / Gmail E-posta Adresi', 'Step 2: Google Play / Gmail Email Address', 'Schritt 2: Google Play / Gmail-E-Mail-Adresse', az: '2-ci Addım: Google Play / Gmail E-poçt Ünvanı') ?> <span style="color: #ef4444;">*</span>
+                        </h3>
+                        <span id="step2Badge" class="tag-badge" style="background: #f1f5f9; color: #64748b;">
+                            <i class="fa-solid fa-lock" style="margin-right: 4px;"></i> <?= t('1. Adım Bekleniyor', 'Step 1 Required', 'Schritt 1 erforderlich', az: '1-ci Addım Tələb Olunur') ?>
+                        </span>
+                    </div>
+
+                    <!-- Kilit / Bilgilendirme Uyarısı -->
+                    <div id="step2LockNotice" style="background: #fffbeb; border: 1px solid #fde68a; color: #92400e; padding: 12px 16px; border-radius: 8px; margin-bottom: 14px; font-size: 0.92rem; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-lock" style="font-size: 1.1rem; color: #d97706; flex-shrink: 0;"></i>
+                        <span>
+                            <?= t(
+                                'Bu formun açılması için lütfen önce yukarıdaki <strong>1. Adım: Google Grubuna Katıl</strong> butonuna tıklayın. Gruba katıldıktan sonra form kilidi otomatik olarak açılacaktır.',
+                                'To unlock this form, please click the <strong>Step 1: Join Google Group</strong> button above. Once clicked, this form will be unlocked automatically.',
+                                'Um dieses Formular freizuschalten, klicken Sie bitte oben auf <strong>Schritt 1: Google-Gruppe beitreten</strong>.',
+                                az: 'Bu formun açılması üçün zəhmət olmasa yuxarıdakı <strong>1-ci Addım: Google Qrupuna Qoşul</strong> düyməsinə klikləyin.'
+                            ) ?>
+                        </span>
+                    </div>
+
+                    <!-- Kilit Açıldı Onay Uyarısı (Başlangıçta gizli) -->
+                    <div id="step2UnlockedNotice" style="display: none; background: #f0fdf4; border: 1px solid #86efac; color: #166534; padding: 12px 16px; border-radius: 8px; margin-bottom: 14px; font-size: 0.92rem;">
+                        <i class="fa-solid fa-circle-check" style="color: #16a34a; margin-right: 6px;"></i>
+                        <?= t(
+                            '<strong>1. Adım Onaylandı!</strong> Lütfen Google Grubu\'na katıldığınız aynı Gmail adresinizi girin (bu adrese demo santral hesabı tanımlanacaktır):',
+                            '<strong>Step 1 Confirmed!</strong> Please enter the same Gmail address you used for the Google Group (a demo PBX account will be created):',
+                            '<strong>Schritt 1 bestätigt!</strong> Bitte geben Sie dieselbe Gmail-Adresse ein, mit der Sie der Gruppe beigetreten sind:',
+                            az: '<strong>1-ci Addım Təsdiqləndi!</strong> Zəhmət olmasa Google Qrupuna qoşulduğunuz eyni Gmail ünvanını daxil edin:'
+                        ) ?>
+                    </div>
+
                     <form id="testerSignupForm" method="POST" style="display: flex; flex-direction: column; gap: 14px;">
                         <!-- Honeypot -->
                         <div style="display: none;">
                             <label>Leave this empty: <input type="text" name="website" autocomplete="off"></label>
                         </div>
+                        <input type="hidden" name="group_confirmed" id="groupConfirmedInput" value="0">
 
                         <div>
-                            <label for="formEmail" style="display: block; font-weight: 700; font-size: 0.95rem; color: #0f172a; margin-bottom: 8px;">
-                                <?= t('Google Play / Gmail E-posta Adresi', 'Google Play / Gmail Email Address', 'Google Play / Gmail-E-Mail-Adresse', az: 'Google Play / Gmail E-poçt Ünvanı') ?> <span style="color: #ef4444;">*</span>
-                            </label>
                             <div class="android-form-row" style="display: flex; gap: 10px; flex-wrap: wrap;">
-                                <input type="email" id="formEmail" name="email" required placeholder="adiniz@gmail.com"
-                                    style="flex: 1 1 240px; min-width: 0; width: 100%; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px 16px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #f8fafc; transition: all 0.2s; outline: none; box-sizing: border-box;">
-                                <button type="submit" id="submitBtn" class="btn-primary android-full-btn" style="flex: 0 0 auto; padding: 12px 22px; font-size: 0.95rem; white-space: nowrap;">
+                                <input type="email" id="formEmail" name="email" required placeholder="adiniz@gmail.com" disabled
+                                    style="flex: 1 1 240px; min-width: 0; width: 100%; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px 16px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #e2e8f0; opacity: 0.7; cursor: not-allowed; transition: all 0.2s; outline: none; box-sizing: border-box;">
+                                <button type="submit" id="submitBtn" class="btn-primary android-full-btn" disabled style="flex: 0 0 auto; padding: 12px 22px; font-size: 0.95rem; white-space: nowrap; opacity: 0.6; cursor: not-allowed;">
                                     <i class="fa-solid fa-paper-plane"></i>
-                                    <span><?= t('Test Listesine Kaydol', 'Join Tester List', 'In Testerliste eintragen', az: 'Test Siyahısına Yazıl') ?></span>
+                                    <span><?= t('Test Listesine Kaydol & Demo Al', 'Register & Get Demo Account', 'Registrieren & Demo erhalten', az: 'Testə Yazıl & Demo Al') ?></span>
                                 </button>
                             </div>
                         </div>
@@ -493,8 +551,16 @@ if ($isAdmin) {
                     <div id="successActionBox" style="display: none; margin-top: 18px; padding: 16px 18px; background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px;">
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
                             <span style="font-size: 1.25rem;">🎉</span>
-                            <strong style="color: #166534; font-size: 0.95rem;"><?= t('Kaydınız Onaylandı! Doğrudan İndirebilirsiniz:', 'Registration Confirmed! Download Links:', 'Registrierung bestätigt!', az: 'Qeydiyyatınız Təsdiqləndi! Keçidlər:') ?></strong>
+                            <strong style="color: #166534; font-size: 0.95rem;"><?= t('Kaydınız ve Demo Santral Hesabınız Hazır!', 'Registration & Demo PBX Account Ready!', 'Registrierung & Demo-Account bereit!', az: 'Qeydiyyatınız və Demo Hesabınız Hazırdır!') ?></strong>
                         </div>
+                        <p style="margin: 0 0 14px 0; font-size: 0.88rem; color: #15803d; line-height: 1.5;">
+                            <?= t(
+                                '1. Adımda Google Grubu\'na katıldığınız Google hesabınızla aşağıdaki bağlantılardan uygulamayı hemen indirebilirsiniz:',
+                                'With the Google account you used to join the Google Group in Step 1, you can now download the app via the links below:',
+                                'Mit dem Google-Konto aus Schritt 1 können Sie die App jetzt über folgende Links laden:',
+                                az: '1-ci Addımda Google Qrupuna qoşulduğunuz Google hesabı ilə tətbiqi dərhal yükləyə bilərsiniz:'
+                            ) ?>
+                        </p>
                         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                             <a href="<?= PLAY_OPT_IN_URL ?>" target="_blank" rel="noopener" class="btn-primary android-full-btn" style="background: #0284c7; padding: 10px 18px; font-size: 0.88rem;">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -674,11 +740,93 @@ if ($isAdmin) {
         const alertBox = document.getElementById('formAlert');
         const successBox = document.getElementById('successActionBox');
         const submitBtn = document.getElementById('submitBtn');
+        const emailInput = document.getElementById('formEmail');
+        const lockNotice = document.getElementById('step2LockNotice');
+        const unlockedNotice = document.getElementById('step2UnlockedNotice');
+        const groupConfirmed = document.getElementById('groupConfirmedInput');
+        const groupStepBadge = document.getElementById('groupStepBadge');
+        const step2Badge = document.getElementById('step2Badge');
+        const btnJoinGroup = document.getElementById('btnJoinGroup');
+        const btnAlreadyJoined = document.getElementById('btnAlreadyJoined');
+        const step2Card = document.getElementById('step2Card');
+
+        function unlockStep2(autoScroll) {
+            sessionStorage.setItem('aipbx_group_joined', '1');
+            if (groupConfirmed) groupConfirmed.value = '1';
+            
+            if (emailInput) {
+                emailInput.disabled = false;
+                emailInput.style.background = '#ffffff';
+                emailInput.style.opacity = '1';
+                emailInput.style.cursor = 'text';
+            }
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                submitBtn.style.cursor = 'pointer';
+            }
+            if (lockNotice) lockNotice.style.display = 'none';
+            if (unlockedNotice) unlockedNotice.style.display = 'block';
+            
+            if (groupStepBadge) {
+                groupStepBadge.className = 'tag-badge tag-green';
+                groupStepBadge.style.background = '#dcfce7';
+                groupStepBadge.style.color = '#15803d';
+                groupStepBadge.style.borderColor = '#86efac';
+                groupStepBadge.innerHTML = '<i class="fa-solid fa-check"></i> ' + (document.documentElement.lang === 'tr' ? '1. Adım Tamam' : 'Step 1 Done');
+            }
+            if (step2Badge) {
+                step2Badge.className = 'tag-badge tag-green';
+                step2Badge.style.background = '#dcfce7';
+                step2Badge.style.color = '#15803d';
+                step2Badge.style.borderColor = '#86efac';
+                step2Badge.innerHTML = '<i class="fa-solid fa-unlock"></i> ' + (document.documentElement.lang === 'tr' ? 'Aktif' : 'Active');
+            }
+            if (step2Card) {
+                step2Card.style.borderColor = '#10b981';
+                step2Card.style.boxShadow = '0 0 0 2px rgba(16, 185, 129, 0.2)';
+            }
+            if (autoScroll && emailInput) {
+                setTimeout(function() {
+                    emailInput.focus();
+                    if (step2Card) {
+                        step2Card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 300);
+            }
+        }
+
+        // Kullanıcı daha önce gruba tıkladıysa kilidi açık tut
+        if (sessionStorage.getItem('aipbx_group_joined') === '1') {
+            unlockStep2(false);
+        }
+
+        if (btnJoinGroup) {
+            btnJoinGroup.addEventListener('click', function() {
+                unlockStep2(true);
+            });
+        }
+
+        if (btnAlreadyJoined) {
+            btnAlreadyJoined.addEventListener('click', function(e) {
+                e.preventDefault();
+                unlockStep2(true);
+            });
+        }
 
         if (!form) return;
 
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
+
+            if (groupConfirmed && groupConfirmed.value !== '1') {
+                alertBox.style.display = 'block';
+                alertBox.style.background = '#fef2f2';
+                alertBox.style.border = '1px solid #fecaca';
+                alertBox.style.color = '#991b1b';
+                alertBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation" style="margin-right:6px;"></i> Lütfen önce 1. Adımdaki Google Grubu butonuna tıklayın.';
+                return;
+            }
 
             submitBtn.disabled = true;
             submitBtn.style.opacity = '0.7';
