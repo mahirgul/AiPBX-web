@@ -35,4 +35,4 @@
 <?php if (($page ?? '') !== 'index'): ?>
 <link rel="stylesheet" href="/css/style.css?v=1.0.0">
 <?php endif; ?>
-<link rel="stylesheet" href="/css/site.css?v=1">
+<link rel="stylesheet" href="/css/site.css?v=2">

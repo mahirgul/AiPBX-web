@@ -43,15 +43,16 @@ $navItems = [
                     <?php endforeach; ?>
                 </div>
             </div>
+            <a href="/android" class="sx-join<?= (($page ?? '') === 'android') ? ' active' : '' ?>"><i class="fa-brands fa-google-play"></i> <?= t('Teste katıl', 'Join the test', 'Am Test teilnehmen', az: 'Testə qoşul') ?></a>
             <a href="https://github.com/mahirgul/AiPBX" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
             <button class="sx-burger" id="sxBurger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sxMobile"><span></span><span></span><span></span></button>
         </div>
     </div>
     <div class="sx-mobile" id="sxMobile">
+        <a href="/android" class="sx-join"><i class="fa-brands fa-google-play"></i> <?= t('Android teste katıl', 'Join the Android test', 'Am Android-Test teilnehmen', az: 'Android testinə qoşul') ?></a>
         <?php foreach ($navItems as [$href, $label]): ?>
             <a href="<?= $href ?>"><?= $label ?></a>
         <?php endforeach; ?>
-        <a href="/android"><?= t('Android teste katıl', 'Join the Android test', 'Android-Test beitreten', az: 'Android testinə qoşul') ?></a>
         <a href="https://github.com/mahirgul/AiPBX" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
 </header>
