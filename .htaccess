@@ -1,0 +1,115 @@
+# AiPBX — Modern Enterprise IP Telephony
+DirectoryIndex index.php index.html
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; frame-ancestors 'self'; form-action 'self' https://groups.google.com; base-uri 'self'; object-src 'none'; connect-src 'self';"
+</IfModule>
+
+# Security: Deny direct web access to sensitive config, dotfiles, sql & backups
+<FilesMatch "^\.env(\..*)?$|config\.php$|\.(bak|sql|log|ini|sh|credentials\.php|tgz|tar|gz|zip)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Block access to dotfiles except .well-known
+    RewriteRule ^\.(?!well-known) - [F,L]
+
+    # 1. Canonical host & HTTPS (single 301 hop to https://aipbx.bid)
+    RewriteCond %{HTTP_HOST} ^www\.aipbx\.bid$ [NC]
+    RewriteRule ^(.*)$ https://aipbx.bid/$1 [R=301,L]
+
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteCond %{HTTP_HOST} ^(www\.)?aipbx\.bid$ [NC]
+    RewriteRule ^(.*)$ https://aipbx.bid/$1 [R=301,L]
+
+    # 2. Duplicate URL forms → one clean URL per page
+    #    /index.html, /index.php, /en/index.php → language root
+    RewriteCond %{THE_REQUEST} \s/+[^\s?]*\.(?:html|php)[\s?] [NC]
+    RewriteRule ^((?:en|de|az)/)?index\.(?:html|php)$ /$1 [R=301,L]
+    #    /features.html, /features.php, /en/features.php → /features, /en/features (not admin/api)
+    RewriteCond %{THE_REQUEST} \s/+[^\s?]*\.(?:html|php)[\s?] [NC]
+    RewriteCond %{DOCUMENT_ROOT}/$2.php -f
+    RewriteRule ^((?:en|de|az)/)?([^/]+)\.(?:html|php)$ /$1$2 [R=301,L]
+    #    /tr/... → /... (Turkish is the unprefixed default)
+    RewriteRule ^tr(?:/(.*))?$ /$1 [R=301,L]
+    #    /en → /en/
+    RewriteRule ^(en|de|az)$ /$1/ [R=301,L]
+    #    /features/ → /features
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond $1 !^(en|de|az)$
+    RewriteRule ^((?:en/|de/)?[^/]+)/$ /$1 [R=301,L]
+
+    # Documentation from the AiPBX repository: /docs/<name> → docs.php?doc=<name>
+    RewriteRule ^(en|de|az)/docs(?:/([A-Za-z0-9_-]+))?$ docs.php?doc=$2 [E=SITE_LANG:$1,QSA,L]
+    RewriteRule ^docs(?:/([A-Za-z0-9_-]+))?$ docs.php?doc=$1 [QSA,L]
+
+    # 3. Language folders: /en/, /en/features → index.php / features.php with SITE_LANG=en
+    RewriteRule ^(en|de|az)/$ index.php [E=SITE_LANG:$1,L]
+    RewriteCond %{DOCUMENT_ROOT}/$2.php -f
+    RewriteRule ^(en|de|az)/([^/.]+)$ $2.php [E=SITE_LANG:$1,L]
+
+    # 4. Clean URLs — transparently serve .php when extension is omitted
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+    RewriteRule ^([^/]+)$ $1.php [L]
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType application/manifest+json .webmanifest
+    AddType application/xml .xml
+    AddType text/plain .txt
+    AddType image/svg+xml .svg
+    AddType image/webp .webp
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+    # Keep non-content endpoints out of search results
+    <If "%{REQUEST_URI} =~ m#^/(admin|api|downloads)/# || %{REQUEST_URI} =~ m#^/(data\.json|404\.html)#">
+        Header always set X-Robots-Tag "noindex, nofollow"
+    </If>
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 2 days"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType application/manifest+json "access plus 1 week"
+    ExpiresByType application/xml "access plus 1 hour"
+    ExpiresByType text/xml "access plus 1 hour"
+    ExpiresByType text/plain "access plus 1 day"
+    ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# PHP partials are not pages
+RedirectMatch 404 ^/includes/
+
+# App builds live on GitHub Releases; keep old /downloads links working
+RedirectMatch 302 ^/downloads/(aipbx-latest\.apk|AiPBX-unsigned\.ipa|AiPBX-Simulator\.zip)$ https://github.com/mahirgul/AiPBX/releases/latest/download/$1

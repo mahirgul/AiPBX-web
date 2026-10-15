@@ -1,0 +1,9 @@
+# robots.txt — AiPBX (https://aipbx.bid)
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /data.json
+
+Sitemap: https://aipbx.bid/sitemap.xml
+Sitemap: https://aipbx.bid/sitemap-docs.xml

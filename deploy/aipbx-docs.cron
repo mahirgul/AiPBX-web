@@ -1,0 +1,2 @@
+# aipbx.bid/docs: pull the AiPBX documentation from GitHub every hour (see the script).
+17 * * * * root /var/www/aipbx.bid/sync-docs.sh >/dev/null 2>&1 || logger -t aipbx-docs "sync-docs.sh failed"
