@@ -181,6 +181,7 @@ if ($isAdmin) {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 12px;
     }
+    .docs-layout.android-single { display: block; max-width: 900px; margin: 0 auto; }
     @media (max-width: 860px) {
         .docs-layout {
             display: block !important;
@@ -234,191 +235,9 @@ if ($isAdmin) {
     <!-- Top Announcement Banner & Main Navigation Bar -->
     <?php include __DIR__ . '/includes/navbar.php'; ?>
 
-    <div class="docs-layout">
+    <div class="docs-layout android-single">
 
         <!-- Left Sidebar Navigation -->
-        <aside class="docs-sidebar">
-            <div class="sidebar-search">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" id="sidebarSearch" placeholder="<?= e(['tr' => 'Dokümantasyonda ara...', 'en' => 'Search the docs...', 'de' => 'Dokumentation durchsuchen...', 'az' => 'Sənədlərdə axtar...'][$LANG]) ?>">
-            </div>
-
-            <div class="sidebar-group">
-                <div class="sidebar-title">
-                    <span data-lang="tr">Platform &amp; Mimari</span>
-                    <span data-lang="en">Platform &amp; Architecture</span>
-                    <span data-lang="de">Plattform &amp; Architektur</span><span data-lang="az">Platforma &amp; Arxitektura</span>
-                </div>
-                <ul class="sidebar-menu">
-                    <li>
-                        <a href="/">
-                            <span data-lang="tr">🏠 Genel Bakış (Overview)</span>
-                            <span data-lang="en">🏠 Overview (Home)</span>
-                            <span data-lang="de">🏠 Übersicht (Home)</span><span data-lang="az">🏠 Ümumi Baxış (Overview)</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/architecture" class="">
-                            <span data-lang="tr">🏗️ Sistem Mimarisi &amp; ALPN</span>
-                            <span data-lang="en">🏗️ Architecture &amp; ALPN</span>
-                            <span data-lang="de">🏗️ Architektur &amp; ALPN</span><span data-lang="az">🏗️ Sistem Arxitekturası &amp; ALPN</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/features" class="">
-                            <span data-lang="tr">⚡ Santral Modülleri</span>
-                            <span data-lang="en">⚡ PBX Modules</span>
-                            <span data-lang="de">⚡ PBX-Module</span><span data-lang="az">⚡ Santral Modulları</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-group">
-                <div class="sidebar-title">
-                    <span data-lang="tr">Çağrı Merkezi &amp; Kuyruk</span>
-                    <span data-lang="en">Call Center &amp; Queues</span>
-                    <span data-lang="de">Callcenter &amp; Warteschlangen</span><span data-lang="az">Çağrı Mərkəzi &amp; Növbə</span>
-                </div>
-                <ul class="sidebar-menu">
-                    <li>
-                        <a href="/callcenter" class="">
-                            <span data-lang="tr">🎧 Kuyruk Yönetimi</span>
-                            <span data-lang="en">🎧 Queue Operations</span>
-                            <span data-lang="de">🎧 Warteschlangen-Betrieb</span><span data-lang="az">🎧 Növbə İdarəetməsi</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/callcenter#break-codes" class="">
-                            <span data-lang="tr">⏸️ Mola Kodları (*22/*23) <span class="sidebar-badge">Yeni</span></span>
-                            <span data-lang="en">⏸️ Break Codes (*22/*23) <span class="sidebar-badge">New</span></span>
-                            <span data-lang="de">⏸️ Pausencodes (*22/*23) <span class="sidebar-badge">Neu</span></span><span data-lang="az">⏸️ Fasilə Kodları (*22/*23) <span class="sidebar-badge">Yeni</span></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/callcenter#wallboard">
-                            <span data-lang="tr">📊 Canlı Wallboard &amp; SLA</span>
-                            <span data-lang="en">📊 Live Wallboard &amp; SLA</span>
-                            <span data-lang="de">📊 Live-Wallboard &amp; SLA</span><span data-lang="az">📊 Canlı Wallboard &amp; SLA</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/callcenter#supervisor">
-                            <span data-lang="tr">👁️ Süpervizör &amp; Spy (*90)</span>
-                            <span data-lang="en">👁️ Supervisor &amp; Spy (*90)</span>
-                            <span data-lang="de">👁️ Supervisor &amp; Spy (*90)</span><span data-lang="az">👁️ Supervayzer &amp; Spy (*90)</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-group">
-                <div class="sidebar-title">
-                    <span data-lang="tr">Mobil İstemciler</span>
-                    <span data-lang="en">Mobile Clients</span>
-                    <span data-lang="de">Mobile Clients</span><span data-lang="az">Mobil Müştərilər</span>
-                </div>
-                <ul class="sidebar-menu">
-                    <li>
-                        <a href="/android" class="active">
-                            <span data-lang="tr">🤖 Google Play Kapalı Test <span class="sidebar-badge">Yeni</span></span>
-                            <span data-lang="en">🤖 Google Play Closed Test <span class="sidebar-badge">New</span></span>
-                            <span data-lang="de">🤖 Google Play Closed-Test <span class="sidebar-badge">Neu</span></span><span data-lang="az">🤖 Google Play Qapalı Test <span class="sidebar-badge">Yeni</span></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/mobile-apps" class="">
-                            <span data-lang="tr">📱 Android &amp; iOS İstemcileri</span>
-                            <span data-lang="en">📱 Android &amp; iOS Clients</span>
-                            <span data-lang="de">📱 Android &amp; iOS Clients</span><span data-lang="az">📱 Android &amp; iOS Müştəriləri</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/mobile-apps#downloads">
-                            <span data-lang="tr">⬇️ APK / IPA / Simulator</span>
-                            <span data-lang="en">⬇️ APK / IPA / Simulator</span>
-                            <span data-lang="de">⬇️ APK / IPA / Simulator</span><span data-lang="az">⬇️ APK / IPA / Simulator</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/mobile-apps#android">
-                            <span data-lang="tr">🤖 Kotlin Native &amp; FCM Push</span>
-                            <span data-lang="en">🤖 Kotlin Native &amp; FCM Push</span>
-                            <span data-lang="de">🤖 Kotlin Native &amp; FCM-Push</span><span data-lang="az">🤖 Kotlin Native &amp; FCM Push</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/mobile-apps#ios">
-                            <span data-lang="tr">🍏 Swift &amp; CallKit</span>
-                            <span data-lang="en">🍏 Swift &amp; CallKit</span>
-                            <span data-lang="de">🍏 Swift &amp; CallKit</span><span data-lang="az">🍏 Swift &amp; CallKit</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-group">
-                <div class="sidebar-title">
-                    <span data-lang="tr">Yönetim &amp; Güvenlik</span>
-                    <span data-lang="en">Admin &amp; Security</span>
-                    <span data-lang="de">Admin &amp; Sicherheit</span><span data-lang="az">İdarəetmə &amp; Təhlükəsizlik</span>
-                </div>
-                <ul class="sidebar-menu">
-                    <li>
-                        <a href="/installation" class="">
-                            <span data-lang="tr">🚀 Hızlı Kurulum (install.sh)</span>
-                            <span data-lang="en">🚀 Quick Install (install.sh)</span>
-                            <span data-lang="de">🚀 Schnellinstallation (install.sh)</span><span data-lang="az">🚀 Sürətli Quraşdırma (install.sh)</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/installation#ports">
-                            <span data-lang="tr">🌐 Port &amp; Güvenlik Duvarı</span>
-                            <span data-lang="en">🌐 Ports &amp; Firewall</span>
-                            <span data-lang="de">🌐 Ports &amp; Firewall</span><span data-lang="az">🌐 Port &amp; Təhlükəsizlik Divarı</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/security" class="">
-                            <span data-lang="tr">🛡️ Güvenlik &amp; Fail2ban</span>
-                            <span data-lang="en">🛡️ Security &amp; Fail2ban</span>
-                            <span data-lang="de">🛡️ Sicherheit &amp; Fail2ban</span><span data-lang="az">🛡️ Təhlükəsizlik &amp; Fail2ban</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-group">
-                <div class="sidebar-title">
-                    <span data-lang="tr">Geliştirici &amp; API</span>
-                    <span data-lang="en">Developer &amp; API</span>
-                    <span data-lang="de">Entwickler &amp; API</span><span data-lang="az">Tərtibatçı &amp; API</span>
-                </div>
-                <ul class="sidebar-menu">
-                    <li>
-                        <a href="/api-docs" class="">
-                            <span data-lang="tr">🔌 REST API Referansı</span>
-                            <span data-lang="en">🔌 REST API Reference</span>
-                            <span data-lang="de">🔌 REST-API Referenz</span><span data-lang="az">🔌 REST API Sorğu Kitabçası</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/api-docs#websocket">
-                            <span data-lang="tr">💬 Go WebSocket Protokolü</span>
-                            <span data-lang="en">💬 Go WebSocket Protocol</span>
-                            <span data-lang="de">💬 Go WebSocket Protokoll</span><span data-lang="az">💬 Go WebSocket Protokolu</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/api-docs#tests">
-                            <span data-lang="tr">🧪 PHPUnit Testleri (142 Test)</span>
-                            <span data-lang="en">🧪 PHPUnit Test Suite</span>
-                            <span data-lang="de">🧪 PHPUnit Test-Suite</span><span data-lang="az">🧪 PHPUnit Testləri (142 Test)</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
 
         <!-- Main Content Area -->
         <main class="docs-content">
@@ -426,7 +245,7 @@ if ($isAdmin) {
                 <a href="/">
                     <span data-lang="tr">Ana Sayfa</span><span data-lang="en">Home</span><span data-lang="de">Startseite</span><span data-lang="az">Ana Səhifə</span>
                 </a> / 
-                <a href="/mobile-apps">
+                <a href="/#apps">
                     <span data-lang="tr">Mobil</span><span data-lang="en">Mobile</span><span data-lang="de">Mobil</span><span data-lang="az">Mobil</span>
                 </a> / 
                 <span>
@@ -684,50 +503,8 @@ if ($isAdmin) {
             </section>
             <?php endif; ?>
 
-            <!-- Docs Pagination -->
-            <div class="docs-pagination">
-                <a href="/mobile-apps" class="pagination-btn">
-                    <span class="pagination-label">
-                        <span data-lang="tr">← Önceki</span>
-                        <span data-lang="en">← Previous</span>
-                        <span data-lang="de">← Zurück</span><span data-lang="az">← Əvvəlki</span>
-                    </span>
-                    <span class="pagination-title">
-                        <span data-lang="tr">Mobil Softphone Uygulamaları</span>
-                        <span data-lang="en">Mobile Softphone Apps</span>
-                        <span data-lang="de">Mobile Softphone-Apps</span><span data-lang="az">Mobil Softphone Tətbiqləri</span>
-                    </span>
-                </a>
-                <a href="/installation" class="pagination-btn next">
-                    <span class="pagination-label">
-                        <span data-lang="tr">Sonraki →</span>
-                        <span data-lang="en">Next →</span>
-                        <span data-lang="de">Weiter →</span><span data-lang="az">Növbəti →</span>
-                    </span>
-                    <span class="pagination-title">
-                        <span data-lang="tr">Kurulum Rehberi (install.sh)</span>
-                        <span data-lang="en">Installation Guide</span>
-                        <span data-lang="de">Installationsanleitung</span><span data-lang="az">Quraşdırma Bələdçisi</span>
-                    </span>
-                </a>
-            </div>
-
         </main>
 
-        <!-- Right Table of Contents (Sticky) -->
-        <div class="docs-toc">
-            <div class="toc-title">
-                <span data-lang="tr">Bu Sayfada</span><span data-lang="en">On This Page</span><span data-lang="de">Auf dieser Seite</span><span data-lang="az">Bu Səhifədə</span>
-            </div>
-            <ul class="toc-list">
-                <li><a href="#google-group">AiPBX Google Grubu</a></li>
-                <li><a href="#signup-form"><?= t('E-posta ile Kayıt', 'Email Registration', 'E-Mail-Registrierung', az: 'E-poçtla Qeydiyyat') ?></a></li>
-                <li><a href="#downloads"><?= t('İndirme Linkleri', 'Download Links', 'Download-Links', az: 'Yükləmə Keçidləri') ?></a></li>
-                <?php if ($isAdmin): ?>
-                <li><a href="#admin-panel">Yönetici Paneli</a></li>
-                <?php endif; ?>
-            </ul>
-        </div>
     </div>
 
     <!-- Universal Footer -->
