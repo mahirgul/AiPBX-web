@@ -43,6 +43,7 @@ $navItems = [
                     <?php endforeach; ?>
                 </div>
             </div>
+            <a href="https://github.com/sponsors/mahirgul" class="sx-sponsor" target="_blank" rel="noopener"><i class="fa-solid fa-heart"></i> <span><?= t('Sponsor Ol', 'Sponsor', 'Sponsorn', az: 'Sponsor ol') ?></span></a>
             <a href="/android" class="sx-join<?= (($page ?? '') === 'android') ? ' active' : '' ?>"><i class="fa-brands fa-google-play"></i> <?= t('Teste katıl', 'Join the test', 'Am Test teilnehmen', az: 'Testə qoşul') ?></a>
             <a href="https://github.com/mahirgul/AiPBX" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
             <button class="sx-burger" id="sxBurger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sxMobile"><span></span><span></span><span></span></button>
@@ -53,6 +54,7 @@ $navItems = [
         <?php foreach ($navItems as [$href, $label]): ?>
             <a href="<?= $href ?>"><?= $label ?></a>
         <?php endforeach; ?>
+        <a href="https://github.com/sponsors/mahirgul" class="sx-sponsor" target="_blank" rel="noopener"><i class="fa-solid fa-heart"></i> <?= t('GitHub\'da Sponsor Olun', 'Sponsor on GitHub', 'Auf GitHub sponsern', az: 'GitHub-da sponsor olun') ?></a>
         <a href="https://github.com/mahirgul/AiPBX" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
 </header>

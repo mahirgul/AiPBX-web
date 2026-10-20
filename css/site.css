@@ -39,6 +39,9 @@
 .sx-lang-menu svg { width: 20px; height: 14px; border-radius: 2px; }
 .sx-gh { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 8px; background: var(--sx-ink); color: #fff !important; text-decoration: none !important; font-weight: 700; font-size: .88rem; }
 .sx-gh:hover { background: #1e293b; }
+.sx-sponsor { display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 8px; background: #fff0f5; color: #be185d !important; border: 1px solid #fbcfe8; text-decoration: none !important; font-weight: 700; font-size: .88rem; transition: background .15s, border-color .15s, transform .15s; }
+.sx-sponsor:hover { background: #fce7f3; border-color: #f472b6; transform: translateY(-1px); }
+.sx-sponsor i { color: #db2777; }
 .sx-join { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 8px; background: var(--sx-green); color: #fff !important; text-decoration: none !important; font-weight: 700; font-size: .88rem; white-space: nowrap; }
 .sx-join:hover, .sx-join.active { background: #047857; }
 .sx-burger { display: none; width: 42px; height: 42px; border: 1px solid var(--sx-line); border-radius: 10px; background: #fff; cursor: pointer; align-items: center; justify-content: center; flex-direction: column; gap: 5px; padding: 0; }
@@ -52,16 +55,21 @@
     .sx-actions .sx-gh { display: none; }
     .sx-links a { padding: 8px 9px; }
 }
+@media (max-width: 960px) {
+    .sx-actions .sx-sponsor span { display: none; }
+    .sx-actions .sx-sponsor { padding: 8px 10px; }
+}
 @media (max-width: 860px) {
     .sx-nav-in { gap: 12px; }
-    .sx-links, .sx-gh, .sx-actions .sx-join { display: none; }
+    .sx-links, .sx-gh, .sx-actions .sx-join, .sx-actions .sx-sponsor { display: none; }
     .sx-actions { margin-left: auto; }
     .sx-burger { display: inline-flex; }
     .sx-nav.open .sx-mobile { display: block; }
     .sx-mobile { border-top: 1px solid var(--sx-line); background: #fff; padding: 8px 20px 18px; max-height: calc(100vh - 64px); overflow-y: auto; }
     .sx-mobile a { display: block; padding: 12px 4px; border-bottom: 1px solid #f1f5f9; color: var(--sx-ink) !important; text-decoration: none !important; font-weight: 600; }
     .sx-mobile a.sx-join { display: flex; justify-content: center; margin: 10px 0 6px; border: 0; padding: 12px 16px; color: #fff !important; }
-    .sx-mobile a.sx-gh { display: inline-flex; margin-top: 14px; border: 0; color: #fff !important; padding: 10px 16px; }
+    .sx-mobile a.sx-sponsor { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 6px 0; border: 1px solid #fbcfe8; background: #fff0f5; color: #be185d !important; padding: 12px 16px; border-radius: 8px; font-weight: 700; }
+    .sx-mobile a.sx-gh { display: inline-flex; margin-top: 8px; border: 0; color: #fff !important; padding: 10px 16px; }
 }
 
 /* ── Footer ─────────────────────────────────────────────────────────────── */
@@ -144,6 +152,14 @@
 .sx-app p { margin: 0; color: var(--sx-muted); font-size: .94rem; flex: 1; }
 .sx-app .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
 .sx-app .sx-btn { padding: 10px 16px; font-size: .9rem; }
+
+/* Sponsor section */
+.sx-sponsor-box { max-width: 860px; margin: 0 auto; background: linear-gradient(135deg, #fff5f7 0%, #ffffff 50%, #fdf2f8 100%); border: 1px solid #fbcfe8; border-radius: calc(var(--sx-radius) * 1.5); padding: 48px 36px; text-align: center; box-shadow: 0 10px 30px rgba(219, 39, 119, .06); position: relative; overflow: hidden; }
+.sx-sponsor-box::before { content: ''; position: absolute; top: -60px; right: -60px; width: 160px; height: 160px; background: radial-gradient(circle, rgba(244, 114, 182, 0.25) 0%, rgba(255, 255, 255, 0) 70%); border-radius: 50%; pointer-events: none; }
+.sx-sponsor-icon { width: 56px; height: 56px; margin: 0 auto 18px; background: #fce7f3; color: #db2777; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; box-shadow: 0 4px 12px rgba(219, 39, 119, .15); }
+.sx-btn-sponsor { background: #db2777; color: #fff !important; box-shadow: 0 4px 14px rgba(219, 39, 119, .3); border: 1px solid #be185d; }
+.sx-btn-sponsor:hover { background: #be185d; transform: translateY(-1px); }
+.sx-sponsor-cta { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
 
 /* FAQ */
 .sx-faq { max-width: 780px; margin: 0 auto; }
