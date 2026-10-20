@@ -12,7 +12,7 @@
     "repo": "https://github.com/mahirgul/AiPBX",
     "license": "MIT License",
     "version": "1.12.3",
-    "androidVersion": "1.0.59",
+    "androidVersion": "1.0.79",
     "build": "59",
     "releaseDate": "2026-10-10",
     "turnkeyCommand": "curl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash",

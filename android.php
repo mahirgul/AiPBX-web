@@ -419,7 +419,7 @@ if ($isAdmin) {
                                     <span data-lang="az">AiPBX Android Yüklə</span>
                                 </h3>
                                 <p style="margin: 2px 0 0; font-size: 0.82rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
-                                    v<?= e($company['androidVersion'] ?? '1.0.59') ?> · Package: com.mhrgl.AiPBX
+                                    v<?= e($company['androidVersion'] ?? '1.0.79') ?> · Package: com.mhrgl.AiPBX
                                 </p>
                             </div>
                         </div>
