@@ -4,7 +4,7 @@ The official marketing website, documentation viewer, and Android closed testing
 
 🌐 **Live Website:** [https://aipbx.bid](https://aipbx.bid)  
 📦 **Main PBX Repository:** [mahirgul/AiPBX](https://github.com/mahirgul/AiPBX)  
-🧩 **Plugins Repository:** [mahirgul/aipbx-plugins](https://github.com/mahirgul/aipbx-plugins)
+🧩 **Plugins Repository:** [mahirgul/AiPBX-plugins](https://github.com/mahirgul/AiPBX-plugins)
 
 ---
 
