@@ -1,9 +1,9 @@
 {
   "company": {
     "name": "AiPBX",
-    "fullName": "AiPBX — Modern Open Source Enterprise IP Telephony Platform",
-    "shortDescTR": "Asterisk 22, Port 443 ALPN stream çoklama, WebRTC, Passkey biyometrik giriş, Go sohbet motoru ve yerel mobil softphone destekli kurumsal açık kaynak IP santral.",
-    "shortDescEN": "Next-generation open-source enterprise IP PBX powered by Asterisk 22, Port 443 ALPN stream multiplexing, WebRTC, Passkeys, Go chat daemon, and native mobile softphones.",
+    "fullName": "AiPBX — 100% Free Open Source AI-Powered Enterprise IP Telephony Platform (VoIP & SIP)",
+    "shortDescTR": "%100 ücretsiz ve açık kaynak (MIT). Asterisk 22, SIP & PJSIP protokolü, Whisper AI ses tanıma, Port 443 ALPN stream çoklama, WebRTC, Passkey biyometrik giriş, Go sohbet motoru ve yerel mobil softphone destekli kurumsal santral.",
+    "shortDescEN": "100% free and open-source (MIT). Enterprise AI-powered VoIP SIP PBX powered by Asterisk 22, PJSIP, Whisper AI voice requests, Port 443 ALPN stream multiplexing, WebRTC, Passkeys, and native mobile softphones.",
     "shortDescDE": "Enterprise Open-Source IP-Telefonanlage mit Asterisk 22, Port 443 ALPN Multiplexing, WebRTC, Passkeys, Go-Chat-Engine und nativen Mobil-Softphones.",
     "shortDescAZ": "Asterisk 22, Port 443 ALPN stream multipleksləşdirmə, WebRTC, Passkey biometrik giriş, Go söhbət mühərriki və yerli mobil softphone dəstəkli korporativ açıq mənbəli IP santral.",
     "author": "Mahir Gül",
@@ -68,12 +68,12 @@
     }
   ],
   "hero": {
-    "badgeTR": "✨ AiPBX 1.12.3 — Kurumsal IP Santral Platformu",
-    "badgeEN": "✨ AiPBX 1.12.3 — Enterprise IP Telephony Platform",
+    "badgeTR": "✨ AiPBX 1.12.3 — %100 Ücretsiz & Açık Kaynak Yapay Zekâ Destekli VoIP SIP Santral",
+    "badgeEN": "✨ AiPBX 1.12.3 — 100% Free & Open Source AI-Powered VoIP SIP PBX",
     "badgeDE": "✨ AiPBX 1.12.3 — Enterprise IP-Telefonanlage",
     "badgeAZ": "✨ AiPBX 1.12.3 — Korporativ IP Santral Platforması",
-    "titleTR": "Kurumsal IP Santral, Amacına Uygun Tasarlandı.",
-    "titleEN": "Enterprise IP Telephony, Engineered with Purpose.",
+    "titleTR": "%100 Açık Kaynak & Yapay Zekâ Destekli Kurumsal VoIP & SIP Santral",
+    "titleEN": "100% Free Open Source & AI-Powered Enterprise VoIP & SIP PBX",
     "titleDE": "Enterprise IP-Telefonie, Konsequent Durchdacht.",
     "titleAZ": "Korporativ IP Santral, Məqsədə Uyğun Layihələndirilib.",
     "subtitleTR": "Asterisk 22, Nginx L4 ALPN stream çoklama, WebRTC, Passkey biyometrik kimlik doğrulama, Go anlık mesajlaşma ve yerel Android/iOS mobil istemcilerini tek çatı altında birleştiren yeni nesil kurumsal santral.",

@@ -1,0 +1,14 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor & IDE Directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs & SQLite Databases
+*.log
+data/testers.db
