@@ -120,6 +120,8 @@ ErrorDocument 404 /404.html
 
 # PHP partials are not pages
 RedirectMatch 404 ^/includes/
+# Repository files that are not pages (deploy scripts, README)
+RedirectMatch 404 ^/(deploy/|README\.md$)
 
 # App builds live on GitHub Releases; keep old /downloads links working
 RedirectMatch 302 ^/downloads/(aipbx-latest\.apk|AiPBX-unsigned\.ipa|AiPBX-Simulator\.zip)$ https://github.com/mahirgul/AiPBX/releases/latest/download/$1
