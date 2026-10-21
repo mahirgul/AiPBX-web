@@ -7,7 +7,14 @@ $page = 'android';
 require_once __DIR__ . '/includes/data.php';
 
 const DB_PATH = '/var/www/aipbx.bid/data/testers.db';
-const ADMIN_KEY = 'aipbx2026';
+// Admin key: NOT in the repository (it is public). One line in this file,
+// outside the web root; without the file the admin view and export are off.
+const ADMIN_KEY_FILE = '/var/www/aipbx.bid/data/admin.key';
+
+function is_admin_key(?string $given): bool {
+    $key = is_readable(ADMIN_KEY_FILE) ? trim((string)file_get_contents(ADMIN_KEY_FILE)) : '';
+    return strlen($key) >= 20 && is_string($given) && hash_equals($key, $given);
+}
 const GOOGLE_GROUP_URL = 'https://groups.google.com/g/aipbx';
 const PLAY_OPT_IN_URL = 'https://play.google.com/apps/testing/com.mhrgl.AiPBX';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mhrgl.AiPBX';
@@ -29,7 +36,7 @@ function get_testers_db(): PDO {
 }
 
 // Admin CSV Export
-if (isset($_GET['export']) && $_GET['export'] === 'csv' && isset($_GET['key']) && $_GET['key'] === ADMIN_KEY) {
+if (isset($_GET['export']) && $_GET['export'] === 'csv' && is_admin_key($_GET['key'] ?? null)) {
     try {
         $db = get_testers_db();
         $stmt = $db->query("SELECT email FROM testers ORDER BY id ASC");
@@ -140,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Admin Panel Kontrolü
-$isAdmin = (isset($_GET['admin']) && $_GET['admin'] === ADMIN_KEY);
+$isAdmin = is_admin_key($_GET['admin'] ?? null);
 $adminTesters = [];
 if ($isAdmin) {
     try {
@@ -461,7 +468,7 @@ if ($isAdmin) {
                         <p style="margin: 0; color: #475569;">
                             Google Play Console kapalı test listesine toplu ekleme yapmak için CSV dosyasını indirebilirsiniz.
                         </p>
-                        <a href="/android?export=csv&key=<?= ADMIN_KEY ?>" class="btn-primary" style="background: #0284c7;">
+                        <a href="/android?export=csv&key=<?= rawurlencode((string)$_GET['admin']) ?>" class="btn-primary" style="background: #0284c7;">
                             <i class="fa-solid fa-file-csv"></i>
                             <span>Google Play Uyumlu CSV İndir</span>
                         </a>
