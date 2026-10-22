@@ -31,4 +31,4 @@ $rel = latest_release();
         </div>
     </div>
 </div>
-<script src="/js/site.js?v=1"></script>
+<script src="<?= asset('/js/site.js') ?>"></script>

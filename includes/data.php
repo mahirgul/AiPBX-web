@@ -33,6 +33,12 @@ const VIDEOS = [
     'tour'    => [],
 ];
 
+/** "/css/site.css" -> "/css/site.css?v=<mtime>": browsers fetch a file again as soon as it changes. */
+function asset(string $path): string {
+    $t = @filemtime(dirname(__DIR__) . $path);
+    return $path . '?v=' . ($t ?: '1');
+}
+
 /** The video id for the page language, falling back to Turkish (az) and English. */
 function video_id(string $kind, string $lang): string {
     $v = VIDEOS[$kind] ?? [];
