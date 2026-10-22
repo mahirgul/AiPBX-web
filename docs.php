@@ -70,7 +70,7 @@ $h = fn($s) => htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE | ENT_H
     <?php include __DIR__ . '/includes/head.php'; ?>
     <?php include __DIR__ . '/includes/seo-helper.php'; ?>
     <?php if ($query !== '' || !empty($notFound)): ?><meta name="robots" content="noindex, follow"><?php endif; ?>
-    <link rel="stylesheet" href="/css/docs-md.css?v=1.1.0">
+    <link rel="stylesheet" href="/css/docs-md.css?v=1.1.1">
 </head>
 
 <body>
