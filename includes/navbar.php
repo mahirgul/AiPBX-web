@@ -43,7 +43,6 @@ $navItems = [
                     <?php endforeach; ?>
                 </div>
             </div>
-            <a href="/android" class="sx-join<?= (($page ?? '') === 'android') ? ' active' : '' ?>"><i class="fa-brands fa-google-play"></i> <?= t('Teste katıl', 'Join the test', 'Am Test teilnehmen', az: 'Testə qoşul') ?></a>
             <a href="https://github.com/sponsors/mahirgul" class="sx-icon sx-icon-heart" target="_blank" rel="noopener" aria-label="Sponsor" title="<?= e(['tr' => 'Sponsor ol', 'en' => 'Sponsor', 'de' => 'Sponsern', 'az' => 'Sponsor ol'][$LANG]) ?>"><i class="fa-solid fa-heart"></i></a>
             <a href="<?= YOUTUBE_CHANNEL ?>" class="sx-icon sx-icon-yt" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://github.com/mahirgul/AiPBX" class="sx-icon sx-icon-gh" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -51,7 +50,6 @@ $navItems = [
         </div>
     </div>
     <div class="sx-mobile" id="sxMobile">
-        <a href="/android" class="sx-join"><i class="fa-brands fa-google-play"></i> <?= t('Android teste katıl', 'Join the Android test', 'Am Android-Test teilnehmen', az: 'Android testinə qoşul') ?></a>
         <?php foreach ($navItems as [$href, $label]): ?>
             <a href="<?= $href ?>"><?= $label ?></a>
         <?php endforeach; ?>
