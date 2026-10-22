@@ -35,3 +35,21 @@
         });
     });
 })();
+
+// Videos: load the YouTube player only after a click (no third-party request before).
+(function () {
+    document.querySelectorAll('.sx-video[data-yt]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var id = btn.getAttribute('data-yt'), hl = btn.getAttribute('data-lang') || 'en';
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&cc_load_policy=1&hl=' + encodeURIComponent(hl);
+            f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            f.allowFullscreen = true;
+            f.title = btn.getAttribute('aria-label') || 'Video';
+            var box = document.createElement('div');
+            box.className = 'sx-video';
+            box.appendChild(f);
+            btn.replaceWith(box);
+        });
+    });
+})();

@@ -25,6 +25,19 @@ if (file_exists($dataFile)) {
 const SITE_URL     = 'https://aipbx.bid';
 const SITE_LANGS   = ['tr', 'en', 'de', 'az'];
 const DEFAULT_LANG = 'tr';
+const YOUTUBE_CHANNEL = 'https://www.youtube.com/@aipbx';
+// YouTube video ids per language (no Azerbaijani video: Turkish is shown there).
+// Add the menu tour ids here when they are uploaded; an empty list hides the video.
+const VIDEOS = [
+    'install' => ['tr' => 'eDHHHW6ZcvQ', 'en' => 'lH1-k_z5jFE', 'de' => '1QuOM6Rtcbg'],
+    'tour'    => [],
+];
+
+/** The video id for the page language, falling back to Turkish (az) and English. */
+function video_id(string $kind, string $lang): string {
+    $v = VIDEOS[$kind] ?? [];
+    return $v[$lang] ?? ($lang === 'az' ? ($v['tr'] ?? '') : '') ?: ($v['en'] ?? '');
+}
 
 $PAGE_SLUG = basename($_SERVER['SCRIPT_NAME'] ?? 'index.php', '.php');
 $PAGE_SLUG = ($PAGE_SLUG === 'index') ? '/' : '/' . $PAGE_SLUG;

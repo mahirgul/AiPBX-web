@@ -18,6 +18,7 @@ $rel = latest_release();
             <a href="/android"><?= t('Android testi', 'Android test', 'Android-Test', az: 'Android testi') ?></a>
             <a href="https://github.com/mahirgul/AiPBX/issues" target="_blank" rel="noopener"><?= t('Hata bildir', 'Report an issue', 'Fehler melden', az: 'Xəta bildir') ?></a>
             <a href="https://github.com/sponsors/mahirgul" target="_blank" rel="noopener" style="color:#ea4aaa; font-weight:600;"><i class="fa-solid fa-heart"></i> <?= t('Sponsor Ol', 'Sponsor', 'Sponsorn', az: 'Sponsor ol') ?></a>
+            <a href="<?= YOUTUBE_CHANNEL ?>" target="_blank" rel="noopener">YouTube</a>
             <a href="https://github.com/mahirgul/AiPBX" target="_blank" rel="noopener">GitHub</a>
         </div>
     </div>

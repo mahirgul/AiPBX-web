@@ -3,7 +3,7 @@ DirectoryIndex index.php index.html
 
 # Security Headers
 <IfModule mod_headers.c>
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; frame-ancestors 'self'; form-action 'self' https://groups.google.com; base-uri 'self'; object-src 'none'; connect-src 'self';"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; frame-src https://www.youtube-nocookie.com; frame-ancestors 'self'; form-action 'self' https://groups.google.com; base-uri 'self'; object-src 'none'; connect-src 'self';"
 </IfModule>
 
 # Security: Deny direct web access to sensitive config, dotfiles, sql & backups
