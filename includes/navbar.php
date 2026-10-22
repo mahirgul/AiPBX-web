@@ -2,9 +2,9 @@
 /**
  * aipbx.bid — navigation bar (all pages).
  *
- * Kept short on purpose: the home page sections, the documentation (/docs,
- * rendered from the AiPBX repository) and the Android test sign-up. The
- * hamburger menu below 860 px is the same list.
+ * Five pages in words (features, install, videos, mobile, docs); sponsor,
+ * YouTube and GitHub as icons, so the bar stays uncrowded. The hamburger menu
+ * below 860 px is the same list with words.
  */
 global $LANG, $PAGE_SLUG, $page;
 $langNames = ['tr' => 'Türkçe', 'en' => 'English', 'de' => 'Deutsch', 'az' => 'Azərbaycan'];
@@ -15,12 +15,11 @@ $langFlags = [
 ];
 
 $navItems = [
-    ['/#features',    t('Özellikler', 'Features', 'Funktionen', az: 'Xüsusiyyətlər'), ''],
-    ['/#screenshots', t('Ekranlar', 'Screenshots', 'Screenshots', az: 'Ekranlar'), ''],
-    ['/#install',     t('Kurulum', 'Install', 'Installation', az: 'Quraşdırma'), ''],
-    ['/#videos',      t('Videolar', 'Videos', 'Videos', az: 'Videolar'), ''],
-    ['/#apps',        t('Mobil', 'Mobile', 'Mobil', az: 'Mobil'), ''],
-    ['/docs',         t('Dokümantasyon', 'Docs', 'Doku', az: 'Sənədlər'), 'docs'],
+    ['/features', t('Özellikler', 'Features', 'Funktionen', az: 'Xüsusiyyətlər'), 'features'],
+    ['/install',  t('Kurulum', 'Install', 'Installation', az: 'Quraşdırma'), 'install'],
+    ['/videos',   t('Videolar', 'Videos', 'Videos', az: 'Videolar'), 'videos'],
+    ['/mobile',   t('Mobil', 'Mobile', 'Mobil', az: 'Mobil'), 'mobile'],
+    ['/docs',     t('Belgeler', 'Docs', 'Doku', az: 'Sənədlər'), 'docs'],
 ];
 ?>
 <header class="sx-nav" id="sxNav">
@@ -44,10 +43,10 @@ $navItems = [
                     <?php endforeach; ?>
                 </div>
             </div>
-            <a href="https://github.com/sponsors/mahirgul" class="sx-sponsor" target="_blank" rel="noopener"><i class="fa-solid fa-heart"></i> <span><?= t('Sponsor Ol', 'Sponsor', 'Sponsorn', az: 'Sponsor ol') ?></span></a>
             <a href="/android" class="sx-join<?= (($page ?? '') === 'android') ? ' active' : '' ?>"><i class="fa-brands fa-google-play"></i> <?= t('Teste katıl', 'Join the test', 'Am Test teilnehmen', az: 'Testə qoşul') ?></a>
-            <a href="<?= YOUTUBE_CHANNEL ?>" class="sx-gh sx-yt" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://github.com/mahirgul/AiPBX" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://github.com/sponsors/mahirgul" class="sx-icon sx-icon-heart" target="_blank" rel="noopener" aria-label="Sponsor" title="<?= e(['tr' => 'Sponsor ol', 'en' => 'Sponsor', 'de' => 'Sponsern', 'az' => 'Sponsor ol'][$LANG]) ?>"><i class="fa-solid fa-heart"></i></a>
+            <a href="<?= YOUTUBE_CHANNEL ?>" class="sx-icon sx-icon-yt" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://github.com/mahirgul/AiPBX" class="sx-icon sx-icon-gh" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
             <button class="sx-burger" id="sxBurger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sxMobile"><span></span><span></span><span></span></button>
         </div>
     </div>
@@ -57,7 +56,7 @@ $navItems = [
             <a href="<?= $href ?>"><?= $label ?></a>
         <?php endforeach; ?>
         <a href="https://github.com/sponsors/mahirgul" class="sx-sponsor" target="_blank" rel="noopener"><i class="fa-solid fa-heart"></i> <?= t('GitHub\'da Sponsor Olun', 'Sponsor on GitHub', 'Auf GitHub sponsern', az: 'GitHub-da sponsor olun') ?></a>
-        <a href="<?= YOUTUBE_CHANNEL ?>" class="sx-gh" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</a>
-            <a href="https://github.com/mahirgul/AiPBX" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="<?= YOUTUBE_CHANNEL ?>" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        <a href="https://github.com/mahirgul/AiPBX" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
 </header>

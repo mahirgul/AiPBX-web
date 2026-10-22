@@ -58,7 +58,10 @@ if (preg_match('~<p>(.*?)</p>~s', $html, $m)) {
     $firstPara = trim(preg_replace('/\s+/', ' ', strip_tags($m[1])));
 }
 $seoOverride = [
-    'title' => $title . ' — AiPBX Documentation',
+    // The index page is titled "AiPBX Documentation" itself: say what it is instead of repeating it.
+    'title' => $title === 'AiPBX Documentation'
+        ? 'AiPBX Documentation: Open-Source IP PBX, SIP and VoIP Admin Guide'
+        : $title . ' — AiPBX Documentation',
     'desc'  => mb_strimwidth($firstPara !== '' ? $firstPara : 'AiPBX documentation: ' . $title, 0, 160, '…'),
     'slug'  => '/docs/' . $current,
 ];

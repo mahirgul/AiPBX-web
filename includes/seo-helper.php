@@ -63,6 +63,34 @@ $pageSeoMap = array (
     ),
     'slug' => '/android',
   ),
+  'features' => array (
+    'tr' => array ('title' => 'AiPBX Özellikleri: Açık Kaynak IP Santral, SIP, VoIP ve Yapay Zekâ', 'desc' => 'AiPBX ile neler yapılır: dahililer, SIP trunk, IVR, kuyruklar, çağrı merkezi, faks, WebRTC, masaüstü telefonlar ve yerel yapay zekâ. Ücretsiz, açık kaynak IP santral.', 'keywords' => 'AiPBX özellikleri, IP santral, açık kaynak santral, SIP santral, VoIP santral, yapay zeka santral, AI PBX, çağrı merkezi yazılımı, IVR, SIP trunk, Asterisk 22, WebRTC, faks sunucusu, telefon santrali'),
+    'en' => array ('title' => 'AiPBX Features: Open-Source IP PBX, SIP, VoIP Phone System with AI', 'desc' => 'What AiPBX does: extensions, SIP trunks, IVR, queues, a call center, fax, WebRTC, desk phones and local AI. A free, open-source IP PBX built on Asterisk 22.', 'keywords' => 'AiPBX features, IP PBX, open source PBX, SIP PBX, VoIP phone system, AI PBX, AI powered PBX, call center software, IVR, SIP trunk, Asterisk 22, WebRTC, fax server, business phone system'),
+    'de' => array ('title' => 'AiPBX Funktionen: Open-Source-IP-Telefonanlage, SIP, VoIP und KI', 'desc' => 'Was AiPBX kann: Nebenstellen, SIP-Trunks, IVR, Warteschlangen, Callcenter, Fax, WebRTC, Tischtelefone und lokale KI. Kostenlose Open-Source-Telefonanlage auf Asterisk 22.', 'keywords' => 'AiPBX Funktionen, IP-Telefonanlage, Open Source Telefonanlage, SIP Telefonanlage, VoIP Telefonanlage, KI Telefonanlage, AI PBX, Callcenter Software, IVR, SIP-Trunk, Asterisk 22, WebRTC, Faxserver'),
+    'az' => array ('title' => 'AiPBX xüsusiyyətləri: açıq mənbəli IP santral, SIP, VoIP və süni intellekt', 'desc' => 'AiPBX: daxili nömrələr, SIP trunk, IVR, növbələr, çağrı mərkəzi, faks, WebRTC, masaüstü telefonlar və yerli süni intellekt. Pulsuz, açıq mənbəli IP santral.', 'keywords' => 'AiPBX xüsusiyyətləri, IP santral, açıq mənbəli santral, SIP santral, VoIP santral, süni intellekt santral, AI PBX, çağrı mərkəzi, IVR, SIP trunk, Asterisk 22, WebRTC'),
+    'slug' => '/features',
+  ),
+  'install' => array (
+    'tr' => array ('title' => 'AiPBX Kurulumu: Ubuntu 26.04 Üzerine Tek Komutla IP Santral (Asterisk 22)', 'desc' => 'AiPBX açık kaynak IP santrali Ubuntu 26.04 sunucuya tek komutla kurun: Asterisk 22, PJSIP, WebRTC, SIP/TLS, sertifika ve güvenlik duvarı. Videolu anlatımla.', 'keywords' => 'AiPBX kurulumu, santral kurulumu, IP santral kurulumu, Asterisk kurulumu, Asterisk 22 Ubuntu, VoIP sunucu kurulumu, SIP sunucu kurulumu, açık kaynak santral kurulumu, Ubuntu 26.04 santral'),
+    'en' => array ('title' => 'Install AiPBX: Open-Source IP PBX on Ubuntu 26.04 in One Command', 'desc' => 'Install the AiPBX open-source IP PBX on an Ubuntu 26.04 server with one command: Asterisk 22, PJSIP, WebRTC, SIP over TLS, certificates and firewall. With a video guide.', 'keywords' => 'install AiPBX, PBX installation, IP PBX installation, install Asterisk, Asterisk 22 Ubuntu, VoIP server setup, SIP server setup, open source PBX install, Ubuntu 26.04 PBX'),
+    'de' => array ('title' => 'AiPBX installieren: IP-Telefonanlage mit einem Befehl auf Ubuntu 26.04', 'desc' => 'Die Open-Source-Telefonanlage AiPBX mit einem Befehl auf Ubuntu 26.04 installieren: Asterisk 22, PJSIP, WebRTC, SIP über TLS, Zertifikate und Firewall. Mit Video.', 'keywords' => 'AiPBX installieren, Telefonanlage installieren, IP-Telefonanlage einrichten, Asterisk installieren, Asterisk 22 Ubuntu, VoIP Server einrichten, SIP Server, Open Source Telefonanlage'),
+    'az' => array ('title' => 'AiPBX quraşdırılması: Ubuntu 26.04 üzərində bir əmrlə IP santral', 'desc' => 'AiPBX açıq mənbəli IP santralını Ubuntu 26.04 serverə bir əmrlə quraşdırın: Asterisk 22, PJSIP, WebRTC, TLS üzərindən SIP, sertifikat və firewall. Video ilə.', 'keywords' => 'AiPBX quraşdırma, santral quraşdırma, IP santral quraşdırma, Asterisk quraşdırma, Asterisk 22 Ubuntu, VoIP server, SIP server'),
+    'slug' => '/install',
+  ),
+  'videos' => array (
+    'tr' => array ('title' => 'AiPBX Videoları: IP Santral Kurulumu ve Yönetim Paneli Turu', 'desc' => 'AiPBX açık kaynak IP santralin kurulumu ve yönetim paneli adım adım, Türkçe anlatım ve altyazıyla. SIP, VoIP, IVR, çağrı merkezi ve yapay zekâ ekranları.', 'keywords' => 'AiPBX video, santral kurulum videosu, IP santral eğitimi, Asterisk eğitim, VoIP eğitim videosu, SIP santral kurulumu video, açık kaynak santral'),
+    'en' => array ('title' => 'AiPBX Videos: IP PBX Installation and Admin Portal Tour', 'desc' => 'Watch the AiPBX open-source IP PBX being installed and its admin portal step by step, narrated and subtitled: SIP, VoIP, IVR, call center and AI screens.', 'keywords' => 'AiPBX video, PBX installation video, IP PBX tutorial, Asterisk tutorial, VoIP tutorial, SIP PBX setup video, open source PBX'),
+    'de' => array ('title' => 'AiPBX Videos: Installation und Portal-Tour der IP-Telefonanlage', 'desc' => 'Die Open-Source-Telefonanlage AiPBX: Installation und Verwaltungsportal Schritt für Schritt, mit Sprecher und Untertiteln. SIP, VoIP, IVR, Callcenter und KI.', 'keywords' => 'AiPBX Video, Telefonanlage Installation Video, IP-Telefonanlage Anleitung, Asterisk Tutorial, VoIP Tutorial, SIP Telefonanlage, Open Source'),
+    'az' => array ('title' => 'AiPBX videoları: IP santralın quraşdırılması və idarəetmə paneli', 'desc' => 'AiPBX açıq mənbəli IP santralın quraşdırılması və idarəetmə paneli addım-addım, səsli izah və altyazı ilə: SIP, VoIP, IVR, çağrı mərkəzi və süni intellekt.', 'keywords' => 'AiPBX video, santral quraşdırma videosu, IP santral təlimi, Asterisk, VoIP, SIP santral'),
+    'slug' => '/videos',
+  ),
+  'mobile' => array (
+    'tr' => array ('title' => 'AiPBX Mobil: Android ve iOS SIP Softphone Uygulaması', 'desc' => 'Dahiliniz cebinizde: AiPBX Android ve iOS uygulamasıyla SIP ve WebRTC üzerinden sesli ve görüntülü arama, sohbet ve rehber. Yalnızca kendi santralinize bağlanır.', 'keywords' => 'AiPBX mobil, SIP softphone, Android softphone, iOS softphone, santral mobil uygulama, VoIP uygulaması, dahili telefon uygulaması, WebRTC'),
+    'en' => array ('title' => 'AiPBX Mobile: Android and iOS SIP Softphone App', 'desc' => 'Your extension in your pocket: the AiPBX Android and iOS app for voice and video calls, chat and the directory over SIP and WebRTC. It connects only to your own PBX.', 'keywords' => 'AiPBX mobile, SIP softphone, Android softphone, iOS softphone, PBX mobile app, VoIP app, extension app, WebRTC'),
+    'de' => array ('title' => 'AiPBX Mobil: SIP-Softphone-App für Android und iOS', 'desc' => 'Ihre Nebenstelle in der Tasche: die AiPBX-App für Android und iOS mit Sprach- und Videoanrufen, Chat und Telefonbuch über SIP und WebRTC. Nur mit Ihrer eigenen Anlage.', 'keywords' => 'AiPBX mobil, SIP Softphone, Android Softphone, iOS Softphone, Telefonanlage App, VoIP App, Nebenstelle App, WebRTC'),
+    'az' => array ('title' => 'AiPBX Mobil: Android və iOS SIP softphone tətbiqi', 'desc' => 'Daxili nömrəniz cibinizdə: AiPBX Android və iOS tətbiqi ilə SIP və WebRTC üzərindən səsli və görüntülü zəng, söhbət və kataloq. Yalnız öz santralınıza qoşulur.', 'keywords' => 'AiPBX mobil, SIP softphone, Android softphone, iOS softphone, santral tətbiqi, VoIP tətbiqi, WebRTC'),
+    'slug' => '/mobile',
+  ),
 );
 
 // Aktif sayfa belirle ($page değişkeni PHP sayfasında set edilmeli)
@@ -133,16 +161,16 @@ $graph = [
         'url'                    => SITE_URL . '/',
         'image'                  => $ogImage,
         'screenshot'             => [SITE_URL . '/img/screenshot_dialer.png', SITE_URL . '/img/screenshot_call.png'],
-        'installUrl'             => lang_url('/installation', $LANG),
+        'installUrl'             => lang_url('/install', $LANG),
         'downloadUrl'            => 'https://github.com/mahirgul/AiPBX',
         'license'                => 'https://opensource.org/licenses/MIT',
         'isAccessibleForFree'    => true,
         'offers'                 => ['@type' => 'Offer', 'price' => '0', 'priceCurrency' => 'USD'],
         'author'                 => ['@id' => SITE_URL . '/#author'],
-        'sameAs'                 => ['https://github.com/mahirgul/AiPBX'],
+        'sameAs'                 => ['https://github.com/mahirgul/AiPBX', YOUTUBE_CHANNEL],
     ],
     [
-        '@type'              => ($pageKey === 'api-docs' || $pageKey === 'installation') ? ['WebPage', 'TechArticle'] : 'WebPage',
+        '@type'              => ($pageKey === 'install') ? ['WebPage', 'TechArticle'] : 'WebPage',
         '@id'                => $canonical . '#webpage',
         'url'                => $canonical,
         'name'               => $seoTitle,
@@ -166,8 +194,8 @@ $graph = [
     ],
 ];
 
-// FAQ rich result data (the same Q&A is visible in the #faq section of the homepage)
-if ($pageKey === 'index' && !empty($faq)) {
+// FAQ rich result data (the same Q&A is visible in the FAQ of the features page)
+if ($pageKey === 'features' && !empty($faq)) {
     $graph[] = [
         '@type'      => 'FAQPage',
         '@id'        => $canonical . '#faq',
@@ -178,6 +206,29 @@ if ($pageKey === 'index' && !empty($faq)) {
             'acceptedAnswer' => ['@type' => 'Answer', 'text' => strip_tags(getLocal($f, 'a'))],
         ], $faq),
     ];
+}
+
+// Video rich results: the videos on the install and videos pages (ids in data.php).
+if (in_array($pageKey, ['install', 'videos'], true)) {
+    foreach (($pageKey === 'install' ? ['install'] : array_keys(VIDEOS)) as $kind) {
+        $vid = video_id($kind, $LANG);
+        $info = VIDEO_INFO[$vid] ?? null;
+        if ($vid === '' || $info === null) continue;
+        $graph[] = [
+            '@type'        => 'VideoObject',
+            '@id'          => $canonical . '#video-' . $kind,
+            'name'         => $info['title'],
+            'description'  => $info['desc'],
+            'thumbnailUrl' => ['https://i.ytimg.com/vi/' . $vid . '/maxresdefault.jpg', 'https://i.ytimg.com/vi/' . $vid . '/hqdefault.jpg'],
+            'uploadDate'   => $info['date'],
+            'duration'     => $info['duration'],
+            'contentUrl'   => 'https://www.youtube.com/watch?v=' . $vid,
+            'embedUrl'     => 'https://www.youtube-nocookie.com/embed/' . $vid,
+            'inLanguage'   => $info['lang'],
+            'publisher'    => ['@id' => SITE_URL . '/#author'],
+            'about'        => ['@id' => SITE_URL . '/#software'],
+        ];
+    }
 }
 ?>
 

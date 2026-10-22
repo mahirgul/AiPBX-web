@@ -33,6 +33,19 @@ const VIDEOS = [
     'tour'    => [],
 ];
 
+// For the VideoObject structured data (search results show the video).
+const VIDEO_INFO = [
+    'eDHHHW6ZcvQ' => ['lang' => 'tr', 'date' => '2026-10-23', 'duration' => 'PT3M48S',
+        'title' => 'AiPBX Kurulumu: Açık Kaynak IP Santral Adım Adım (Ubuntu 26.04 · Asterisk 22)',
+        'desc' => 'AiPBX açık kaynak IP santralin boş bir Ubuntu 26.04 sunucuya tek komutla kurulumu: Asterisk 22, PJSIP, WebRTC, SIP/TLS, T.38 faks, çağrı merkezi ve yerel yapay zekâ.'],
+    'lH1-k_z5jFE' => ['lang' => 'en', 'date' => '2026-10-23', 'duration' => 'PT4M24S',
+        'title' => 'How to Install AiPBX: Open-Source AI-Powered IP PBX, Step by Step (Ubuntu 26.04 · Asterisk 22)',
+        'desc' => 'Installing the AiPBX open-source IP PBX on an empty Ubuntu 26.04 server with one command: Asterisk 22, PJSIP, WebRTC, SIP over TLS, T.38 fax, a call center and local AI.'],
+    '1QuOM6Rtcbg' => ['lang' => 'de', 'date' => '2026-10-23', 'duration' => 'PT4M3S',
+        'title' => 'AiPBX installieren: Quelloffene IP-Telefonanlage mit KI, Schritt für Schritt (Ubuntu 26.04)',
+        'desc' => 'Installation der Open-Source-Telefonanlage AiPBX mit einem Befehl auf einem leeren Ubuntu-26.04-Server: Asterisk 22, PJSIP, WebRTC, SIP über TLS, T.38-Fax, Callcenter und lokale KI.'],
+];
+
 /** "/css/site.css" -> "/css/site.css?v=<mtime>": browsers fetch a file again as soon as it changes. */
 function asset(string $path): string {
     $t = @filemtime(dirname(__DIR__) . $path);
