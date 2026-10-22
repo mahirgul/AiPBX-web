@@ -31,3 +31,6 @@
     .docs-layout .docs-sidebar { order: 2; position: static; height: auto; border-right: 0; border-top: 1px solid #e2e8f0; padding: 20px 0 0; }
     .docs-md h1 { font-size: 1.8rem; }
 }
+/* Diagrams: docs/img/*.svg (Mermaid), put inline by DocsService. */
+.docs-md figure.doc-diagram { margin: 16px 0 24px; padding: 14px; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow-x: auto; }
+.docs-md figure.doc-diagram svg { display: block; margin: 0 auto; height: auto; }
