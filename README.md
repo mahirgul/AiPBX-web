@@ -1,10 +1,11 @@
 # AiPBX Website & Documentation Portal (`aipbx.bid`)
 
-The official marketing website, documentation viewer, and Android closed testing registration portal for [AiPBX](https://github.com/mahirgul/AiPBX).
+The official marketing website, documentation viewer, and mobile portal for [AiPBX](https://github.com/mahirgul/AiPBX).
 
 🌐 **Live Website:** [https://aipbx.bid](https://aipbx.bid)  
 📦 **Main PBX Repository:** [mahirgul/AiPBX](https://github.com/mahirgul/AiPBX)  
-🧩 **Plugins Repository:** [mahirgul/AiPBX-plugins](https://github.com/mahirgul/AiPBX-plugins)
+🧩 **Plugins Repository:** [mahirgul/AiPBX-plugins](https://github.com/mahirgul/AiPBX-plugins)  
+📱 **Google Play Store:** [AiPBX on Google Play](https://play.google.com/store/apps/details?id=com.mhrgl.AiPBX)
 
 ---
 
@@ -21,7 +22,6 @@ The official marketing website, documentation viewer, and Android closed testing
 ## 🏗️ Structure
 
 ```text
-├── android.php          # Android Closed Testing early access registration
 ├── css/
 │   ├── docs-md.css      # Documentation Markdown rendering stylesheet
 │   └── site.css         # Modern, responsive site chrome (navbar, footer, hero, cards)
