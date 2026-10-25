@@ -31,7 +31,7 @@ const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mhrgl.
 // Add the menu tour ids here when they are uploaded; an empty list hides the video.
 const VIDEOS = [
     'install' => ['tr' => 'eDHHHW6ZcvQ', 'en' => 'lH1-k_z5jFE', 'de' => '1QuOM6Rtcbg'],
-    'tour'    => [],
+    'tour'    => ['tr' => 'Teol14NgXbY', 'en' => 'xU0BYN6AKE4', 'de' => '8whV_DY3ZqQ'],
 ];
 
 // For the VideoObject structured data (search results show the video).
@@ -45,6 +45,15 @@ const VIDEO_INFO = [
     '1QuOM6Rtcbg' => ['lang' => 'de', 'date' => '2026-10-23', 'duration' => 'PT4M3S',
         'title' => 'AiPBX installieren: Quelloffene IP-Telefonanlage mit KI, Schritt für Schritt (Ubuntu 26.04)',
         'desc' => 'Installation der Open-Source-Telefonanlage AiPBX mit einem Befehl auf einem leeren Ubuntu-26.04-Server: Asterisk 22, PJSIP, WebRTC, SIP über TLS, T.38-Fax, Callcenter und lokale KI.'],
+    'Teol14NgXbY' => ['lang' => 'tr', 'date' => '2026-10-25', 'duration' => 'PT9M47S',
+        'title' => 'AiPBX Menü Turu: Açık Kaynak IP Santralin Bütün Ekranları (Asterisk 22 · WebRTC · Çağrı Merkezi)',
+        'desc' => 'AiPBX yönetim panelinin bütün menülerini sırayla tanıtıyoruz: dahililer, SIP dış hatlar, gelen ve giden yönlendirmeler, IVR, kuyruklar, çağrı merkezi, faks, yerel yapay zekâ, entegrasyonlar ve güvenlik. Örnek verilerle, yeni kurulmuş bir santral üzerinde.'],
+    'xU0BYN6AKE4' => ['lang' => 'en', 'date' => '2026-10-25', 'duration' => 'PT10M46S',
+        'title' => 'AiPBX Menu Tour: Every Screen of the Open-Source IP PBX (Asterisk 22 · WebRTC · Call Center)',
+        'desc' => 'We walk through every menu of the AiPBX administration portal: extensions, SIP trunks, inbound and outbound routes, IVR, queues, the call center, fax, local AI, integrations and security. With sample data, on a freshly installed system.'],
+    '8whV_DY3ZqQ' => ['lang' => 'de', 'date' => '2026-10-25', 'duration' => 'PT10M4S',
+        'title' => 'AiPBX Menütour: Alle Seiten der Open-Source-Telefonanlage (Asterisk 22 · WebRTC · Callcenter)',
+        'desc' => 'Wir gehen alle Menüs des AiPBX-Verwaltungsportals durch: Nebenstellen, SIP-Trunks, eingehende und ausgehende Routen, IVR, Warteschlangen, Callcenter, Fax, lokale KI, Integrationen und Sicherheit. Mit Beispieldaten auf einer frisch installierten Anlage.'],
 ];
 
 /** "/css/site.css" -> "/css/site.css?v=<mtime>": browsers fetch a file again as soon as it changes. */
