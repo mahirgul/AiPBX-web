@@ -201,44 +201,4 @@
     <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/mobile"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/en/mobile"/>
   </url>
-  <url>
-    <loc>https://aipbx.bid/android</loc>
-    <lastmod>2026-10-23</lastmod>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/android"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/en/android"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/android"/>
-    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/android"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/en/android"/>
-  </url>
-  <url>
-    <loc>https://aipbx.bid/en/android</loc>
-    <lastmod>2026-10-23</lastmod>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/android"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/en/android"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/android"/>
-    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/android"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/en/android"/>
-  </url>
-  <url>
-    <loc>https://aipbx.bid/de/android</loc>
-    <lastmod>2026-10-23</lastmod>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/android"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/en/android"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/android"/>
-    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/android"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/en/android"/>
-  </url>
-  <url>
-    <loc>https://aipbx.bid/az/android</loc>
-    <lastmod>2026-10-23</lastmod>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/android"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/en/android"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/android"/>
-    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/android"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/en/android"/>
-  </url>
 </urlset>

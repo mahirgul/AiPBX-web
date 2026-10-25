@@ -35,34 +35,6 @@ $pageSeoMap = array (
     ),
     'slug' => '/',
   ),
-  'android' => 
-  array (
-    'tr' => 
-    array (
-      'title' => 'Android Google Play Kapalı Test & Erken Erişim | AiPBX',
-      'desc' => 'AiPBX Android kurumsal softphone uygulamasının Google Play kapalı test (Closed Testing) sürecine katılın. Google Grubu veya kayıt formuyla hemen erişim sağlayın.',
-      'keywords' => 'AiPBX Android, Google Play kapalı test, closed testing track, AiPBX tester kayıt, Android PBX erken erişim',
-    ),
-    'en' => 
-    array (
-      'title' => 'Android Google Play Closed Testing & Early Access | AiPBX',
-      'desc' => 'Join the Google Play closed testing track for AiPBX Android enterprise softphone. Get instant access via Google Group or tester registration form.',
-      'keywords' => 'AiPBX Android, Google Play closed testing, closed track, AiPBX tester signup, Android PBX early access',
-    ),
-    'de' => 
-    array (
-      'title' => 'Android Google Play Closed-Testing & Vorabzugang | AiPBX',
-      'desc' => 'Nehmen Sie am Google Play Closed Testing für das AiPBX Android Enterprise-Softphone teil. Sofortiger Zugang über Google Group oder Registrierungsformular.',
-      'keywords' => 'AiPBX Android, Google Play Closed-Testing, Closed Track, AiPBX Tester Anmeldung, Android PBX Vorabzugang',
-    ),
-    'az' => 
-    array (
-      'title' => 'Android Google Play Qapalı Test & Erkən Giriş | AiPBX',
-      'desc' => 'AiPBX Android korporativ softphone tətbiqinin Google Play qapalı test (Closed Testing) prosesinə qoşulun. Google Qrupu və ya qeydiyyat forması ilə dərhal giriş əldə edin.',
-      'keywords' => 'AiPBX Android, Google Play qapalı test, closed testing track, AiPBX tester qeydiyyat, Android PBX erkən giriş',
-    ),
-    'slug' => '/android',
-  ),
   'features' => array (
     'tr' => array ('title' => 'AiPBX Özellikleri: Açık Kaynak IP Santral, SIP, VoIP ve Yapay Zekâ', 'desc' => 'AiPBX ile neler yapılır: dahililer, SIP trunk, IVR, kuyruklar, çağrı merkezi, faks, WebRTC, masaüstü telefonlar ve yerel yapay zekâ. Ücretsiz, açık kaynak IP santral.', 'keywords' => 'AiPBX özellikleri, IP santral, açık kaynak santral, SIP santral, VoIP santral, yapay zeka santral, AI PBX, çağrı merkezi yazılımı, IVR, SIP trunk, Asterisk 22, WebRTC, faks sunucusu, telefon santrali'),
     'en' => array ('title' => 'AiPBX Features: Open-Source IP PBX, SIP, VoIP Phone System with AI', 'desc' => 'What AiPBX does: extensions, SIP trunks, IVR, queues, a call center, fax, WebRTC, desk phones and local AI. A free, open-source IP PBX built on Asterisk 22.', 'keywords' => 'AiPBX features, IP PBX, open source PBX, SIP PBX, VoIP phone system, AI PBX, AI powered PBX, call center software, IVR, SIP trunk, Asterisk 22, WebRTC, fax server, business phone system'),

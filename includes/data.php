@@ -26,6 +26,7 @@ const SITE_URL     = 'https://aipbx.bid';
 const SITE_LANGS   = ['tr', 'en', 'de', 'az'];
 const DEFAULT_LANG = 'tr';
 const YOUTUBE_CHANNEL = 'https://www.youtube.com/@aipbx';
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mhrgl.AiPBX';
 // YouTube video ids per language (no Azerbaijani video: Turkish is shown there).
 // Add the menu tour ids here when they are uploaded; an empty list hides the video.
 const VIDEOS = [

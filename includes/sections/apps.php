@@ -13,9 +13,9 @@
             <div class="sx-apps">
                 <div class="sx-app">
                     <h3><i class="fa-brands fa-android" style="color:#16a34a"></i> Android</h3>
-                    <p><?= t('Google Play\'de kapalı testte. Teste katılın ya da APK dosyasını doğrudan indirin.', 'In closed testing on Google Play. Join the test or download the APK directly.', 'Im geschlossenen Test auf Google Play. Am Test teilnehmen oder die APK direkt herunterladen.', az: 'Google Play-də qapalı testdədir. Testə qoşulun və ya APK faylını birbaşa yükləyin.') ?></p>
+                    <p><?= t('Google Play Store\'dan indirin ya da APK dosyasını doğrudan edinin.', 'Get it on Google Play Store or download the APK directly.', 'Im Google Play Store herunterladen oder die APK direkt beziehen.', az: 'Google Play Store-dan yükləyin və ya APK faylını birbaşa əldə edin.') ?></p>
                     <div class="row">
-                        <a href="/android" class="sx-btn sx-btn-primary"><i class="fa-brands fa-google-play"></i> <?= t('Teste katıl', 'Join the test', 'Am Test teilnehmen', az: 'Testə qoşul') ?></a>
+                        <a href="<?= PLAY_STORE_URL ?>" target="_blank" rel="noopener" class="sx-btn sx-btn-primary"><i class="fa-brands fa-google-play"></i> Google Play</a>
                         <a href="<?= e(download_url('aipbx-latest.apk')) ?>" class="sx-btn sx-btn-ghost"><i class="fa-solid fa-download"></i> APK</a>
                     </div>
                 </div>

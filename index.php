@@ -17,11 +17,11 @@ require_once __DIR__ . '/includes/content.php';
 <?php include __DIR__ . '/includes/navbar.php'; ?>
 
 <main>
-    <a href="/android" class="sx-beta">
+    <a href="<?= PLAY_STORE_URL ?>" target="_blank" rel="noopener" class="sx-beta">
         <span class="sx-beta-in">
             <i class="fa-brands fa-google-play"></i>
-            <span><?= t('<b>Android uygulaması Google Play\'de kapalı testte.</b> Teste katılın, ilk siz deneyin.', '<b>The Android app is in closed testing on Google Play.</b> Join the test and try it first.', '<b>Die Android-App ist im geschlossenen Test auf Google Play.</b> Machen Sie mit und testen Sie zuerst.', az: '<b>Android tətbiqi Google Play-də qapalı testdədir.</b> Testə qoşulun, ilk siz sınayın.') ?></span>
-            <span class="sx-beta-btn"><?= t('Teste katıl', 'Join the test', 'Am Test teilnehmen', az: 'Testə qoşul') ?> →</span>
+            <span><?= t('<b>AiPBX Android uygulaması Google Play Store\'da!</b> Hemen yükleyin ve deneyin.', '<b>The AiPBX Android app is on Google Play Store!</b> Install and try it now.', '<b>Die AiPBX Android-App ist im Google Play Store!</b> Jetzt installieren und ausprobieren.', az: '<b>AiPBX Android tətbiqi Google Play Store-dadır!</b> İndi quraşdırın və sınayın.') ?></span>
+            <span class="sx-beta-btn"><?= t('Google Play\'den İndir', 'Get it on Google Play', 'Auf Google Play laden', az: 'Google Play-dən yüklə') ?> →</span>
         </span>
     </a>
     <section class="sx-hero">

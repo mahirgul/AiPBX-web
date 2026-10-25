@@ -15,7 +15,7 @@ $rel = latest_release();
         <div class="sx-footer-links">
             <a href="/docs"><?= t('Dokümantasyon', 'Documentation', 'Dokumentation', az: 'Sənədlər') ?></a>
             <a href="https://github.com/mahirgul/AiPBX/releases" target="_blank" rel="noopener"><?= t('Sürüm notları', 'Release notes', 'Versionshinweise', az: 'Buraxılış qeydləri') ?></a>
-            <a href="/android"><?= t('Android testi', 'Android test', 'Android-Test', az: 'Android testi') ?></a>
+            <a href="<?= PLAY_STORE_URL ?>" target="_blank" rel="noopener"><i class="fa-brands fa-google-play" style="margin-right:3px;"></i>Google Play</a>
             <a href="https://github.com/mahirgul/AiPBX/issues" target="_blank" rel="noopener"><?= t('Hata bildir', 'Report an issue', 'Fehler melden', az: 'Xəta bildir') ?></a>
             <a href="https://github.com/sponsors/mahirgul" target="_blank" rel="noopener" style="color:#ea4aaa; font-weight:600;"><i class="fa-solid fa-heart"></i> <?= t('Sponsor Ol', 'Sponsor', 'Sponsorn', az: 'Sponsor ol') ?></a>
             <a href="<?= YOUTUBE_CHANNEL ?>" target="_blank" rel="noopener">YouTube</a>

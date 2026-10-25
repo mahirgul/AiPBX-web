@@ -12,7 +12,7 @@ The official marketing website, documentation viewer, and Android closed testing
 
 - **Landing Page (`index.php`):** Highlighting AiPBX core features, turnkey one-command installation, screenshots of live system management, mobile app showcase, GitHub release versioning, and community sponsor support.
 - **Documentation Hub (`docs.php`):** Renders all Markdown documentation files directly from the main `AiPBX` repository in real time. Hourly automated synchronization via cron pulls latest docs without manual deploys.
-- **Android Closed Testing Portal (`android.php`):** Two-step registration workflow enforcing Google Group membership before unlocking Google Play Store closed track early access.
+- **Android App & Store Links:** Direct Google Play Store link and direct APK download.
 - **Multilingual Support (i18n):** Full support for Turkish (TR), English (EN), German (DE), and Azerbaijani (AZ).
 - **SEO & Social Optimization:** Dynamic OpenGraph preview tags, canonical URLs, JSON-LD schemas, and auto-generated XML sitemaps (`sitemap.xml`, `sitemap-docs.xml`).
 
