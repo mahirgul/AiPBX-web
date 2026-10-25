@@ -48,8 +48,7 @@ DirectoryIndex index.php index.html
     # home page or a document in /docs. Permanent redirects keep links and search
     # results working.
     RewriteRule ^((?:en|de|az)/)?(?:tables|msteams|callcenter)(?:\.php|\.html)?/?$ /$1features [R=301,L]
-    RewriteRule ^((?:en|de|az)/)?mobile-apps(?:\.php|\.html)?/?$ /$1mobile [R=301,L]
-    RewriteRule ^((?:en|de|az)/)?android(?:\.php|\.html)?/?$ https://play.google.com/store/apps/details?id=com.mhrgl.AiPBX [R=301,L]
+    RewriteRule ^((?:en|de|az)/)?(?:mobile-apps|android)(?:\.php|\.html)?/?$ /$1mobile [R=301,L]
     RewriteRule ^((?:en|de|az)/)?installation(?:\.php|\.html)?/?$ /$1install [R=301,L]
     RewriteRule ^((?:en|de|az)/)?architecture(?:\.php|\.html)?/?$ /$1docs/system-map [R=301,L]
     RewriteRule ^((?:en|de|az)/)?security(?:\.php|\.html)?/?$ /$1docs/security [R=301,L]
