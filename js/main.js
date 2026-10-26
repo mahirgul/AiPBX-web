@@ -281,7 +281,7 @@ function updateScreenDisplay(index, lang) {
 }
 
 // 2. Language Management (TR / EN / DE)
-// Each language lives at its own URL (/, /en/, /de/) and the server renders only
+// Each language lives at its own URL (/ = English, /tr/, /de/, /az/) and the server renders only
 // that language, so switching language means navigating to the alternate URL.
 function setLanguage(lang) {
     if (lang === document.documentElement.lang) return;
@@ -292,7 +292,7 @@ function setLanguage(lang) {
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Render the interactive screen switcher in the page language
-    updateScreenDisplay(activeScreenIndex, document.documentElement.lang || 'tr');
+    updateScreenDisplay(activeScreenIndex, document.documentElement.lang || 'en');
 
     // Language Dropdown Toggle
     const langSelector = document.getElementById('langSelector');

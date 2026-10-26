@@ -14,7 +14,7 @@ The official marketing website, documentation viewer, and mobile portal for [AiP
 - **Landing Page (`index.php`):** Highlighting AiPBX core features, turnkey one-command installation, screenshots of live system management, mobile app showcase, GitHub release versioning, and community sponsor support.
 - **Documentation Hub (`docs.php`):** Renders all Markdown documentation files directly from the main `AiPBX` repository in real time. Hourly automated synchronization via cron pulls latest docs without manual deploys.
 - **Android App & Store Links:** Direct Google Play Store link and direct APK download.
-- **Multilingual Support (i18n):** Full support for Turkish (TR), English (EN), German (DE), and Azerbaijani (AZ).
+- **Multilingual Support (i18n):** Full support for Turkish (TR), English (EN), German (DE), and Azerbaijani (AZ). English is the unprefixed default (`/features`); the others live under `/tr/`, `/de/` and `/az/`. A first visit is sent to the browser's language once; old `/en/` links redirect (301) to the unprefixed addresses.
 - **SEO & Social Optimization:** Dynamic OpenGraph preview tags, canonical URLs, JSON-LD schemas, and auto-generated XML sitemaps (`sitemap.xml`, `sitemap-docs.xml`).
 
 ---

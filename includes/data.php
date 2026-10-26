@@ -17,14 +17,15 @@ if (file_exists($dataFile)) {
 // ── Language Routing (TR / EN / DE / AZ) ──────────────────────────────────────────
 // The URL alone decides the language, so every URL always serves the same
 // content (a hard requirement for canonical/hreflang SEO):
-//   /features      → TR (default, no prefix)
-//   /en/features   → EN
+//   /features      → EN (default, no prefix; since 2026-10-26, Turkish before)
+//   /tr/features   → TR
 //   /de/features   → DE
 //   /az/features   → AZ
-// .htaccess maps /en/*, /de/* and /az/* onto the same PHP files with SITE_LANG set.
+// .htaccess maps /tr/*, /de/* and /az/* onto the same PHP files with SITE_LANG set,
+// and sends the old /en/* addresses to the unprefixed ones (301).
 const SITE_URL     = 'https://aipbx.bid';
 const SITE_LANGS   = ['tr', 'en', 'de', 'az'];
-const DEFAULT_LANG = 'tr';
+const DEFAULT_LANG = 'en';
 const YOUTUBE_CHANNEL = 'https://www.youtube.com/@aipbx';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mhrgl.AiPBX';
 // YouTube video ids per language (no Azerbaijani video: Turkish is shown there).
@@ -93,29 +94,35 @@ if (isset($_GET['lang']) && in_array(strtolower((string)$_GET['lang']), SITE_LAN
 // First visit to a default-language URL: send humans whose browser prefers
 // another supported language to that version once (302, never cached).
 // Crawlers and anyone who already has a language cookie see the URL as-is.
-if ($LANG === DEFAULT_LANG && !isset($_COOKIE['aipbx_lang'])
+// The cookie was renamed (aipbx_lang → aipbx_locale) when the default became
+// English, so a visitor whose old cookie said "tr" for the unprefixed URLs is
+// asked again by the browser language instead of being pinned to English.
+if ($LANG === DEFAULT_LANG && !isset($_COOKIE['aipbx_locale'])
     && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'GET'
     && !preg_match('/bot|crawl|spider|slurp|lighthouse|preview|facebookexternalhit|embedly|headless/i', $_SERVER['HTTP_USER_AGENT'] ?? 'bot')
     && !empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
     $preferred = DEFAULT_LANG;
     foreach (explode(',', strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE'])) as $l) {
         $code = substr(trim($l), 0, 2);
-        if ($code === 'tr') { $preferred = 'tr'; break; }
-        if ($code === 'az') { $preferred = 'az'; break; }
-        if ($code === 'de') { $preferred = 'de'; break; }
-        if ($code !== '' && $code !== '*') { $preferred = 'en'; break; }
+        if (in_array($code, SITE_LANGS, true)) { $preferred = $code; break; }
+        if ($code !== '' && $code !== '*') { break; }   // any other language: English
     }
     if ($preferred !== DEFAULT_LANG) {
         $qs = $_SERVER['QUERY_STRING'] ?? '';
         header('Cache-Control: private, no-store');
         header('Vary: Accept-Language, Cookie');
+        // The cookie is set on the redirect too: a browser that still holds the
+        // old permanent "/tr/ → /" redirect (Turkish was unprefixed until
+        // 2026-10-26) comes straight back here, and must then stay put instead
+        // of bouncing between the two addresses.
+        setcookie('aipbx_locale', $preferred, ['expires' => time() + 365 * 24 * 3600, 'path' => '/', 'secure' => true, 'samesite' => 'Lax']);
         header('Location: ' . lang_url($PAGE_SLUG, $preferred) . ($qs !== '' ? '?' . $qs : ''), true, 302);
         exit;
     }
 }
 header('Vary: Accept-Language, Cookie');
 header('Content-Language: ' . $LANG);
-setcookie('aipbx_lang', $LANG, ['expires' => time() + 365 * 24 * 3600, 'path' => '/', 'secure' => true, 'samesite' => 'Lax']);
+setcookie('aipbx_locale', $LANG, ['expires' => time() + 365 * 24 * 3600, 'path' => '/', 'secure' => true, 'samesite' => 'Lax']);
 
 /**
  * Pages carry all three translations inline (data-lang="tr|en|de"). Only the
@@ -158,14 +165,14 @@ function strip_foreign_lang(string $html, string $lang): string {
     return $out . substr($html, $pos);
 }
 
-/** Prefix root-relative page links with the language folder (/features → /en/features). */
+/** Prefix root-relative page links with the language folder (/features → /tr/features). */
 function localize_links(string $html, string $lang): string {
     if ($lang === DEFAULT_LANG) return $html;
     return preg_replace_callback('#\bhref="(/[^"]*)"#', function ($m) use ($lang) {
         $url  = $m[1];
         $path = parse_url($url, PHP_URL_PATH) ?? '/';
         if (str_starts_with($url, '//')
-            || preg_match('#^/(en|de|az|css|js|img|downloads|admin|api|cdn-cgi|\.well-known)(/|$)#', $path)
+            || preg_match('#^/(tr|en|de|az|css|js|img|downloads|admin|api|cdn-cgi|\.well-known)(/|$)#', $path)
             || str_contains(basename($path), '.')) {
             return $m[0];
         }

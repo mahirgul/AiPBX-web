@@ -28,40 +28,41 @@ DirectoryIndex index.php index.html
     RewriteRule ^(.*)$ https://aipbx.bid/$1 [R=301,L]
 
     # 2. Duplicate URL forms → one clean URL per page
-    #    /index.html, /index.php, /en/index.php → language root
+    #    /en/... → /... (English is the unprefixed default since 2026-10-26;
+    #    the old /en/ addresses keep working and pass their ranking on)
+    RewriteRule ^en(?:/(.*))?$ /$1 [R=301,L]
+    #    /index.html, /index.php, /tr/index.php → language root
     RewriteCond %{THE_REQUEST} \s/+[^\s?]*\.(?:html|php)[\s?] [NC]
-    RewriteRule ^((?:en|de|az)/)?index\.(?:html|php)$ /$1 [R=301,L]
-    #    /features.html, /features.php, /en/features.php → /features, /en/features (not admin/api)
+    RewriteRule ^((?:tr|de|az)/)?index\.(?:html|php)$ /$1 [R=301,L]
+    #    /features.html, /features.php, /tr/features.php → /features, /tr/features (not admin/api)
     RewriteCond %{THE_REQUEST} \s/+[^\s?]*\.(?:html|php)[\s?] [NC]
     RewriteCond %{DOCUMENT_ROOT}/$2.php -f
-    RewriteRule ^((?:en|de|az)/)?([^/]+)\.(?:html|php)$ /$1$2 [R=301,L]
-    #    /tr/... → /... (Turkish is the unprefixed default)
-    RewriteRule ^tr(?:/(.*))?$ /$1 [R=301,L]
-    #    /en → /en/
-    RewriteRule ^(en|de|az)$ /$1/ [R=301,L]
+    RewriteRule ^((?:tr|de|az)/)?([^/]+)\.(?:html|php)$ /$1$2 [R=301,L]
+    #    /tr → /tr/
+    RewriteRule ^(tr|de|az)$ /$1/ [R=301,L]
     #    /features/ → /features
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond $1 !^(en|de|az)$
-    RewriteRule ^((?:en/|de/)?[^/]+)/$ /$1 [R=301,L]
+    RewriteCond $1 !^(tr|de|az)$
+    RewriteRule ^((?:tr/|de/|az/)?[^/]+)/$ /$1 [R=301,L]
 
     # Pages of the old site (until 2026-10): their content is now a section of the
     # home page or a document in /docs. Permanent redirects keep links and search
     # results working.
-    RewriteRule ^((?:en|de|az)/)?(?:tables|msteams|callcenter)(?:\.php|\.html)?/?$ /$1features [R=301,L]
-    RewriteRule ^((?:en|de|az)/)?(?:mobile-apps|android)(?:\.php|\.html)?/?$ /$1mobile [R=301,L]
-    RewriteRule ^((?:en|de|az)/)?installation(?:\.php|\.html)?/?$ /$1install [R=301,L]
-    RewriteRule ^((?:en|de|az)/)?architecture(?:\.php|\.html)?/?$ /$1docs/system-map [R=301,L]
-    RewriteRule ^((?:en|de|az)/)?security(?:\.php|\.html)?/?$ /$1docs/security [R=301,L]
-    RewriteRule ^((?:en|de|az)/)?api-docs(?:\.php|\.html)?/?$ /$1docs [R=301,L]
+    RewriteRule ^((?:tr|de|az)/)?(?:tables|msteams|callcenter)(?:\.php|\.html)?/?$ /$1features [R=301,L]
+    RewriteRule ^((?:tr|de|az)/)?(?:mobile-apps|android)(?:\.php|\.html)?/?$ /$1mobile [R=301,L]
+    RewriteRule ^((?:tr|de|az)/)?installation(?:\.php|\.html)?/?$ /$1install [R=301,L]
+    RewriteRule ^((?:tr|de|az)/)?architecture(?:\.php|\.html)?/?$ /$1docs/system-map [R=301,L]
+    RewriteRule ^((?:tr|de|az)/)?security(?:\.php|\.html)?/?$ /$1docs/security [R=301,L]
+    RewriteRule ^((?:tr|de|az)/)?api-docs(?:\.php|\.html)?/?$ /$1docs [R=301,L]
 
     # Documentation from the AiPBX repository: /docs/<name> → docs.php?doc=<name>
-    RewriteRule ^(en|de|az)/docs(?:/([A-Za-z0-9_-]+))?$ docs.php?doc=$2 [E=SITE_LANG:$1,QSA,L]
+    RewriteRule ^(tr|de|az)/docs(?:/([A-Za-z0-9_-]+))?$ docs.php?doc=$2 [E=SITE_LANG:$1,QSA,L]
     RewriteRule ^docs(?:/([A-Za-z0-9_-]+))?$ docs.php?doc=$1 [QSA,L]
 
-    # 3. Language folders: /en/, /en/features → index.php / features.php with SITE_LANG=en
-    RewriteRule ^(en|de|az)/$ index.php [E=SITE_LANG:$1,L]
+    # 3. Language folders: /tr/, /tr/features → index.php / features.php with SITE_LANG=tr
+    RewriteRule ^(tr|de|az)/$ index.php [E=SITE_LANG:$1,L]
     RewriteCond %{DOCUMENT_ROOT}/$2.php -f
-    RewriteRule ^(en|de|az)/([^/.]+)$ $2.php [E=SITE_LANG:$1,L]
+    RewriteRule ^(tr|de|az)/([^/.]+)$ $2.php [E=SITE_LANG:$1,L]
 
     # 4. Clean URLs — transparently serve .php when extension is omitted
     RewriteCond %{REQUEST_FILENAME} !-d

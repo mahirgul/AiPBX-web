@@ -339,5 +339,5 @@ function updateScreenDisplay(index, lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    updateScreenDisplay(activeScreenIndex, document.documentElement.lang || 'tr');
+    updateScreenDisplay(activeScreenIndex, document.documentElement.lang || 'en');
 });
