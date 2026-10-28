@@ -69,6 +69,7 @@
     .sx-mobile a { display: block; padding: 12px 4px; border-bottom: 1px solid #f1f5f9; color: var(--sx-ink) !important; text-decoration: none !important; font-weight: 600; }
     .sx-mobile a.sx-join { display: flex; justify-content: center; margin: 10px 0 6px; border: 0; padding: 12px 16px; color: #fff !important; }
     .sx-mobile a.sx-sponsor { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 6px 0; border: 1px solid #fbcfe8; background: #fff0f5; color: #be185d !important; padding: 12px 16px; border-radius: 8px; font-weight: 700; }
+    .sx-mobile a.sx-upcloud { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 6px 0; border: 1px solid #e9d5ff; background: #faf5ff; color: #7e22ce !important; padding: 12px 16px; border-radius: 8px; font-weight: 700; text-decoration: none !important; }
     .sx-mobile a.sx-gh { display: inline-flex; margin-top: 8px; border: 0; color: #fff !important; padding: 10px 16px; }
 }
 
@@ -212,6 +213,8 @@
   border: 1px solid var(--sx-line); background: #fff; font-size: 1.05rem; transition: background .15s, transform .15s; }
 .sx-icon:hover { transform: translateY(-1px); }
 .sx-icon-heart { color: #db2777 !important; background: #fff0f5; border-color: #fbcfe8; }
+.sx-icon-cloud { color: #7e22ce !important; background: #faf5ff; border-color: #e9d5ff; }
+.sx-icon-cloud:hover { background: #f3e8ff; border-color: #d8b4fe; }
 .sx-icon-yt { color: #dc2626 !important; }
 .sx-icon-gh { color: #0f172a !important; }
 @media (max-width: 860px) { .sx-actions .sx-icon { display: none; } }

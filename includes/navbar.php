@@ -44,6 +44,7 @@ $navItems = [
                 </div>
             </div>
             <a href="https://github.com/sponsors/mahirgul" class="sx-icon sx-icon-heart" target="_blank" rel="noopener" aria-label="Sponsor" title="<?= e(['tr' => 'Sponsor ol', 'en' => 'Sponsor', 'de' => 'Sponsern', 'az' => 'Sponsor ol'][$LANG]) ?>"><i class="fa-solid fa-heart"></i></a>
+            <a href="https://signup.upcloud.com/?promo=affiliate-aipbx250&amp;utm_source=aipbx&amp;utm_medium=affiliate&amp;utm_campaign=affiliate-aipbx250" class="sx-icon sx-icon-cloud" target="_blank" rel="noopener sponsored" aria-label="UpCloud" title="<?= e(['tr' => 'UpCloud ($250 Ücretsiz Kredi)', 'en' => 'UpCloud ($250 Free Credit)', 'de' => 'UpCloud ($250 Startguthaben)', 'az' => 'UpCloud ($250 Pulsuz Kredit)'][$LANG]) ?>"><i class="fa-solid fa-cloud"></i></a>
             <a href="<?= YOUTUBE_CHANNEL ?>" class="sx-icon sx-icon-yt" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://github.com/mahirgul/AiPBX" class="sx-icon sx-icon-gh" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
             <button class="sx-burger" id="sxBurger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sxMobile"><span></span><span></span><span></span></button>
@@ -54,6 +55,7 @@ $navItems = [
             <a href="<?= $href ?>"><?= $label ?></a>
         <?php endforeach; ?>
         <a href="https://github.com/sponsors/mahirgul" class="sx-sponsor" target="_blank" rel="noopener"><i class="fa-solid fa-heart"></i> <?= t('GitHub\'da Sponsor Olun', 'Sponsor on GitHub', 'Auf GitHub sponsern', az: 'GitHub-da sponsor olun') ?></a>
+        <a href="https://signup.upcloud.com/?promo=affiliate-aipbx250&amp;utm_source=aipbx&amp;utm_medium=affiliate&amp;utm_campaign=affiliate-aipbx250" class="sx-upcloud" target="_blank" rel="noopener sponsored"><i class="fa-solid fa-cloud"></i> <?= t('UpCloud ($250 Ücretsiz Kredi)', 'UpCloud ($250 Free Credit)', 'UpCloud ($250 Startguthaben)', az: 'UpCloud ($250 Pulsuz Kredit)') ?></a>
         <a href="<?= YOUTUBE_CHANNEL ?>" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
         <a href="https://github.com/mahirgul/AiPBX" class="sx-gh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
