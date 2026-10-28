@@ -14,6 +14,7 @@ $rel = latest_release();
         </div>
         <div class="sx-footer-links">
             <a href="/docs"><?= t('Dokümantasyon', 'Documentation', 'Dokumentation', az: 'Sənədlər') ?></a>
+            <a href="/docs/roadmap"><?= t('Yol Haritası (Roadmap)', 'Roadmap', 'Roadmap', az: 'Yol xəritəsi') ?></a>
             <a href="/contact"><?= t('İletişim', 'Contact', 'Kontakt', az: 'Əlaqə') ?></a>
             <a href="https://github.com/mahirgul/AiPBX/releases" target="_blank" rel="noopener"><?= t('Sürüm notları', 'Release notes', 'Versionshinweise', az: 'Buraxılış qeydləri') ?></a>
             <a href="<?= PLAY_STORE_URL ?>" target="_blank" rel="noopener"><i class="fa-brands fa-google-play" style="margin-right:3px;"></i>Google Play</a>
