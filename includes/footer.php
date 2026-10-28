@@ -20,6 +20,7 @@ $rel = latest_release();
             <a href="https://github.com/sponsors/mahirgul" target="_blank" rel="noopener" style="color:#ea4aaa; font-weight:600;"><i class="fa-solid fa-heart"></i> <?= t('Sponsor Ol', 'Sponsor', 'Sponsorn', az: 'Sponsor ol') ?></a>
             <a href="https://signup.upcloud.com/?promo=affiliate-aipbx250&amp;utm_source=aipbx&amp;utm_medium=affiliate&amp;utm_campaign=affiliate-aipbx250" target="_blank" rel="noopener sponsored" style="color:#7e22ce; font-weight:600;"><i class="fa-solid fa-cloud" style="margin-right:3px;"></i>UpCloud ($250 <?= t('Kredi', 'Credit', 'Guthaben', az: 'Kredit') ?>)</a>
             <a href="<?= YOUTUBE_CHANNEL ?>" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.linkedin.com/in/mhrgl/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" style="margin-right:3px;"></i>LinkedIn</a>
             <a href="https://github.com/mahirgul/AiPBX" target="_blank" rel="noopener">GitHub</a>
         </div>
     </div>

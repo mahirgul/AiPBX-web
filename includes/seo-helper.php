@@ -118,7 +118,7 @@ $graph = [
         '@id'    => SITE_URL . '/#author',
         'name'   => 'Mahir Gül',
         'url'    => 'https://mhrgl.com',
-        'sameAs' => ['https://github.com/mahirgul', 'https://mhrgl.com', 'https://x.com/mhrgl'],
+        'sameAs' => ['https://github.com/mahirgul', 'https://mhrgl.com', 'https://www.linkedin.com/in/mhrgl/', 'https://x.com/mhrgl'],
     ],
     [
         '@type'                  => 'SoftwareApplication',
