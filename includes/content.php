@@ -80,4 +80,4 @@ $shots = [
         t('Dokümantasyon sunucunun içinde: internet olmasa da hata ararken elinizin altında.', 'The documentation is on the server itself: at hand while debugging, even without internet.', 'Die Dokumentation liegt auf dem Server: bei der Fehlersuche griffbereit, auch ohne Internet.', az: 'Sənədlər serverin özündədir: internet olmasa da xəta axtararkən əlinizin altında.')],
 ];
 
-$installCmd = 'curl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash';
+$installCmd = 'curl -fsSL aipbx.bid/i | sudo bash';

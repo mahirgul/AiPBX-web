@@ -15,7 +15,7 @@
     "androidVersion": "1.0.79",
     "build": "59",
     "releaseDate": "2026-10-28",
-    "turnkeyCommand": "curl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash",
+    "turnkeyCommand": "curl -fsSL aipbx.bid/i | sudo bash",
     "gitCloneCommand": "git clone https://github.com/mahirgul/AiPBX.git /opt/aipbx && cd /opt/aipbx && sudo bash install.sh",
     "supportedOS": [
       "Ubuntu 26.04 LTS"
@@ -1227,10 +1227,10 @@
       "qEN": "How can I install AiPBX on my server?",
       "qDE": "Wie kann ich AiPBX auf meinem Server installieren?",
       "qAZ": "AiPBX sistemini serverimə necə quraşdıra bilərəm?",
-      "aTR": "Temiz bir Ubuntu 26.04 LTS sunucusunda tek bir satır komut çalıştırmanız yeterlidir:\ncurl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash\nScript Asterisk 22, Nginx L4 stream, MariaDB, PHP 8 ve Go sohbet motorunu tam otomatik kurar.",
-      "aEN": "On a clean Ubuntu 26.04 LTS machine, run our one-liner turnkey script:\ncurl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash\nThe installer compiles Asterisk 22 and configures Nginx stream, MariaDB, PHP 8, and Go chat automatically.",
-      "aDE": "Führen Sie auf einem frischen Ubuntu 26.04 LTS Server einfach folgenden Einzeiler aus:\ncurl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash\nDas Skript installiert Asterisk 22, Nginx-Stream, MariaDB, PHP 8 und den Go-Chatdienst vollautomatisch.",
-      "aAZ": "Təmiz Ubuntu 26.04 LTS serverində tək sətirlik bir əmr icra etməyiniz kifayətdir:\ncurl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash\nSkript Asterisk 22, Nginx L4 stream, MariaDB, PHP 8 və Go söhbət mühərrikini tam avtomatik quraşdırır."
+      "aTR": "Temiz bir Ubuntu 26.04 LTS sunucusunda tek bir satır komut çalıştırmanız yeterlidir:\ncurl -fsSL aipbx.bid/i | sudo bash\nScript Asterisk 22, Nginx L4 stream, MariaDB, PHP 8 ve Go sohbet motorunu tam otomatik kurar.",
+      "aEN": "On a clean Ubuntu 26.04 LTS machine, run our one-liner turnkey script:\ncurl -fsSL aipbx.bid/i | sudo bash\nThe installer compiles Asterisk 22 and configures Nginx stream, MariaDB, PHP 8, and Go chat automatically.",
+      "aDE": "Führen Sie auf einem frischen Ubuntu 26.04 LTS Server einfach folgenden Einzeiler aus:\ncurl -fsSL aipbx.bid/i | sudo bash\nDas Skript installiert Asterisk 22, Nginx-Stream, MariaDB, PHP 8 und den Go-Chatdienst vollautomatisch.",
+      "aAZ": "Təmiz Ubuntu 26.04 LTS serverində tək sətirlik bir əmr icra etməyiniz kifayətdir:\ncurl -fsSL aipbx.bid/i | sudo bash\nSkript Asterisk 22, Nginx L4 stream, MariaDB, PHP 8 və Go söhbət mühərrikini tam avtomatik quraşdırır."
     }
   ]
 }
