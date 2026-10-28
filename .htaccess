@@ -15,6 +15,9 @@ DirectoryIndex index.php index.html
     RewriteEngine On
     RewriteBase /
 
+    # Quick installer shortcut: curl -fsSL aipbx.bid/i | sudo bash
+    RewriteRule ^(i|install\.sh)$ https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh [R=302,L]
+
     # Block access to dotfiles except .well-known
     RewriteRule ^\.(?!well-known) - [F,L]
 
