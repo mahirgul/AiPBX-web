@@ -11,10 +11,10 @@
     "website": "https://aipbx.bid",
     "repo": "https://github.com/mahirgul/AiPBX",
     "license": "MIT License",
-    "version": "1.12.3",
+    "version": "1.50.20",
     "androidVersion": "1.0.79",
     "build": "59",
-    "releaseDate": "2026-10-10",
+    "releaseDate": "2026-10-28",
     "turnkeyCommand": "curl -fsSL https://raw.githubusercontent.com/mahirgul/AiPBX/main/install.sh | sudo bash",
     "gitCloneCommand": "git clone https://github.com/mahirgul/AiPBX.git /opt/aipbx && cd /opt/aipbx && sudo bash install.sh",
     "supportedOS": [
