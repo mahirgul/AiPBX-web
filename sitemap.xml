@@ -201,4 +201,44 @@
     <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/mobile"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/mobile"/>
   </url>
+  <url>
+    <loc>https://aipbx.bid/tr/contact</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/contact"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/contact</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/contact"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/contact</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/contact"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/contact</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/contact"/>
+  </url>
 </urlset>

@@ -20,6 +20,7 @@ $navItems = [
     ['/videos',   t('Videolar', 'Videos', 'Videos', az: 'Videolar'), 'videos'],
     ['/mobile',   t('Mobil', 'Mobile', 'Mobil', az: 'Mobil'), 'mobile'],
     ['/docs',     t('Belgeler', 'Docs', 'Doku', az: 'Sənədlər'), 'docs'],
+    ['/contact',  t('İletişim', 'Contact', 'Kontakt', az: 'Əlaqə'), 'contact'],
 ];
 ?>
 <header class="sx-nav" id="sxNav">

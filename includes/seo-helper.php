@@ -63,6 +63,29 @@ $pageSeoMap = array (
     'az' => array ('title' => 'AiPBX Mobil: Android və iOS SIP softphone tətbiqi', 'desc' => 'Daxili nömrəniz cibinizdə: AiPBX Android və iOS tətbiqi ilə SIP və WebRTC üzərindən səsli və görüntülü zəng, söhbət və kataloq. Yalnız öz santralınıza qoşulur.', 'keywords' => 'AiPBX mobil, SIP softphone, Android softphone, iOS softphone, santral tətbiqi, VoIP tətbiqi, WebRTC'),
     'slug' => '/mobile',
   ),
+  'contact' => array (
+    'tr' => array (
+      'title' => 'AiPBX İletişim & Destek: Proje Lideri & Danışmanlık',
+      'desc' => 'AiPBX kurumsal telefon santrali, teknik destek, VoIP danışmanlığı ve iş birliği için doğrudan iletişim kanalları. LinkedIn, WhatsApp, Telegram, Signal, E-posta.',
+      'keywords' => 'AiPBX iletişim, Mahir Gül iletişim, VoIP danışmanlığı, Asterisk destek, IP santral teknik destek, VoIP uzmanı, kurumsal santral danışmanlık',
+    ),
+    'en' => array (
+      'title' => 'AiPBX Contact & Support: Direct Channels with Creator',
+      'desc' => 'Direct contact channels for AiPBX IP PBX inquiries, enterprise VoIP consultancy, technical support, and partnerships. LinkedIn, WhatsApp, Telegram, Signal, Email.',
+      'keywords' => 'AiPBX contact, Mahir Gül contact, VoIP consultancy, Asterisk support, IP PBX technical support, enterprise VoIP consultant',
+    ),
+    'de' => array (
+      'title' => 'AiPBX Kontakt & Support: Direkte Kanäle',
+      'desc' => 'Direkte Kontaktkanäle für Fragen zu AiPBX, VoIP-Beratung, technischen Support und Partnerschaften. LinkedIn, WhatsApp, Telegram, Signal, E-Mail.',
+      'keywords' => 'AiPBX Kontakt, Mahir Gül Kontakt, VoIP Beratung, Asterisk Support, Telefonanlage Support, Enterprise VoIP',
+    ),
+    'az' => array (
+      'title' => 'AiPBX Əlaqə & Dəstək: Birbaşa Əlaqə',
+      'desc' => 'AiPBX layihəsi, korporativ VoIP məsləhəti, texniki dəstək və əməkdaşlıq üçün birbaşa əlaqə vasitələri. LinkedIn, WhatsApp, Telegram, Signal, E-poçt.',
+      'keywords' => 'AiPBX əlaqə, Mahir Gül əlaqə, VoIP məsləhət, Asterisk dəstək, IP santral texniki dəstək',
+    ),
+    'slug' => '/contact',
+  ),
 );
 
 // Aktif sayfa belirle ($page değişkeni PHP sayfasında set edilmeli)
