@@ -27,6 +27,21 @@
                     </ul>
                     <a href="https://github.com/mahirgul/AiPBX/blob/main/INSTALL.md" class="sx-btn sx-btn-ghost" target="_blank" rel="noopener"><i class="fa-solid fa-book"></i> <?= t('Kurulum kılavuzu', 'Installation guide', 'Installationsanleitung', az: 'Quraşdırma bələdçisi') ?></a>
                     <a href="/docs" class="sx-btn sx-btn-ghost"><i class="fa-solid fa-life-ring"></i> <?= t('Dokümantasyon', 'Documentation', 'Dokumentation', az: 'Sənədlər') ?></a>
+                    <div style="margin-top: 16px; padding: 12px 14px; border-radius: 8px; background: #faf5ff; border: 1px solid #e9d5ff; text-align: left;">
+                        <div style="display: flex; align-items: center; gap: 7px; margin-bottom: 5px;">
+                            <i class="fa-solid fa-cloud" style="color: #9333ea; font-size: 1rem;"></i>
+                            <strong style="color: #6b21a8; font-size: .88rem;"><?= t('Bulut Sunucu İhtiyacı?', 'Need a Cloud Server?', 'Cloud-Server benötigt?', az: 'Bulud Server Ehtiyacı?') ?></strong>
+                        </div>
+                        <p style="font-size: .82rem; color: #581c87; margin-bottom: 8px; line-height: 1.4;">
+                            <?= t('AiPBX\'i UpCloud üzerinde yüksek hızlı MaxIOPS depolama ile kurun. <strong>$250 ücretsiz kredi</strong> kazanın (Kod: <code>affiliate-aipbx250</code>).',
+                                  'Deploy AiPBX on UpCloud with ultra-fast MaxIOPS storage. Get <strong>$250 free cloud credits</strong> (Promo: <code>affiliate-aipbx250</code>).',
+                                  'AiPBX auf UpCloud mit schnellem MaxIOPS betreiben. <strong>$250 Startguthaben</strong> sichern (Code: <code>affiliate-aipbx250</code>).',
+                                  az: 'AiPBX-i UpCloud-da yüksək sürətli MaxIOPS yaddaşla qurun. <strong>$250 pulsuz kredit</strong> qazanın (Kod: <code>affiliate-aipbx250</code>).') ?>
+                        </p>
+                        <a href="https://signup.upcloud.com/?promo=affiliate-aipbx250&amp;utm_source=aipbx&amp;utm_medium=affiliate&amp;utm_campaign=affiliate-aipbx250" target="_blank" rel="noopener sponsored" style="display: inline-flex; align-items: center; gap: 6px; background: #7e22ce; color: #fff; font-size: .8rem; font-weight: 700; padding: 6px 11px; border-radius: 6px; text-decoration: none;">
+                            <i class="fa-solid fa-bolt"></i> <?= t('UpCloud\'da $250 Kredi ile Başla', 'Deploy on UpCloud ($250 Credit)', 'Auf UpCloud starten ($250)', az: 'UpCloud-da $250 Kreditlə Başla') ?>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
