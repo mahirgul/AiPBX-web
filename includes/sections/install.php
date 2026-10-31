@@ -4,7 +4,7 @@
     <section class="sx-section alt" id="install">
         <div class="sx-wrap">
             <h2 class="sx-h2"><?= t('Kurulum', 'Install', 'Installation', az: 'Quraşdırma') ?></h2>
-            <p class="sx-lead"><?= t('Temiz bir Ubuntu sunucuda tek komut. Gerisini kurulum programı yapar.', 'One command on a clean Ubuntu server. The installer does the rest.', 'Ein Befehl auf einem frischen Ubuntu-Server. Den Rest erledigt der Installer.', az: 'Təmiz Ubuntu serverdə bir əmr. Qalanını quraşdırıcı edir.') ?></p>
+            <p class="sx-lead"><?= t('Temiz bir Linux sunucuda (Ubuntu, Debian, Raspberry Pi) tek komut. Gerisini kurulum programı yapar.', 'One command on a clean Linux server (Ubuntu, Debian, or Raspberry Pi). The installer does the rest.', 'Ein Befehl auf einem frischen Linux-Server (Ubuntu, Debian oder Raspberry Pi). Den Rest erledigt der Installer.', az: 'Təmiz Linux serverdə (Ubuntu, Debian, Raspberry Pi) bir əmr. Qalanını quraşdırıcı edir.') ?></p>
             <div class="sx-install">
                 <div>
                     <div class="sx-code">
@@ -20,7 +20,8 @@
                 <div class="sx-req">
                     <h3><?= t('Gereksinimler', 'Requirements', 'Voraussetzungen', az: 'Tələblər') ?></h3>
                     <ul>
-                        <li>Ubuntu Server 26.04 LTS (x86_64)</li>
+                        <li><?= t('Ubuntu 26.04 LTS+, Debian 13+, Raspberry Pi OS (64-bit), Armbian', 'Ubuntu 26.04 LTS+, Debian 13+, Raspberry Pi OS (64-bit), Armbian', 'Ubuntu 26.04 LTS+, Debian 13+, Raspberry Pi OS (64-Bit), Armbian', az: 'Ubuntu 26.04 LTS+, Debian 13+, Raspberry Pi OS (64-bit), Armbian') ?></li>
+                        <li><?= t('Mimari: x86_64 veya ARM64 (Raspberry Pi 4/5)', 'Architecture: x86_64 or ARM64 (Raspberry Pi 4/5)', 'Architektur: x86_64 oder ARM64 (Raspberry Pi 4/5)', az: 'Memarlıq: x86_64 və ya ARM64 (Raspberry Pi 4/5)') ?></li>
                         <li><?= t('En az 2 vCPU, 2 GB RAM, 15 GB disk', 'At least 2 vCPU, 2 GB RAM, 15 GB disk', 'Mindestens 2 vCPU, 2 GB RAM, 15 GB Speicher', az: 'Ən azı 2 vCPU, 2 GB RAM, 15 GB disk') ?></li>
                         <li><?= t('Önerilen: 4 vCPU, 4 GB RAM, 40 GB SSD', 'Recommended: 4 vCPU, 4 GB RAM, 40 GB SSD', 'Empfohlen: 4 vCPU, 4 GB RAM, 40 GB SSD', az: 'Tövsiyə: 4 vCPU, 4 GB RAM, 40 GB SSD') ?></li>
                         <li><?= t('Dışarıdan erişim için bir alan adı (isteğe bağlı)', 'A domain name for access from outside (optional)', 'Ein Domainname für den Zugriff von außen (optional)', az: 'Xaricdən giriş üçün domen adı (isteğe bağlı)') ?></li>

@@ -32,7 +32,7 @@ require_once __DIR__ . '/includes/content.php';
                 <a href="https://github.com/mahirgul/AiPBX" class="sx-btn sx-btn-ghost" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
             </div>
             <div class="sx-hero-meta">
-                <?php if ($version !== ''): ?><b><?= e($version) ?></b> · <?php endif; ?>Asterisk 22 · Ubuntu 26.04 LTS · <?= t('MIT lisansı', 'MIT license', 'MIT-Lizenz', az: 'MIT lisenziyası') ?>
+                <?php if ($version !== ''): ?><b><?= e($version) ?></b> · <?php endif; ?>Asterisk 22 · Ubuntu & Debian (x86_64 / ARM64) · <?= t('MIT lisansı', 'MIT license', 'MIT-Lizenz', az: 'MIT lisenziyası') ?>
             </div>
             <div class="sx-frame">
                 <div class="sx-frame-bar"><i></i><i></i><i></i></div>

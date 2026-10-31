@@ -18,10 +18,10 @@ $faq = [
     ],
     [
         'qTR' => 'Hangi sunucuya kurulur?', 'qEN' => 'What server does it need?', 'qDE' => 'Welchen Server braucht es?', 'qAZ' => 'Hansı server lazımdır?',
-        'aTR' => 'Temiz bir Ubuntu Server 26.04 LTS (x86_64). En az 2 vCPU, 2 GB RAM ve 15 GB disk; kurumsal kullanım için 4 vCPU, 4 GB RAM önerilir. Sanal makine de olur.',
-        'aEN' => 'A clean Ubuntu Server 26.04 LTS (x86_64). At least 2 vCPU, 2 GB RAM and 15 GB disk; 4 vCPU and 4 GB RAM are recommended for production. A virtual machine is fine.',
-        'aDE' => 'Ein frisches Ubuntu Server 26.04 LTS (x86_64). Mindestens 2 vCPU, 2 GB RAM und 15 GB Speicher; für den Betrieb werden 4 vCPU und 4 GB RAM empfohlen. Eine VM genügt.',
-        'aAZ' => 'Təmiz Ubuntu Server 26.04 LTS (x86_64). Ən azı 2 vCPU, 2 GB RAM və 15 GB disk; korporativ istifadə üçün 4 vCPU və 4 GB RAM tövsiyə olunur. Virtual maşın da olar.',
+        'aTR' => 'Temiz bir 64-bit Ubuntu (26.04+), Debian (13+), Raspberry Pi OS veya Armbian. x86_64 ve ARM64 (Raspberry Pi 4/5 dahil) desteklenir. En az 2 vCPU (veya 4 çekirdek ARM), 2 GB RAM ve 15 GB disk; kurumsal kullanım için 4 vCPU, 4 GB RAM önerilir. Sanal makine veya Raspberry Pi olur.',
+        'aEN' => 'A clean 64-bit OS: Ubuntu Server (26.04 LTS+), Debian 13+, Raspberry Pi OS (64-bit), or Armbian. Both x86_64 and ARM64 (including Raspberry Pi 4/5) are supported. At least 2 vCPU, 2 GB RAM and 15 GB disk; 4 vCPU and 4 GB RAM recommended for production. Virtual machines and SBCs are fine.',
+        'aDE' => 'Ein frisches 64-Bit-OS: Ubuntu Server (26.04 LTS+), Debian 13+, Raspberry Pi OS (64-Bit) oder Armbian. Sowohl x86_64 als auch ARM64 (inkl. Raspberry Pi 4/5) werden unterstützt. Mindestens 2 vCPU, 2 GB RAM und 15 GB Speicher. Eine VM oder ein Pi genügt.',
+        'aAZ' => 'Təmiz 64-bit OS: Ubuntu Server (26.04 LTS+), Debian 13+, Raspberry Pi OS (64-bit) və ya Armbian. Həm x86_64, həm də ARM64 (Raspberry Pi 4/5 daxil) dəstəklənir. Ən azı 2 vCPU, 2 GB RAM və 15 GB disk.',
     ],
     [
         'qTR' => 'İnternet olmadan çalışır mı?', 'qEN' => 'Does it work without internet access?', 'qDE' => 'Funktioniert es ohne Internet?', 'qAZ' => 'İnternetsiz işləyir?',

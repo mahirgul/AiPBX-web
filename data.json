@@ -18,7 +18,10 @@
     "turnkeyCommand": "curl -fsSL aipbx.bid/i | sudo bash",
     "gitCloneCommand": "git clone https://github.com/mahirgul/AiPBX.git /opt/aipbx && cd /opt/aipbx && sudo bash install.sh",
     "supportedOS": [
-      "Ubuntu 26.04 LTS"
+      "Ubuntu 26.04 LTS+",
+      "Debian 13 (Trixie)+",
+      "Raspberry Pi OS (64-bit)",
+      "Armbian (64-bit)"
     ]
   },
   "stats": [
@@ -1227,10 +1230,10 @@
       "qEN": "How can I install AiPBX on my server?",
       "qDE": "Wie kann ich AiPBX auf meinem Server installieren?",
       "qAZ": "AiPBX sistemini serverimə necə quraşdıra bilərəm?",
-      "aTR": "Temiz bir Ubuntu 26.04 LTS sunucusunda tek bir satır komut çalıştırmanız yeterlidir:\ncurl -fsSL aipbx.bid/i | sudo bash\nScript Asterisk 22, Nginx L4 stream, MariaDB, PHP 8 ve Go sohbet motorunu tam otomatik kurar.",
-      "aEN": "On a clean Ubuntu 26.04 LTS machine, run our one-liner turnkey script:\ncurl -fsSL aipbx.bid/i | sudo bash\nThe installer compiles Asterisk 22 and configures Nginx stream, MariaDB, PHP 8, and Go chat automatically.",
-      "aDE": "Führen Sie auf einem frischen Ubuntu 26.04 LTS Server einfach folgenden Einzeiler aus:\ncurl -fsSL aipbx.bid/i | sudo bash\nDas Skript installiert Asterisk 22, Nginx-Stream, MariaDB, PHP 8 und den Go-Chatdienst vollautomatisch.",
-      "aAZ": "Təmiz Ubuntu 26.04 LTS serverində tək sətirlik bir əmr icra etməyiniz kifayətdir:\ncurl -fsSL aipbx.bid/i | sudo bash\nSkript Asterisk 22, Nginx L4 stream, MariaDB, PHP 8 və Go söhbət mühərrikini tam avtomatik quraşdırır."
+      "aTR": "Temiz bir 64-bit Ubuntu (26.04+), Debian (13+) veya Raspberry Pi 4/5 sunucusunda tek bir satır komut çalıştırmanız yeterlidir:\ncurl -fsSL aipbx.bid/i | sudo bash\nScript x86_64 ve ARM64 mimarilerini otomatik tanır; Asterisk 22, Nginx L4 stream, MariaDB, PHP 8 ve Go sohbet motorunu tam otomatik kurar.",
+      "aEN": "On a clean 64-bit Ubuntu (26.04+), Debian (13+), or Raspberry Pi 4/5 server, run our one-liner turnkey script:\ncurl -fsSL aipbx.bid/i | sudo bash\nThe installer automatically detects x86_64 or ARM64, and configures Asterisk 22, Nginx stream, MariaDB, PHP 8, and Go chat automatically.",
+      "aDE": "Führen Sie auf einem frischen 64-Bit-Server mit Ubuntu (26.04+), Debian (13+) oder Raspberry Pi 4/5 einfach folgenden Einzeiler aus:\ncurl -fsSL aipbx.bid/i | sudo bash\nDas Skript erkennt x86_64 und ARM64 automatisch und installiert Asterisk 22, Nginx-Stream, MariaDB, PHP 8 und den Go-Chatdienst vollautomatisch.",
+      "aAZ": "Təmiz 64-bit Ubuntu (26.04+), Debian (13+) və ya Raspberry Pi 4/5 serverində tək sətirlik bir əmr icra etməyiniz kifayətdir:\ncurl -fsSL aipbx.bid/i | sudo bash\nSkript x86_64 və ARM64 arxitekturalarını avtomatik tanıyır və Asterisk 22, Nginx stream, MariaDB, PHP 8 və Go söhbət mühərrikini tam avtomatik quraşdırır."
     }
   ]
 }
