@@ -6,7 +6,10 @@ $page = 'install';
 require_once __DIR__ . '/includes/data.php';
 require_once __DIR__ . '/includes/content.php';
 $head = [t('AiPBX kurulumu: IP santral tek komutla', 'Install AiPBX: an IP PBX in one command', 'AiPBX installieren: eine IP-Telefonanlage mit einem Befehl', az: 'AiPBX quraşdırılması: bir əmrlə IP santral'),
-    t('Temiz bir Ubuntu 26.04 sunucuda Asterisk 22, PJSIP, WebRTC, SIP/TLS, sertifika ve güvenlik duvarı birlikte kurulur; yaklaşık 15 dakika sürer.', 'On a clean Ubuntu 26.04 server it sets up Asterisk 22, PJSIP, WebRTC, SIP over TLS, certificates and the firewall; it takes about 15 minutes.', 'Auf einem frischen Ubuntu-26.04-Server richtet es Asterisk 22, PJSIP, WebRTC, SIP über TLS, Zertifikate und Firewall ein; etwa 15 Minuten.', az: 'Təmiz Ubuntu 26.04 serverdə Asterisk 22, PJSIP, WebRTC, TLS üzərindən SIP, sertifikat və firewall birlikdə qurulur; təxminən 15 dəqiqə çəkir.')];
+    t('Temiz bir Linux sunucuda (Ubuntu 26.04+, Debian 13+, Raspberry Pi OS) Asterisk 22, PJSIP, WebRTC, SIP/TLS, sertifika ve güvenlik duvarı birlikte kurulur; yaklaşık 15 dakika sürer.',
+      'On a clean Linux server (Ubuntu 26.04+, Debian 13+, Raspberry Pi OS) it sets up Asterisk 22, PJSIP, WebRTC, SIP over TLS, certificates and the firewall; it takes about 15 minutes.',
+      'Auf einem frischen Linux-Server (Ubuntu 26.04+, Debian 13+, Raspberry Pi OS) richtet es Asterisk 22, PJSIP, WebRTC, SIP über TLS, Zertifikate und Firewall ein; etwa 15 Minuten.',
+      az: 'Təmiz Linux serverdə (Ubuntu 26.04+, Debian 13+, Raspberry Pi OS) Asterisk 22, PJSIP, WebRTC, TLS üzərindən SIP, sertifikat və firewall birlikdə qurulur; təxminən 15 dəqiqə çəkir.')];
 $videoKinds = ['install'];
 ?>
 <!DOCTYPE html>

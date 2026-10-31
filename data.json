@@ -1092,7 +1092,7 @@
         "ram": "2 GB RAM",
         "storage": "20 GB SSD / NVMe",
         "network": "100 Mbps Ethernet",
-        "os": "Ubuntu 26.04 LTS"
+        "os": "Ubuntu 26.04+ / Debian 13+ / Raspberry Pi OS"
       },
       {
         "tierTR": "Orta Ölçek (50-250 Dahili)",
@@ -1107,7 +1107,7 @@
         "storageDE": "60 GB NVMe (inkl. Gesprächsaufzeichnung)",
         "storageAZ": "60 GB NVMe (Səs Yazıları Daxil)",
         "network": "1 Gbps Ethernet",
-        "os": "Ubuntu 26.04 LTS"
+        "os": "Ubuntu 26.04+ / Debian 13+ / Raspberry Pi OS"
       },
       {
         "tierTR": "Kurumsal / Çağrı Merkezi (250-2000+ Dahili)",
@@ -1118,7 +1118,7 @@
         "ram": "16 - 32 GB RAM",
         "storage": "250+ GB NVMe RAID-10",
         "network": "10 Gbps Ethernet / ALPN L4 Load Balancing",
-        "os": "Ubuntu 26.04 LTS"
+        "os": "Ubuntu 26.04+ / Debian 13+ / Raspberry Pi OS"
       }
     ]
   },
