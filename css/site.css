@@ -28,6 +28,10 @@
 .sx-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; flex: 1; }
 .sx-links a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--sx-text) !important; text-decoration: none !important; font-weight: 600; font-size: .92rem; }
 .sx-links a:hover, .sx-links a.active { color: var(--sx-primary) !important; background: #f0f9ff; }
+/* The live demo stands out from the other menu items. */
+.sx-links a.sx-demo, .sx-mobile a.sx-demo { color: var(--sx-green) !important; }
+.sx-links a.sx-demo { background: #ecfdf5; }
+.sx-links a.sx-demo:hover { color: #fff !important; background: var(--sx-green); }
 .sx-actions { display: flex; align-items: center; gap: 10px; }
 .sx-lang { position: relative; }
 .sx-lang-btn { display: flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid var(--sx-line); border-radius: 8px; background: #fff; cursor: pointer; font: inherit; font-weight: 700; font-size: .85rem; color: var(--sx-ink); }

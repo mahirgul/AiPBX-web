@@ -20,6 +20,8 @@ $navItems = [
     ['/videos',   t('Videolar', 'Videos', 'Videos', az: 'Videolar'), 'videos'],
     ['/mobile',   t('Mobil', 'Mobile', 'Mobil', az: 'Mobil'), 'mobile'],
     ['/docs',     t('Belgeler', 'Docs', 'Doku', az: 'Sənədlər'), 'docs'],
+    // The portal itself with made-up data, in the visitor's language (no Azerbaijani portal copy).
+    ['https://aipbx.bid/demo/' . (in_array($LANG, ['tr', 'de'], true) ? $LANG : 'en') . '/dashboard/', t('Canlı demo', 'Live demo', 'Live-Demo', az: 'Canlı demo'), ''],
     ['/contact',  t('İletişim', 'Contact', 'Kontakt', az: 'Əlaqə'), 'contact'],
 ];
 ?>
@@ -30,7 +32,7 @@ $navItems = [
         </a>
         <ul class="sx-links">
             <?php foreach ($navItems as [$href, $label, $key]): ?>
-                <li><a href="<?= $href ?>"<?= ($key !== '' && ($page ?? '') === $key) ? ' class="active"' : '' ?>><?= $label ?></a></li>
+                <li><a href="<?= $href ?>"<?= str_contains($href, '/demo/') ? ' class="sx-demo"' : (($key !== '' && ($page ?? '') === $key) ? ' class="active"' : '') ?>><?= $label ?></a></li>
             <?php endforeach; ?>
         </ul>
         <div class="sx-actions">
@@ -53,7 +55,7 @@ $navItems = [
     </div>
     <div class="sx-mobile" id="sxMobile">
         <?php foreach ($navItems as [$href, $label]): ?>
-            <a href="<?= $href ?>"><?= $label ?></a>
+            <a href="<?= $href ?>"<?= str_contains($href, '/demo/') ? ' class="sx-demo"' : '' ?>><?= $label ?></a>
         <?php endforeach; ?>
         <a href="https://github.com/sponsors/mahirgul" class="sx-sponsor" target="_blank" rel="noopener"><i class="fa-solid fa-heart"></i> <?= t('GitHub\'da Sponsor Olun', 'Sponsor on GitHub', 'Auf GitHub sponsern', az: 'GitHub-da sponsor olun') ?></a>
         <a href="https://signup.upcloud.com/?promo=affiliate-aipbx250&amp;utm_source=aipbx&amp;utm_medium=affiliate&amp;utm_campaign=affiliate-aipbx250" class="sx-upcloud" target="_blank" rel="noopener sponsored"><i class="fa-solid fa-cloud"></i> <?= t('UpCloud ($250 Ücretsiz Kredi)', 'UpCloud ($250 Free Credit)', 'UpCloud ($250 Startguthaben)', az: 'UpCloud ($250 Pulsuz Kredit)') ?></a>

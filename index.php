@@ -28,6 +28,7 @@ require_once __DIR__ . '/includes/content.php';
             ) ?></p>
             <div class="sx-hero-cta">
                 <a href="/install" class="sx-btn sx-btn-primary"><i class="fa-solid fa-terminal"></i> <?= t('Kurulum', 'Install', 'Installieren', az: 'Quraşdırma') ?></a>
+                <a href="https://aipbx.bid/demo/<?= in_array($LANG, ['tr', 'de'], true) ? $LANG : 'en' ?>/dashboard/" class="sx-btn sx-btn-ghost"><i class="fa-solid fa-display"></i> <?= t('Canlı demo', 'Live demo', 'Live-Demo', az: 'Canlı demo') ?></a>
                 <a href="/videos" class="sx-btn sx-btn-ghost"><i class="fa-solid fa-circle-play"></i> <?= t('Videoyu izle', 'Watch the video', 'Video ansehen', az: 'Videoya bax') ?></a>
                 <a href="https://github.com/mahirgul/AiPBX" class="sx-btn sx-btn-ghost" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
             </div>
