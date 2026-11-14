@@ -16,7 +16,7 @@
                     <p><?= t('Google Play Store\'dan indirin ya da APK dosyasını doğrudan edinin.', 'Get it on Google Play Store or download the APK directly.', 'Im Google Play Store herunterladen oder die APK direkt beziehen.', az: 'Google Play Store-dan yükləyin və ya APK faylını birbaşa əldə edin.') ?></p>
                     <div class="row">
                         <a href="<?= PLAY_STORE_URL ?>" target="_blank" rel="noopener" class="sx-btn sx-btn-primary"><i class="fa-brands fa-google-play"></i> Google Play</a>
-                        <a href="<?= e(download_url('aipbx-latest.apk')) ?>" class="sx-btn sx-btn-ghost"><i class="fa-solid fa-download"></i> APK</a>
+                        <a href="<?= e(download_url('aipbx-latest.apk', GITHUB_ANDROID_REPO)) ?>" class="sx-btn sx-btn-ghost"><i class="fa-solid fa-download"></i> APK</a>
                     </div>
                 </div>
                 <div class="sx-app">

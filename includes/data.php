@@ -270,6 +270,7 @@ function getLangUrl(string $targetLang): string {
 // Download links use GitHub's fixed "latest" URLs; the release tag and file sizes
 // shown next to them are looked up once an hour.
 const GITHUB_REPO = 'mahirgul/AiPBX';
+const GITHUB_ANDROID_REPO = 'mahirgul/AiPBX-Android';
 
 function latest_release(): array {
     static $rel = null;
@@ -295,8 +296,8 @@ function latest_release(): array {
 }
 
 /** Download URL for an app build: always the newest file of the latest GitHub Release. */
-function download_url(string $file): string {
-    return 'https://github.com/' . GITHUB_REPO . '/releases/latest/download/' . $file;
+function download_url(string $file, string $repo = GITHUB_REPO): string {
+    return 'https://github.com/' . $repo . '/releases/latest/download/' . $file;
 }
 
 /** Human-readable size of a build ("3.0 MB"), from GitHub or the local copy. */
