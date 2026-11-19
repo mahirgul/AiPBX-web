@@ -28,6 +28,9 @@ const SITE_LANGS   = ['tr', 'en', 'de', 'az'];
 const DEFAULT_LANG = 'en';
 const YOUTUBE_CHANNEL = 'https://www.youtube.com/@aipbx';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mhrgl.AiPBX';
+// Odoo App Store (the page has a version switch: 17.0, 18.0, 19.0).
+const ODOO_CONNECTOR_URL = 'https://apps.odoo.com/apps/modules/19.0/aipbx_connector';
+const ODOO_CONNECTOR_CRM_URL = 'https://apps.odoo.com/apps/modules/19.0/aipbx_connector_crm';
 // YouTube video ids per language (no Azerbaijani video: Turkish is shown there).
 // Add the menu tour ids here when they are uploaded; an empty list hides the video.
 const VIDEOS = [

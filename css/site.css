@@ -157,6 +157,7 @@
 .sx-app p { margin: 0; color: var(--sx-muted); font-size: .94rem; flex: 1; }
 .sx-app .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
 .sx-app .sx-btn { padding: 10px 16px; font-size: .9rem; }
+.sx-app-wide { grid-column: 1 / -1; }
 
 /* Sponsor section */
 .sx-sponsor-box { max-width: 860px; margin: 0 auto; background: linear-gradient(135deg, #fff5f7 0%, #ffffff 50%, #fdf2f8 100%); border: 1px solid #fbcfe8; border-radius: calc(var(--sx-radius) * 1.5); padding: 48px 36px; text-align: center; box-shadow: 0 10px 30px rgba(219, 39, 119, .06); position: relative; overflow: hidden; }

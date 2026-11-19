@@ -26,6 +26,15 @@
                         <a href="https://github.com/<?= e(GITHUB_IOS_REPO) ?>" class="sx-btn sx-btn-ghost" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
                     </div>
                 </div>
+                <div class="sx-app sx-app-wide">
+                    <h3><i class="fa-solid fa-plug" style="color:#714b67"></i> Odoo</h3>
+                    <p><?= t('Odoo 17, 18 ve 19 için ücretsiz bağlayıcı: tıkla-ara, arayanın kartı, çağrı geçmişi ve ses kayıtları. CRM modülü çağrıları fırsatlara yazar.', 'Free connector for Odoo 17, 18 and 19: click-to-call, caller pop-up, call history and recordings. The CRM module puts calls on opportunities.', 'Kostenloser Connector für Odoo 17, 18 und 19: Click-to-Call, Anrufer-Pop-up, Anrufliste und Aufnahmen. Das CRM-Modul legt Anrufe an Verkaufschancen ab.', az: 'Odoo 17, 18 və 19 üçün pulsuz qoşucu: kliklə zəng, zəng edənin kartı, zəng tarixçəsi və səs yazıları. CRM modulu zəngləri imkanlara yazır.') ?></p>
+                    <div class="row">
+                        <a href="<?= ODOO_CONNECTOR_URL ?>" target="_blank" rel="noopener" class="sx-btn sx-btn-primary"><i class="fa-solid fa-store"></i> AiPBX Connector</a>
+                        <a href="<?= ODOO_CONNECTOR_CRM_URL ?>" target="_blank" rel="noopener" class="sx-btn sx-btn-ghost"><i class="fa-solid fa-store"></i> AiPBX Connector - CRM</a>
+                        <a href="https://github.com/mahirgul/AiPBX-Odoo" target="_blank" rel="noopener" class="sx-btn sx-btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
