@@ -24,7 +24,9 @@ if (!is_file(DOCS_SRC . '/web/src/services/DocsService.php')) {
     exit;
 }
 require_once DOCS_SRC . '/web/src/services/DocsService.php';
-DocsService::$docUrl  = '/docs/';
+// Links, search and the language switcher stay in the page's language (/tr/docs/...).
+$docsBase = lang_url('/docs', $LANG, false);
+DocsService::$docUrl  = $docsBase . '/';
 DocsService::$repoUrl = 'https://github.com/mahirgul/AiPBX/blob/main';
 
 $docs    = DocsService::list();
@@ -33,6 +35,7 @@ if ($current === '') {
     $current = 'README';
 }
 $query   = trim(mb_substr((string) ($_GET['q'] ?? ''), 0, 100));
+$PAGE_SLUG = ($query === '' && $current !== 'README') ? '/docs/' . $current : '/docs';
 $source  = DocsService::source($current);
 if ($source === null && $query === '') {
     http_response_code(404);
@@ -82,7 +85,7 @@ $h = fn($s) => htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE | ENT_H
     <div class="docs-layout<?= ($query !== '' || count($toc) < 2) ? ' no-toc' : '' ?>">
 
         <aside class="docs-sidebar" lang="en">
-            <form class="sidebar-search" method="GET" action="/docs">
+            <form class="sidebar-search" method="GET" action="<?= $h($docsBase) ?>">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 <input type="search" name="q" value="<?= $h($query) ?>" maxlength="100" placeholder="Search the documentation...">
             </form>
@@ -90,7 +93,7 @@ $h = fn($s) => htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE | ENT_H
                 <div class="sidebar-title"><span>Documentation</span></div>
                 <ul class="sidebar-menu">
                     <?php foreach ($docs as $d): ?>
-                        <li><a href="/docs/<?= $h($d['name']) ?>" class="<?= ($query === '' && $d['name'] === $current) ? 'active' : '' ?>"><?= $h($d['title']) ?></a></li>
+                        <li><a href="<?= $h($docsBase) ?>/<?= $h($d['name']) ?>" class="<?= ($query === '' && $d['name'] === $current) ? 'active' : '' ?>"><?= $h($d['title']) ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
@@ -99,7 +102,7 @@ $h = fn($s) => htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE | ENT_H
         <main class="docs-content" lang="en">
             <div class="docs-breadcrumb">
                 <a href="/"><?= t('Ana Sayfa', 'Home', 'Startseite', az: 'Ana Səhifə') ?></a> /
-                <a href="/docs">Documentation</a>
+                <a href="<?= $h($docsBase) ?>">Documentation</a>
                 <?php if ($query === ''): ?> / <span><?= $h($title) ?></span><?php endif; ?>
             </div>
 
@@ -117,10 +120,10 @@ $h = fn($s) => htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE | ENT_H
                 <section class="docs-section docs-md">
                     <?php if ($results === []): ?><p>Nothing found.</p><?php endif; ?>
                     <?php foreach ($results as $r): ?>
-                        <h3><a href="/docs/<?= $h($r['name']) ?>"><?= $h($r['title']) ?></a></h3>
+                        <h3><a href="<?= $h($docsBase) ?>/<?= $h($r['name']) ?>"><?= $h($r['title']) ?></a></h3>
                         <ul>
                             <?php foreach ($r['hits'] as $hit): ?>
-                                <li><a href="/docs/<?= $h($r['name']) ?><?= $hit['anchor'] !== '' ? '#' . $h($hit['anchor']) : '' ?>"><?= $h(mb_strimwidth($hit['line'], 0, 220, '…')) ?></a></li>
+                                <li><a href="<?= $h($docsBase) ?>/<?= $h($r['name']) ?><?= $hit['anchor'] !== '' ? '#' . $h($hit['anchor']) : '' ?>"><?= $h(mb_strimwidth($hit['line'], 0, 220, '…')) ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     <?php endforeach; ?>
