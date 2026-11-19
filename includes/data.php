@@ -271,6 +271,7 @@ function getLangUrl(string $targetLang): string {
 // shown next to them are looked up once an hour.
 const GITHUB_REPO = 'mahirgul/AiPBX';
 const GITHUB_ANDROID_REPO = 'mahirgul/AiPBX-Android';
+const GITHUB_IOS_REPO = 'mahirgul/AiPBX-ios';
 
 function latest_release(): array {
     static $rel = null;

@@ -129,4 +129,5 @@ RedirectMatch 404 ^/includes/
 RedirectMatch 404 ^/(deploy/|README\.md$)
 
 # App builds live on GitHub Releases; keep old /downloads links working
-RedirectMatch 302 ^/downloads/(aipbx-latest\.apk|AiPBX-unsigned\.ipa|AiPBX-Simulator\.zip)$ https://github.com/mahirgul/AiPBX/releases/latest/download/$1
+RedirectMatch 302 ^/downloads/(aipbx-latest\.apk)$ https://github.com/mahirgul/AiPBX-Android/releases/latest/download/$1
+RedirectMatch 302 ^/downloads/(AiPBX-unsigned\.ipa|AiPBX-Simulator\.zip)$ https://github.com/mahirgul/AiPBX-ios/releases/latest/download/$1

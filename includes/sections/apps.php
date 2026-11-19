@@ -21,9 +21,9 @@
                 </div>
                 <div class="sx-app">
                     <h3><i class="fa-brands fa-apple" style="color:#0f172a"></i> iOS</h3>
-                    <p><?= t('App Store\'da değil; imzasız IPA dosyası GitHub\'da. Android sürümünün gerisinde.', 'Not on the App Store; an unsigned IPA is on GitHub. Behind the Android app in features.', 'Nicht im App Store; eine unsignierte IPA liegt auf GitHub. Hat weniger Funktionen als die Android-App.', az: 'App Store-da deyil; imzasız IPA faylı GitHub-dadır. Android versiyasından geridədir.') ?></p>
+                    <p><?= t('App Store\'da değil; kaynak kodu GitHub\'da, Xcode ile derlenir. Android sürümünün gerisinde.', 'Not on the App Store; the source is on GitHub, built with Xcode. Behind the Android app in features.', 'Nicht im App Store; der Quellcode liegt auf GitHub und wird mit Xcode gebaut. Hat weniger Funktionen als die Android-App.', az: 'App Store-da deyil; mənbə kodu GitHub-dadır, Xcode ilə yığılır. Android versiyasından geridədir.') ?></p>
                     <div class="row">
-                        <a href="<?= e(download_url('AiPBX-unsigned.ipa')) ?>" class="sx-btn sx-btn-ghost"><i class="fa-solid fa-download"></i> IPA</a>
+                        <a href="https://github.com/<?= e(GITHUB_IOS_REPO) ?>" class="sx-btn sx-btn-ghost" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
