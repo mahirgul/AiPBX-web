@@ -276,27 +276,27 @@ const GITHUB_REPO = 'mahirgul/AiPBX';
 const GITHUB_ANDROID_REPO = 'mahirgul/AiPBX-Android';
 const GITHUB_IOS_REPO = 'mahirgul/AiPBX-ios';
 
-function latest_release(): array {
-    static $rel = null;
-    if ($rel !== null) return $rel;
-    $cache = sys_get_temp_dir() . '/aipbx_latest_release.json';
+function latest_release(string $repo = GITHUB_REPO): array {
+    static $rels = [];
+    if (isset($rels[$repo])) return $rels[$repo];
+    $cache = sys_get_temp_dir() . '/aipbx_latest_release_' . md5($repo) . '.json';
     if (is_file($cache) && time() - filemtime($cache) < 3600) {
-        return $rel = json_decode((string)file_get_contents($cache), true) ?: [];
+        return $rels[$repo] = json_decode((string)file_get_contents($cache), true) ?: [];
     }
     $ctx = stream_context_create(['http' => [
         'timeout' => 3,
         'header'  => "User-Agent: aipbx.bid\r\nAccept: application/vnd.github+json\r\n",
     ]]);
-    $json = @file_get_contents('https://api.github.com/repos/' . GITHUB_REPO . '/releases/latest', false, $ctx);
+    $json = @file_get_contents('https://api.github.com/repos/' . $repo . '/releases/latest', false, $ctx);
     $data = $json ? json_decode($json, true) : null;
     if (!is_array($data) || empty($data['tag_name'])) {
         // Keep serving the last good answer; retry in an hour.
-        if (is_file($cache)) { touch($cache); return $rel = json_decode((string)file_get_contents($cache), true) ?: []; }
-        return $rel = [];
+        if (is_file($cache)) { touch($cache); return $rels[$repo] = json_decode((string)file_get_contents($cache), true) ?: []; }
+        return $rels[$repo] = [];
     }
-    $rel = ['tag' => $data['tag_name'], 'assets' => array_column($data['assets'] ?? [], 'size', 'name')];
-    @file_put_contents($cache, json_encode($rel));
-    return $rel;
+    $rels[$repo] = ['tag' => $data['tag_name'], 'assets' => array_column($data['assets'] ?? [], 'size', 'name')];
+    @file_put_contents($cache, json_encode($rels[$repo]));
+    return $rels[$repo];
 }
 
 /** Download URL for an app build: always the newest file of the latest GitHub Release. */
@@ -305,8 +305,8 @@ function download_url(string $file, string $repo = GITHUB_REPO): string {
 }
 
 /** Human-readable size of a build ("3.0 MB"), from GitHub or the local copy. */
-function download_size(string $file): string {
-    $rel = latest_release();
+function download_size(string $file, string $repo = GITHUB_ANDROID_REPO): string {
+    $rel = latest_release($repo);
     $bytes = $rel['assets'][$file] ?? 0;
     return $bytes ? number_format($bytes / 1048576, 1) . ' MB' : '';
 }
@@ -314,7 +314,7 @@ function download_size(string $file): string {
 /** Badge text for the Android build: the release tag once CI has attached the APK. */
 function android_build_label(): string {
     global $company;
-    $rel = latest_release();
+    $rel = latest_release(GITHUB_ANDROID_REPO);
     return $rel['tag'] ?? ('v' . ($company['version'] ?? ''));
 }
 
