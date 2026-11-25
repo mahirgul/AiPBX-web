@@ -132,7 +132,8 @@ $h = fn($s) => htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE | ENT_H
                 <?php if (!empty($notFound)): ?><p class="docs-md-lang">This document does not exist; here is the overview.</p><?php endif; ?>
                 <article class="docs-section docs-md"><?= $html ?></article>
                 <p class="docs-md-edit">
-                    <a href="https://github.com/mahirgul/AiPBX/blob/main/docs/<?= $h($current) ?>.md" target="_blank" rel="noopener">
+                    <?php $editPath = in_array($current, ['INSTALL', 'ARCHITECTURE', 'CHANGELOG', 'CONTRIBUTING', 'SECURITY'], true) ? $current . '.md' : 'docs/' . $current . '.md'; ?>
+                    <a href="https://github.com/mahirgul/AiPBX/blob/main/<?= $h($editPath) ?>" target="_blank" rel="noopener">
                         <i class="fa-brands fa-github"></i> View or edit this page on GitHub
                     </a>
                 </p>
