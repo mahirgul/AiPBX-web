@@ -43,22 +43,22 @@ const VIDEOS = [
 const VIDEO_INFO = [
     'eDHHHW6ZcvQ' => ['lang' => 'tr', 'date' => '2026-10-22T15:16:16-07:00', 'duration' => 'PT3M48S',
         'title' => 'AiPBX Kurulumu: Açık Kaynak IP Santral Adım Adım (Ubuntu & Debian · Asterisk 22)',
-        'desc' => 'AiPBX açık kaynak IP santralin Ubuntu, Debian veya Raspberry Pi sunucuya tek komutla kurulumu: Asterisk 22, PJSIP, WebRTC, SIP/TLS, T.38 faks, çağrı merkezi ve yerel yapay zekâ.'],
+        'desc' => 'AiPBX açık kaynak IP santralin Ubuntu, Debian veya Raspberry Pi sunucuya tek komutla kurulumu: Asterisk 22, PJSIP, WebRTC, SIP/TLS, T.38 faks, çağrı merkezi ve yapay zekâ.'],
     'lH1-k_z5jFE' => ['lang' => 'en', 'date' => '2026-10-22T15:08:18-07:00', 'duration' => 'PT4M24S',
         'title' => 'How to Install AiPBX: Open-Source AI-Powered IP PBX, Step by Step (Ubuntu, Debian & Raspberry Pi · Asterisk 22)',
-        'desc' => 'Installing the AiPBX open-source IP PBX on an empty Ubuntu, Debian or Raspberry Pi server with one command: Asterisk 22, PJSIP, WebRTC, SIP over TLS, T.38 fax, a call center and local AI.'],
+        'desc' => 'Installing the AiPBX open-source IP PBX on an empty Ubuntu, Debian or Raspberry Pi server with one command: Asterisk 22, PJSIP, WebRTC, SIP over TLS, T.38 fax, a call center and AI.'],
     '1QuOM6Rtcbg' => ['lang' => 'de', 'date' => '2026-10-22T15:18:29-07:00', 'duration' => 'PT4M3S',
         'title' => 'AiPBX installieren: Quelloffene IP-Telefonanlage mit KI, Schritt für Schritt (Ubuntu & Debian)',
-        'desc' => 'Installation der Open-Source-Telefonanlage AiPBX mit einem Befehl auf einem leeren Ubuntu- oder Debian-Server: Asterisk 22, PJSIP, WebRTC, SIP über TLS, T.38-Fax, Callcenter und lokale KI.'],
+        'desc' => 'Installation der Open-Source-Telefonanlage AiPBX mit einem Befehl auf einem leeren Ubuntu- oder Debian-Server: Asterisk 22, PJSIP, WebRTC, SIP über TLS, T.38-Fax, Callcenter und KI.'],
     'Teol14NgXbY' => ['lang' => 'tr', 'date' => '2026-10-25T12:19:22-07:00', 'duration' => 'PT9M47S',
         'title' => 'AiPBX Menü Turu: Açık Kaynak IP Santralin Bütün Ekranları (Asterisk 22 · WebRTC · Çağrı Merkezi)',
-        'desc' => 'AiPBX yönetim panelinin bütün menülerini sırayla tanıtıyoruz: dahililer, SIP dış hatlar, gelen ve giden yönlendirmeler, IVR, kuyruklar, çağrı merkezi, faks, yerel yapay zekâ, entegrasyonlar ve güvenlik. Örnek verilerle, yeni kurulmuş bir santral üzerinde.'],
+        'desc' => 'AiPBX yönetim panelinin bütün menülerini sırayla tanıtıyoruz: dahililer, SIP dış hatlar, gelen ve giden yönlendirmeler, IVR, kuyruklar, çağrı merkezi, faks, yapay zekâ, entegrasyonlar ve güvenlik. Örnek verilerle, yeni kurulmuş bir santral üzerinde.'],
     'xU0BYN6AKE4' => ['lang' => 'en', 'date' => '2026-10-25T12:19:30-07:00', 'duration' => 'PT10M46S',
         'title' => 'AiPBX Menu Tour: Every Screen of the Open-Source IP PBX (Asterisk 22 · WebRTC · Call Center)',
-        'desc' => 'We walk through every menu of the AiPBX administration portal: extensions, SIP trunks, inbound and outbound routes, IVR, queues, the call center, fax, local AI, integrations and security. With sample data, on a freshly installed system.'],
+        'desc' => 'We walk through every menu of the AiPBX administration portal: extensions, SIP trunks, inbound and outbound routes, IVR, queues, the call center, fax, AI, integrations and security. With sample data, on a freshly installed system.'],
     '8whV_DY3ZqQ' => ['lang' => 'de', 'date' => '2026-10-25T12:19:35-07:00', 'duration' => 'PT10M4S',
         'title' => 'AiPBX Menütour: Alle Seiten der Open-Source-Telefonanlage (Asterisk 22 · WebRTC · Callcenter)',
-        'desc' => 'Wir gehen alle Menüs des AiPBX-Verwaltungsportals durch: Nebenstellen, SIP-Trunks, eingehende und ausgehende Routen, IVR, Warteschlangen, Callcenter, Fax, lokale KI, Integrationen und Sicherheit. Mit Beispieldaten auf einer frisch installierten Anlage.'],
+        'desc' => 'Wir gehen alle Menüs des AiPBX-Verwaltungsportals durch: Nebenstellen, SIP-Trunks, eingehende und ausgehende Routen, IVR, Warteschlangen, Callcenter, Fax, KI, Integrationen und Sicherheit. Mit Beispieldaten auf einer frisch installierten Anlage.'],
 ];
 
 /** "/css/site.css" -> "/css/site.css?v=<mtime>": browsers fetch a file again as soon as it changes. */

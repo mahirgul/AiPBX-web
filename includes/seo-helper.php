@@ -12,34 +12,34 @@ $pageSeoMap = array (
     'tr' => 
     array (
       'title' => 'AiPBX — Açık kaynak, yapay zekâ destekli IP santral',
-      'desc' => 'Tek komutla kurulan ücretsiz kurumsal santral: web portalı, masaüstü telefonlar, Android ve iOS uygulaması, çağrı merkezi, faks ve yerel yapay zekâ. Asterisk 22, MIT lisansı.',
+      'desc' => 'Tek komutla kurulan ücretsiz kurumsal santral: web portalı, masaüstü telefonlar, Android ve iOS uygulaması, çağrı merkezi, faks ve yapay zekâ. Asterisk 22, MIT lisansı.',
       'keywords' => 'AiPBX, %100 free, açık kaynak IP santral, open source PBX, yapay zeka destekli santral, ai powered pbx, ai supported voip, VoIP santral, SIP santral, SIP trunk, PJSIP, Asterisk 22, WebRTC softphone, ücretsiz IP santral, kurumsal telefon santrali',
     ),
     'en' => 
     array (
       'title' => 'AiPBX — Open-source IP PBX with AI built in',
-      'desc' => 'A free business phone system installed with one command: web portal, desk phones, Android and iOS apps, call centre, fax and local AI. Asterisk 22, MIT license.',
+      'desc' => 'A free business phone system installed with one command: web portal, desk phones, Android and iOS apps, call centre, fax and AI. Asterisk 22, MIT license.',
       'keywords' => 'AiPBX, 100% free pbx, open source ip pbx, opensource voip, ai powered pbx, ai supported telephony, voip, sip, sip trunk, pjsip, asterisk 22, webrtc softphone, free business phone system, enterprise voip solution',
     ),
     'de' => 
     array (
       'title' => 'AiPBX — Open-Source-Telefonanlage mit KI',
-      'desc' => 'Eine kostenlose Telefonanlage, mit einem Befehl installiert: Webportal, Tischtelefone, Android- und iOS-App, Callcenter, Fax und lokale KI. Asterisk 22, MIT-Lizenz.',
+      'desc' => 'Eine kostenlose Telefonanlage, mit einem Befehl installiert: Webportal, Tischtelefone, Android- und iOS-App, Callcenter, Fax und KI. Asterisk 22, MIT-Lizenz.',
       'keywords' => 'AiPBX, 100% free, Open Source IP TK-Anlage, KI Telefonanlage, ai powered voip, Asterisk 22, WebRTC Telefonie, Port 443 SIP, Enterprise Kommunikation, VoIP SIP',
     ),
     'az' => 
     array (
       'title' => 'AiPBX — Süni intellektli açıq mənbəli IP santral',
-      'desc' => 'Bir əmrlə quraşdırılan pulsuz korporativ santral: veb portal, masaüstü telefonlar, Android və iOS tətbiqi, çağrı mərkəzi, faks və yerli süni intellekt. Asterisk 22, MIT lisenziyası.',
+      'desc' => 'Bir əmrlə quraşdırılan pulsuz korporativ santral: veb portal, masaüstü telefonlar, Android və iOS tətbiqi, çağrı mərkəzi, faks və süni intellekt. Asterisk 22, MIT lisenziyası.',
       'keywords' => 'AiPBX, 100% pulsuz, açıq mənbəli IP santral, süni intellekt santral, ai powered pbx, VoIP santral, SIP santral, SIP trunk, PJSIP, Asterisk 22, WebRTC softphone',
     ),
     'slug' => '/',
   ),
   'features' => array (
-    'tr' => array ('title' => 'AiPBX Özellikleri: Açık Kaynak IP Santral, SIP, VoIP ve Yapay Zekâ', 'desc' => 'AiPBX ile neler yapılır: dahililer, SIP trunk, IVR, kuyruklar, çağrı merkezi, faks, WebRTC, masaüstü telefonlar ve yerel yapay zekâ. Ücretsiz, açık kaynak IP santral.', 'keywords' => 'AiPBX özellikleri, IP santral, açık kaynak santral, SIP santral, VoIP santral, yapay zeka santral, AI PBX, çağrı merkezi yazılımı, IVR, SIP trunk, Asterisk 22, WebRTC, faks sunucusu, telefon santrali'),
-    'en' => array ('title' => 'AiPBX Features: Open-Source IP PBX, SIP, VoIP Phone System with AI', 'desc' => 'What AiPBX does: extensions, SIP trunks, IVR, queues, a call center, fax, WebRTC, desk phones and local AI. A free, open-source IP PBX built on Asterisk 22.', 'keywords' => 'AiPBX features, IP PBX, open source PBX, SIP PBX, VoIP phone system, AI PBX, AI powered PBX, call center software, IVR, SIP trunk, Asterisk 22, WebRTC, fax server, business phone system'),
-    'de' => array ('title' => 'AiPBX Funktionen: Open-Source-IP-Telefonanlage, SIP, VoIP und KI', 'desc' => 'Was AiPBX kann: Nebenstellen, SIP-Trunks, IVR, Warteschlangen, Callcenter, Fax, WebRTC, Tischtelefone und lokale KI. Kostenlose Open-Source-Telefonanlage auf Asterisk 22.', 'keywords' => 'AiPBX Funktionen, IP-Telefonanlage, Open Source Telefonanlage, SIP Telefonanlage, VoIP Telefonanlage, KI Telefonanlage, AI PBX, Callcenter Software, IVR, SIP-Trunk, Asterisk 22, WebRTC, Faxserver'),
-    'az' => array ('title' => 'AiPBX xüsusiyyətləri: açıq mənbəli IP santral, SIP, VoIP və süni intellekt', 'desc' => 'AiPBX: daxili nömrələr, SIP trunk, IVR, növbələr, çağrı mərkəzi, faks, WebRTC, masaüstü telefonlar və yerli süni intellekt. Pulsuz, açıq mənbəli IP santral.', 'keywords' => 'AiPBX xüsusiyyətləri, IP santral, açıq mənbəli santral, SIP santral, VoIP santral, süni intellekt santral, AI PBX, çağrı mərkəzi, IVR, SIP trunk, Asterisk 22, WebRTC'),
+    'tr' => array ('title' => 'AiPBX Özellikleri: Açık Kaynak IP Santral, SIP, VoIP ve Yapay Zekâ', 'desc' => 'AiPBX ile neler yapılır: dahililer, SIP trunk, IVR, kuyruklar, çağrı merkezi, faks, WebRTC, masaüstü telefonlar ve yapay zekâ. Ücretsiz, açık kaynak IP santral.', 'keywords' => 'AiPBX özellikleri, IP santral, açık kaynak santral, SIP santral, VoIP santral, yapay zeka santral, AI PBX, çağrı merkezi yazılımı, IVR, SIP trunk, Asterisk 22, WebRTC, faks sunucusu, telefon santrali'),
+    'en' => array ('title' => 'AiPBX Features: Open-Source IP PBX, SIP, VoIP Phone System with AI', 'desc' => 'What AiPBX does: extensions, SIP trunks, IVR, queues, a call center, fax, WebRTC, desk phones and AI. A free, open-source IP PBX built on Asterisk 22.', 'keywords' => 'AiPBX features, IP PBX, open source PBX, SIP PBX, VoIP phone system, AI PBX, AI powered PBX, call center software, IVR, SIP trunk, Asterisk 22, WebRTC, fax server, business phone system'),
+    'de' => array ('title' => 'AiPBX Funktionen: Open-Source-IP-Telefonanlage, SIP, VoIP und KI', 'desc' => 'Was AiPBX kann: Nebenstellen, SIP-Trunks, IVR, Warteschlangen, Callcenter, Fax, WebRTC, Tischtelefone und KI. Kostenlose Open-Source-Telefonanlage auf Asterisk 22.', 'keywords' => 'AiPBX Funktionen, IP-Telefonanlage, Open Source Telefonanlage, SIP Telefonanlage, VoIP Telefonanlage, KI Telefonanlage, AI PBX, Callcenter Software, IVR, SIP-Trunk, Asterisk 22, WebRTC, Faxserver'),
+    'az' => array ('title' => 'AiPBX xüsusiyyətləri: açıq mənbəli IP santral, SIP, VoIP və süni intellekt', 'desc' => 'AiPBX: daxili nömrələr, SIP trunk, IVR, növbələr, çağrı mərkəzi, faks, WebRTC, masaüstü telefonlar və süni intellekt. Pulsuz, açıq mənbəli IP santral.', 'keywords' => 'AiPBX xüsusiyyətləri, IP santral, açıq mənbəli santral, SIP santral, VoIP santral, süni intellekt santral, AI PBX, çağrı mərkəzi, IVR, SIP trunk, Asterisk 22, WebRTC'),
     'slug' => '/features',
   ),
   'install' => array (
