@@ -25,10 +25,10 @@ $faq = [
     ],
     [
         'qTR' => 'İnternet olmadan çalışır mı?', 'qEN' => 'Does it work without internet access?', 'qDE' => 'Funktioniert es ohne Internet?', 'qAZ' => 'İnternetsiz işləyir?',
-        'aTR' => 'Evet. Kurulumdan sonra santral, telefonlar, yerel yapay zekâ modelleri ve portaldaki Yardım sayfası internet olmadan çalışır. Bulut servisleri isteğe bağlıdır.',
-        'aEN' => 'Yes. After installation the PBX, the phones, the local AI models and the Help pages in the portal work without internet access. Cloud services are optional.',
-        'aDE' => 'Ja. Nach der Installation laufen Telefonanlage, Telefone, lokale KI-Modelle und die Hilfe im Portal ohne Internet. Cloud-Dienste sind optional.',
-        'aAZ' => 'Bəli. Quraşdırmadan sonra santral, telefonlar, yerli süni intellekt modelləri və portaldakı Kömək səhifəsi internetsiz işləyir. Bulud xidmətləri isteğe bağlıdır.',
+        'aTR' => 'Evet. Kurulumdan sonra santral, telefonlar, yerel ses (TTS) modelleri ve portaldaki Yardım sayfası internet olmadan çalışır. Bulut servisleri isteğe bağlıdır.',
+        'aEN' => 'Yes. After installation the PBX, the phones, the local voice (text-to-speech) models and the Help pages in the portal work without internet access. Cloud services are optional.',
+        'aDE' => 'Ja. Nach der Installation laufen Telefonanlage, Telefone, lokale Sprachausgabe-Modelle und die Hilfe im Portal ohne Internet. Cloud-Dienste sind optional.',
+        'aAZ' => 'Bəli. Quraşdırmadan sonra santral, telefonlar, yerli səsləndirmə modelləri və portaldakı Kömək səhifəsi internetsiz işləyir. Bulud xidmətləri isteğe bağlıdır.',
     ],
     [
         'qTR' => 'Mevcut santralimle ya da operatörümle çalışır mı?', 'qEN' => 'Does it work with my existing PBX or provider?', 'qDE' => 'Funktioniert es mit meiner Anlage oder meinem Anbieter?', 'qAZ' => 'Mövcud santralım və ya operatorumla işləyir?',
@@ -72,8 +72,8 @@ $features = [
 $shots = [
     ['portal-health', t('Sağlık kontrolleri', 'Health checks', 'Zustandsprüfungen', az: 'Sağlamlıq yoxlamaları'),
         t('Santral kendini izler; bir sorun olduğunda e-posta gönderir.', 'The PBX watches itself and sends an e-mail when something is wrong.', 'Die Anlage überwacht sich selbst und meldet Probleme per E-Mail.', az: 'Santral özünü izləyir; problem olduqda e-poçt göndərir.')],
-    ['portal-local-ai', t('Yerel yapay zekâ', 'Local AI', 'Lokale KI', az: 'Yerli süni intellekt'),
-        t('Konuşma tanıma ve seslendirme modellerini indirip sunucuda çalıştırın.', 'Download speech recognition and text-to-speech models and run them on the server.', 'Modelle für Spracherkennung und Sprachausgabe herunterladen und auf dem Server betreiben.', az: 'Nitq tanıma və səsləndirmə modellərini yükləyib serverdə işlədin.')],
+    ['portal-local-ai', t('Yerel TTS', 'Local TTS', 'Lokale Sprachausgabe', az: 'Yerli səsləndirmə'),
+        t('Seslendirme (TTS) modellerini indirip sunucuda çalıştırın; konuşma tanıma ve dil modelleri bulut hesaplarıyla çalışır.', 'Download text-to-speech models and run them on the server; speech recognition and language models use cloud accounts.', 'Modelle für die Sprachausgabe herunterladen und auf dem Server betreiben; Spracherkennung und Sprachmodelle laufen über Cloud-Konten.', az: 'Səsləndirmə (TTS) modellərini yükləyib serverdə işlədin; nitq tanıma və dil modelləri bulud hesabları ilə işləyir.')],
     ['portal-network-services', t('Telefon ağı', 'Phone network', 'Telefonnetz', az: 'Telefon şəbəkəsi'),
         t('Masaüstü telefonlar için DHCP, TFTP, FTP, NTP ve telefon kayıtları.', 'DHCP, TFTP, FTP, NTP and phone logs for desk phones.', 'DHCP, TFTP, FTP, NTP und Telefonprotokolle für Tischtelefone.', az: 'Masaüstü telefonlar üçün DHCP, TFTP, FTP, NTP və telefon jurnalları.')],
     ['portal-help', t('Yerleşik yardım', 'Built-in help', 'Eingebaute Hilfe', az: 'Daxili kömək'),
