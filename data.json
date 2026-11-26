@@ -2,8 +2,8 @@
   "company": {
     "name": "AiPBX",
     "fullName": "AiPBX — 100% Free Open Source AI-Powered Enterprise IP Telephony Platform (VoIP & SIP)",
-    "shortDescTR": "%100 ücretsiz ve açık kaynak (MIT). Asterisk 22, SIP & PJSIP protokolü, Whisper AI ses tanıma, Port 443 ALPN stream çoklama, WebRTC, Passkey biyometrik giriş, Go sohbet motoru ve yerel mobil softphone destekli kurumsal santral.",
-    "shortDescEN": "100% free and open-source (MIT). Enterprise AI-powered VoIP SIP PBX powered by Asterisk 22, PJSIP, Whisper AI voice requests, Port 443 ALPN stream multiplexing, WebRTC, Passkeys, and native mobile softphones.",
+    "shortDescTR": "%100 ücretsiz ve açık kaynak (MIT). Asterisk 22, SIP & PJSIP protokolü, sesli yapay zekâ ajanları, Port 443 ALPN stream çoklama, WebRTC, Passkey biyometrik giriş, Go sohbet motoru ve yerel mobil softphone destekli kurumsal santral.",
+    "shortDescEN": "100% free and open-source (MIT). Enterprise AI-powered VoIP SIP PBX powered by Asterisk 22, PJSIP, AI voice agents, Port 443 ALPN stream multiplexing, WebRTC, Passkeys, and native mobile softphones.",
     "shortDescDE": "Enterprise Open-Source IP-Telefonanlage mit Asterisk 22, Port 443 ALPN Multiplexing, WebRTC, Passkeys, Go-Chat-Engine und nativen Mobil-Softphones.",
     "shortDescAZ": "Asterisk 22, Port 443 ALPN stream multipleksləşdirmə, WebRTC, Passkey biometrik giriş, Go söhbət mühərriki və yerli mobil softphone dəstəkli korporativ açıq mənbəli IP santral.",
     "author": "Mahir Gül",
@@ -90,14 +90,14 @@
       "badge": "Yapay Zekâ (v1.12)",
       "icon": "fa-robot",
       "color": "#7c3aed",
-      "titleTR": "Yapay Zekâ Sesli İstekler, Whisper STT & TTS",
-      "titleEN": "AI Voice Requests, Whisper STT & Speech Models",
-      "titleDE": "KI-Sprachanfragen, Whisper-STT & Sprachmodelle",
-      "titleAZ": "Süni İntellekt Səsli İstəklər, Whisper STT & Səs Modelləri",
-      "descTR": "Arayanın ne istediğini canlı konuşmadan tanıyan sesli istekler (Voice Requests), CRM sorgulu dinamik anonslar, sunucuda int8 çalışan yerel Whisper STT (%7.6 WER) ve Vosk/Kokoro/Piper modelleri. İsteğe bağlı OpenAI, Groq, Deepgram, Azure, ElevenLabs ve Gemini bulut sağlayıcıları.",
-      "descEN": "Callers speak requests naturally; on-premise Whisper STT (CTranslate2 int8, 7.6% WER) and Vosk/Piper/Kokoro recognise and answer by voice, email staff, and route calls. Dynamic CRM lookup announcements, plus optional cloud STT providers (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
-      "descDE": "Sprachanfragen (Voice Requests) erkennen Anruferanliegen live per lokalem Whisper-STT (CTranslate2 int8, 7,6 % WER) oder Vosk/Piper/Kokoro, antworten per Stimme, mailen Mitarbeitern und leiten weiter. Optionale Cloud-STT-Anbieter (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
-      "descAZ": "Zəng edənin müraciətini canlı danışıqdan anlayan səsli istəklər (Voice Requests), CRM sorğulu dinamik anonslar, serverdə int8 işləyən yerli Whisper STT (7.6% WER) və Vosk/Kokoro/Piper modelləri. İstəyə görə OpenAI, Groq, Deepgram, Azure, ElevenLabs və Gemini bulud inteqrasiyaları."
+      "titleTR": "Yapay Zekâ Sesli Ajanlar, Realtime & Yerel TTS",
+      "titleEN": "AI Voice Agents, Realtime & Local TTS",
+      "titleDE": "KI-Sprachagenten, Realtime & lokale Sprachausgabe",
+      "titleAZ": "Süni İntellekt Səsli Agentlər, Realtime & Yerli TTS",
+      "descTR": "Arayanı canlı konuşmayla karşılayan sesli ajanlar: Realtime (OpenAI, Gemini Live, xAI) ya da kademeli (konuşma tanıma, dil modeli, ses). Talimata yazılan araçlarla aktarma, bilgi bankası, veritabanı ve HTTP sorguları, arayanın diline göre karşılama. Sunucuda çalışan yerel TTS sesleri (EMA, Piper, Kokoro); konuşma tanıma ve dil modelleri OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini gibi bulut hesaplarıyla.",
+      "descEN": "Voice agents that talk to callers live: Realtime (OpenAI, Gemini Live, xAI) or cascade (speech to text, language model, voice). Tools are written into the instructions: transfers, knowledge bases, database and HTTP lookups, greetings in the caller's language. Local text-to-speech voices run on the server (EMA, Piper, Kokoro); speech recognition and language models use cloud accounts (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
+      "descDE": "Sprachagenten, die Anrufer live bedienen: Realtime (OpenAI, Gemini Live, xAI) oder kaskadiert (Spracherkennung, Sprachmodell, Stimme). Die Werkzeuge stehen in der Anleitung: Weiterleitungen, Wissensdatenbanken, Datenbank- und HTTP-Abfragen, Begrüßung in der Sprache des Anrufers. Lokale Sprachausgabe läuft auf dem Server (EMA, Piper, Kokoro); Spracherkennung und Sprachmodelle nutzen Cloud-Konten (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
+      "descAZ": "Zəng edəni canlı danışıqla qarşılayan səsli agentlər: Realtime (OpenAI, Gemini Live, xAI) və ya kaskad (nitq tanıma, dil modeli, səs). Alətlər təlimatın içində yazılır: yönləndirmə, bilik bazası, verilənlər bazası və HTTP sorğuları, zəng edənin dilində salamlama. Serverdə yerli TTS səsləri (EMA, Piper, Kokoro); nitq tanıma və dil modelləri OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini bulud hesabları ilə işləyir."
     },
     {
       "id": "passkey",
