@@ -93,7 +93,7 @@ DirectoryIndex index.php index.html
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
     Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
     # Keep non-content endpoints out of search results
-    <If "%{REQUEST_URI} =~ m#^/(admin|api|downloads)/# || %{REQUEST_URI} =~ m#^/(data\.json|404\.html)#">
+    <If "%{REQUEST_URI} =~ m#^/(admin|api|downloads)/# || %{REQUEST_URI} =~ m#^/(data\.json|404(?:\.(?:html|php))?)#">
         Header always set X-Robots-Tag "noindex, nofollow"
     </If>
 </IfModule>
@@ -121,7 +121,7 @@ DirectoryIndex index.php index.html
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json application/xml image/svg+xml
 </IfModule>
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404.php
 
 # PHP partials are not pages
 RedirectMatch 404 ^/includes/
