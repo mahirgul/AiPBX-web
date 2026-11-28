@@ -43,6 +43,15 @@ $faq = [
         'aEN' => 'In AiPBX, PHP is never in the media or signaling hot path — it is strictly the control plane (admin UI, REST CRUD, and generating Asterisk configs on Apply). SIP/RTP/WebRTC run in C (Asterisk 22 + Nginx + coturn), real-time chat runs in Go, and live AI/ONNX TTS run in Python/C++. A 4 vCPU / 4 GB RAM server handles ~40–70 concurrent WebRTC calls or ~80–120 SIP passthrough calls.',
         'aDE' => 'In AiPBX liegt PHP niemals im Medien- oder Signalisierungspfad, sondern ist rein die Steuerungsebene. SIP/RTP/WebRTC laufen in C (Asterisk 22 + Nginx + coturn), Echtzeit-Chat in Go und Live-KI/ONNX in Python/C++. Ein 4-vCPU-/4-GB-RAM-Server trägt ~40–70 gleichzeitige WebRTC- oder ~80–120 SIP-Anrufe.',
         'aAZ' => 'AiPBX-də PHP heç vaxt səs, SIP siqnalizasiya, söhbət və ya canlı AI yolunda deyil — yalnız idarəetmə müstəvisidir. SIP/RTP/WebRTC C-də, söhbət Go-da, canlı AI və ONNX TTS Python/C++-da işləyir. 4 vCPU / 4 GB RAM serverdə ~40–70 WebRTC və ya ~80–120 SIP zəngi rahat işləyir.',
+        'link' => '/why-php',
+    ],
+    [
+        'qTR' => 'VoIP over QUIC (AiPBX-QUIC) nasıl çalışıyor ve üretimde mi?', 'qEN' => 'How does VoIP over QUIC (AiPBX-QUIC) work, and is it in production?', 'qDE' => 'Wie funktioniert VoIP über QUIC (AiPBX-QUIC)?', 'qAZ' => 'VoIP over QUIC (AiPBX-QUIC) necə işləyir?',
+        'aTR' => 'AiPBX-QUIC, tek bir UDP 443 portundan SIP sinyalleşmesini QUIC stream\'lerinde, RTP sesi ise gecikmesiz QUIC Datagramlarında (RFC 9000 / 9221) taşıyarak Wi-Fi ↔ 4G/5G geçişlerini koparmamayı hedefleyen deneysel Go ağ geçidimizdir. Yapılandırma testleri geçer; canlı Asterisk çağrı doğrulaması yol haritasındadır, üretimde ise Port 443 ALPN + WSS/TURNS çalışır.',
+        'aEN' => 'AiPBX-QUIC is our experimental standalone Go gateway using QUIC streams for SIP and QUIC Datagrams (RFC 9000 / 9221) for RTP over a single UDP 443 port to survive Wi-Fi ↔ 4G/5G handoffs. Config/unit tests pass while live two-way Asterisk calls remain on the roadmap; production uses Port 443 ALPN + WSS/TURNS.',
+        'aDE' => 'AiPBX-QUIC ist unser experimentelles Go-Gateway (RFC 9000 / 9221), das SIP über QUIC-Streams und RTP über QUIC-Datagramme auf UDP 443 bündelt. Live-Zweiwege-Anrufe stehen auf der Roadmap; produktiv läuft Port 443 ALPN + WSS/TURNS.',
+        'aAZ' => 'AiPBX-QUIC, UDP 443 üzərindən SIP və RTP trafikini QUIC (RFC 9000 / 9221) ilə daşıyan təcrübi Go şlüzüdür. Canlı Asterisk səs zəngi yol xəritəsindədir; istehsalatda Port 443 ALPN + WSS/TURNS işləyir.',
+        'link' => '/faq/quic',
     ],
 ];
 

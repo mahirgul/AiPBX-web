@@ -63,6 +63,10 @@ DirectoryIndex index.php index.html
     RewriteRule ^(tr|de|az)/docs(?:/([A-Za-z0-9_-]+))?$ docs.php?doc=$2 [E=SITE_LANG:$1,QSA,L]
     RewriteRule ^docs(?:/([A-Za-z0-9_-]+))?$ docs.php?doc=$1 [QSA,L]
 
+    # FAQ & technology deep-dive articles: /faq/<slug> → faq.php?topic=<slug>
+    RewriteRule ^(tr|de|az)/faq(?:/([A-Za-z0-9_-]+))?$ faq.php?topic=$2 [E=SITE_LANG:$1,QSA,L]
+    RewriteRule ^faq(?:/([A-Za-z0-9_-]+))?$ faq.php?topic=$1 [QSA,L]
+
     # 3. Language folders: /tr/, /tr/features → index.php / features.php with SITE_LANG=tr
     RewriteRule ^(tr|de|az)/$ index.php [E=SITE_LANG:$1,L]
     RewriteCond %{DOCUMENT_ROOT}/$2.php -f

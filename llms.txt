@@ -43,8 +43,23 @@
 - One-Command Install: https://aipbx.bid/install
 - Video Guides: https://aipbx.bid/videos
 - Mobile Apps & Connectors: https://aipbx.bid/mobile
+- FAQ & Technology Deep-Dives: https://aipbx.bid/faq
 - Documentation: https://aipbx.bid/docs
 - Live Interactive Demo (EN / TR / DE): https://aipbx.bid/demo/en/dashboard/
+
+## Technology Deep-Dives & Architecture Articles
+- Why PHP? (Control Plane Architecture & 4 vCPU / 4 GB Sizing): https://aipbx.bid/why-php — Explains why PHP never sits on media/signaling hot paths and gives concrete human & AI concurrency tables.
+- VoIP over QUIC (RFC 9000 / 9221): https://aipbx.bid/faq/quic — Experimental standalone Go gateway (`AiPBX-QUIC`) multiplexing SIP streams and RTP Datagrams over single-port UDP 443 with Connection Migration.
+- Port 443 Nginx L4 ALPN & SNI Multiplexing: https://aipbx.bid/faq/port-443-alpn — Zero-decryption `ssl_preread` routing to Apache (:8443), `coturn` (:5349), and Asterisk SIP-TLS (:5061).
+- Asterisk 22 LTS, Dual-Endpoint PJSIP & ConfBridge SFU: https://aipbx.bid/faq/asterisk-pjsip — Simultaneous deskphone + WebRTC endpoints, zero-transcoding SFU video, and `.prev` atomic config rollback.
+- WebRTC, DTLS-SRTP & Ephemeral `coturn` Credentials: https://aipbx.bid/faq/webrtc-coturn — Solving loopback NAT issues (`relay-ip`, `ice_host_candidates`), disabling `stunaddr`, and 30-min HMAC-SHA1 TURN tokens.
+- Go WebSocket Chat Daemon (`aipbx-chat`) & Built-in LDAP: https://aipbx.bid/faq/go-chat — 1,000+ low-memory goroutine sockets on 4 GB RAM, 256-member groups, `v_chat_users` isolation, and LDAP (:389/:636).
+- ONNX Runtime Local TTS vs. PyTorch: https://aipbx.bid/faq/onnx-local-tts — Real 2-core CPU benchmarks replacing ~1.1 GB PyTorch with ~150 MB ONNX Runtime + numpy (EMA Lightning 11–12×, Piper 13–16×, Kokoro 1.7×).
+- Silero VAD v5 & Smart Turn v3.2 End-of-Turn Detection: https://aipbx.bid/faq/silero-smart-turn — Per-agent opt-in ONNX detectors (`0.08 ms` VAD / `~100 ms` turn classifier) and 8 kHz telephony findings.
+- Asterisk ARI, AudioSocket & ElevenLabs Hold Music: https://aipbx.bid/faq/ari-audiosocket-realtime — 20 ms PCM streaming, Realtime vs Cascade Voice Agents, RAG/DB/DTMF/`dial_and_navigate`, and ElevenLabs MOH generator.
+- HEPv3 SIP/RTCP Capture (`aipbx-signaling`) & Call Quality: https://aipbx.bid/faq/hepv3-signaling — Loopback HEPv3 collector (:9061), SIP ladder diagrams, `.pcap` exports, and bidirectional RTCP health alerts.
+- FIDO2 Passkeys, `SecretBox`, `aipbx-priv` & systemd Sandboxing: https://aipbx.bid/faq/passkeys-secretbox-sandbox — Least-privilege DML DB separation, libsodium secrets outside DB, SSRF pinning, and Ed25519 plugin catalog.
+- Zero-Battery Mobile Push Wakeup & CallKit: https://aipbx.bid/faq/fcm-apns-callkit — Under-400 ms FCM / PushKit wakeups, iOS `aipbx-engine://` scheme fixes, and `POST /api/v1/extensions/{id}/pairing`.
 
 ## Author & Repositories
 - Author: Mahir Gül — https://www.mhrgl.com

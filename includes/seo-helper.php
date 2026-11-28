@@ -77,6 +77,13 @@ $pageSeoMap = array (
     'az' => array ('title' => 'Niyə PHP? — AiPBX Memarlığı & 4 vCPU / 4 GB Server Tutumu', 'desc' => 'AiPBX-də PHP niyə yalnız idarəetmə müstəvisidir? C (Asterisk 22/Nginx), Go (chat), Python/ONNX (AI) yolları və 4 vCPU / 4 GB RAM serverdə eyni vaxtlı agent tutumu.', 'keywords' => 'niyə PHP, AiPBX memarlıq, Asterisk 22 PHP performans, Go chat, ONNX AI tutum, 4 GB RAM santral tutumu'),
     'slug' => '/why-php',
   ),
+  'faq' => array (
+    'tr' => array ('title' => 'AiPBX SSS & Teknolojiler: QUIC, ALPN, WebRTC, Go, ONNX, HEPv3', 'desc' => 'AiPBX\'te kullanılan ve test edilen teknolojiler: VoIP over QUIC, Port 443 ALPN, Asterisk 22 PJSIP, coturn TURNS, Go Chat, ONNX TTS, Silero VAD, HEPv3, Passkey ve CallKit.', 'keywords' => 'AiPBX SSS, VoIP over QUIC, Port 443 ALPN, ONNX Runtime TTS, Silero VAD, Smart Turn, HEPv3 Asterisk, Go chat, FIDO2 Passkey, PushKit CallKit'),
+    'en' => array ('title' => 'AiPBX FAQ & Architecture Technologies: QUIC, ALPN, WebRTC, ONNX, HEPv3', 'desc' => 'Deep-dive articles on technologies AiPBX runs or tests: VoIP over QUIC, Port 443 ALPN, Asterisk 22 PJSIP, coturn TURNS, Go chat, ONNX TTS, Silero VAD, HEPv3, Passkeys, and CallKit.', 'keywords' => 'AiPBX FAQ, VoIP over QUIC, Port 443 ALPN, ONNX Runtime TTS, Silero VAD, Smart Turn, HEPv3 Asterisk, Go WebSocket chat, FIDO2 Passkeys, PushKit CallKit'),
+    'de' => array ('title' => 'AiPBX FAQ & Technologien: QUIC, ALPN, WebRTC, Go, ONNX, HEPv3', 'desc' => 'Fachartikel zu AiPBX-Technologien: VoIP über QUIC, Port 443 ALPN, Asterisk 22 PJSIP, coturn TURNS, Go-Chat, ONNX TTS, Silero VAD, HEPv3, Passkeys und CallKit.', 'keywords' => 'AiPBX FAQ, VoIP über QUIC, Port 443 ALPN, ONNX Runtime TTS, Silero VAD, Smart Turn, HEPv3, Go Chat, FIDO2 Passkeys, PushKit CallKit'),
+    'az' => array ('title' => 'AiPBX Suallar & Texnologiyalar: QUIC, ALPN, WebRTC, Go, ONNX, HEPv3', 'desc' => 'AiPBX-də işlədilən və sınaqdan keçirilən texnologiyalar: VoIP over QUIC, Port 443 ALPN, Asterisk 22 PJSIP, Go söhbət, ONNX TTS, Silero VAD, HEPv3, Passkey və CallKit.', 'keywords' => 'AiPBX suallar, VoIP over QUIC, Port 443 ALPN, ONNX TTS, Silero VAD, HEPv3, Go söhbət, Passkey, CallKit'),
+    'slug' => '/faq',
+  ),
   'contact' => array (
     'tr' => array (
       'title' => 'AiPBX İletişim & Destek: Proje Lideri & Danışmanlık',
@@ -125,6 +132,9 @@ foreach (SITE_LANGS as $l) {
 if (isset($seoOverride)) {
     $seoTitle  = $seoOverride['title'];
     $seoDesc   = $seoOverride['desc'];
+    if (!empty($seoOverride['keywords'])) {
+        $seoKw = $seoOverride['keywords'];
+    }
     $seoSlug   = $seoOverride['slug'];
     $canonical = lang_url($seoSlug, $LANG);
     foreach (SITE_LANGS as $l) {
@@ -203,7 +213,7 @@ $graph = [
         ],
     ],
     [
-        '@type'              => in_array($pageKey, ['install', 'why-php'], true) ? ['WebPage', 'TechArticle'] : 'WebPage',
+        '@type'              => $seoOverride['type'] ?? (in_array($pageKey, ['install', 'why-php'], true) ? ['WebPage', 'TechArticle'] : 'WebPage'),
         '@id'                => $canonical . '#webpage',
         'url'                => $canonical,
         'name'               => $seoTitle,
@@ -227,8 +237,8 @@ $graph = [
     ],
 ];
 
-// FAQ rich result data (the same Q&A is visible in the FAQ of the features page)
-if ($pageKey === 'features' && !empty($faq)) {
+// FAQ rich result data (the same Q&A is visible in the FAQ section of /features and /faq)
+if ((($pageKey === 'features') || ($pageKey === 'faq' && empty($seoOverride))) && !empty($faq)) {
     $graph[] = [
         '@type'      => 'FAQPage',
         '@id'        => $canonical . '#faq',

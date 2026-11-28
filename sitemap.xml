@@ -322,6 +322,486 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/why-php"/>
   </url>
   <url>
+    <loc>https://aipbx.bid/tr/faq</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/quic</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/quic"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/quic</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/quic"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/quic</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/quic"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/quic</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/quic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/quic"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/port-443-alpn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/port-443-alpn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/port-443-alpn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/port-443-alpn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/port-443-alpn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/port-443-alpn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/port-443-alpn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/port-443-alpn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/port-443-alpn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/asterisk-pjsip</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/asterisk-pjsip"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/asterisk-pjsip</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/asterisk-pjsip"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/asterisk-pjsip</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/asterisk-pjsip"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/asterisk-pjsip</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/asterisk-pjsip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/asterisk-pjsip"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/webrtc-coturn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/webrtc-coturn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/webrtc-coturn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/webrtc-coturn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/webrtc-coturn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/webrtc-coturn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/webrtc-coturn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/webrtc-coturn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/webrtc-coturn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/go-chat</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/go-chat"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/go-chat</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/go-chat"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/go-chat</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/go-chat"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/go-chat</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/go-chat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/go-chat"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/onnx-local-tts</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/onnx-local-tts"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/onnx-local-tts</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/onnx-local-tts"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/onnx-local-tts</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/onnx-local-tts"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/onnx-local-tts</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/onnx-local-tts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/onnx-local-tts"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/silero-smart-turn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/silero-smart-turn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/silero-smart-turn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/silero-smart-turn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/silero-smart-turn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/silero-smart-turn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/silero-smart-turn</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/silero-smart-turn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/silero-smart-turn"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/ari-audiosocket-realtime</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/ari-audiosocket-realtime"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/ari-audiosocket-realtime</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/ari-audiosocket-realtime"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/ari-audiosocket-realtime</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/ari-audiosocket-realtime"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/ari-audiosocket-realtime</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/ari-audiosocket-realtime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/ari-audiosocket-realtime"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/hepv3-signaling</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/hepv3-signaling"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/hepv3-signaling</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/hepv3-signaling"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/hepv3-signaling</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/hepv3-signaling"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/hepv3-signaling</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/hepv3-signaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/hepv3-signaling"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/passkeys-secretbox-sandbox</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/passkeys-secretbox-sandbox"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/passkeys-secretbox-sandbox</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/passkeys-secretbox-sandbox"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/passkeys-secretbox-sandbox</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/passkeys-secretbox-sandbox"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/passkeys-secretbox-sandbox</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/passkeys-secretbox-sandbox"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/passkeys-secretbox-sandbox"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/tr/faq/fcm-apns-callkit</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/fcm-apns-callkit"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/faq/fcm-apns-callkit</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/fcm-apns-callkit"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/de/faq/fcm-apns-callkit</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/fcm-apns-callkit"/>
+  </url>
+  <url>
+    <loc>https://aipbx.bid/az/faq/fcm-apns-callkit</loc>
+    <lastmod>2026-11-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aipbx.bid/tr/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipbx.bid/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aipbx.bid/de/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aipbx.bid/az/faq/fcm-apns-callkit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aipbx.bid/faq/fcm-apns-callkit"/>
+  </url>
+  <url>
     <loc>https://aipbx.bid/demo/en/dashboard/</loc>
     <lastmod>2026-11-28</lastmod>
     <priority>0.8</priority>
