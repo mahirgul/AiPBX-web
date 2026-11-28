@@ -14,26 +14,36 @@ $langFlags = [
     'de' => '<svg class="flag-icon" viewBox="0 0 900 600" width="20" height="14" aria-hidden="true"><rect width="900" height="600" fill="#fff"/><rect width="900" height="200" fill="#ed2939"/><rect y="400" width="900" height="200" fill="#ed2939"/></svg>', 'az' => '<svg class="flag-icon" viewBox="0 0 1200 800" width="20" height="14" aria-hidden="true"><rect width="1200" height="800" fill="#00B5E2"/><rect y="267" width="1200" height="266" fill="#EF3340"/><rect y="533" width="1200" height="267" fill="#509E2F"/><circle cx="580" cy="400" r="92" fill="#fff"/><circle cx="604" cy="400" r="76" fill="#EF3340"/><polygon fill="#fff" points="680,354 673,382 647,367 662,393 634,400 662,407 647,433 673,418 680,446 687,418 713,433 698,407 726,400 698,393 713,367 687,382"/></svg>',
 ];
 
-// Docs, FAQ, Why PHP and Videos sit under one "Resources" menu on a wide screen, so the bar stays short.
-$resourceItems = [
+// Two menus keep the bar short: Product (features, integrations) and Resources (docs, FAQ, Why PHP, videos).
+// A group is ['group' => label, 'items' => [[href, label, page key], ...]]; its button shows as active on any of its pages.
+$productGroup = ['group' => t('Ürün', 'Product', 'Produkt', az: 'Məhsul'), 'items' => [
+    ['/features', t('Özellikler', 'Features', 'Funktionen', az: 'Xüsusiyyətlər'), 'features'],
+    ['/integrations', t('Entegrasyonlar', 'Integrations', 'Integrationen', az: 'İnteqrasiyalar'), 'integrations'],
+]];
+$resourceGroup = ['group' => t('Kaynaklar', 'Resources', 'Ressourcen', az: 'Resurslar'), 'items' => [
     ['/docs',      t('Belgeler', 'Docs', 'Doku', az: 'Sənədlər'), 'docs'],
     ['/faq',       t('SSS & Teknolojiler', 'FAQ & Tech', 'FAQ & Technik', az: 'Suallar & Texnologiya'), 'faq'],
     ['/why-php',   t('Neden PHP?', 'Why PHP?', 'Warum PHP?', az: 'Niyə PHP?'), 'why-php'],
     ['/videos',    t('Videolar', 'Videos', 'Videos', az: 'Videolar'), 'videos'],
-];
-$resourceLabel = t('Kaynaklar', 'Resources', 'Ressourcen', az: 'Resurslar');
-$resourceActive = in_array($page ?? '', array_column($resourceItems, 2), true) || str_starts_with((string) $PAGE_SLUG, '/faq');
+]];
 // The portal itself with made-up data, in the visitor's language (no Azerbaijani portal copy).
 $demoItem = ['https://aipbx.bid/demo/' . (in_array($LANG, ['tr', 'de'], true) ? $LANG : 'en') . '/dashboard/', t('Dene', 'Try', 'Testen', az: 'Sına'), ''];
 $navItems = [
-    ['/features', t('Özellikler', 'Features', 'Funktionen', az: 'Xüsusiyyətlər'), 'features'],
-    ['/integrations', t('Entegrasyonlar', 'Integrations', 'Integrationen', az: 'İnteqrasiyalar'), 'integrations'],
+    $productGroup,
     ['/install',  t('Kurulum', 'Install', 'Installation', az: 'Quraşdırma'), 'install'],
     ['/mobile',   t('Mobil', 'Mobile', 'Mobil', az: 'Mobil'), 'mobile'],
-    'resources',
+    $resourceGroup,
     $demoItem,
     ['/contact',  t('İletişim', 'Contact', 'Kontakt', az: 'Əlaqə'), 'contact'],
 ];
+$groupActive = static function (array $g) use ($page, $PAGE_SLUG): bool {
+    foreach ($g['items'] as [$href, , $key]) {
+        if (($page ?? '') === $key || str_starts_with((string) $PAGE_SLUG, $href)) {
+            return true;
+        }
+    }
+    return false;
+};
 ?>
 <header class="sx-nav" id="sxNav">
     <div class="sx-nav-in">
@@ -42,11 +52,11 @@ $navItems = [
         </a>
         <ul class="sx-links">
             <?php foreach ($navItems as $item): ?>
-                <?php if ($item === 'resources'): ?>
-                    <li class="sx-res" id="sxRes">
-                        <button type="button" class="sx-res-btn<?= $resourceActive ? ' active' : '' ?>" aria-haspopup="true" aria-expanded="false"><?= $resourceLabel ?> <i class="fa-solid fa-chevron-down"></i></button>
+                <?php if (isset($item['group'])): ?>
+                    <li class="sx-res">
+                        <button type="button" class="sx-res-btn<?= $groupActive($item) ? ' active' : '' ?>" aria-haspopup="true" aria-expanded="false"><?= $item['group'] ?> <i class="fa-solid fa-chevron-down"></i></button>
                         <div class="sx-res-menu">
-                            <?php foreach ($resourceItems as [$href, $label, $key]): ?>
+                            <?php foreach ($item['items'] as [$href, $label, $key]): ?>
                                 <a href="<?= $href ?>"<?= ($page ?? '') === $key ? ' class="active"' : '' ?>><?= $label ?></a>
                             <?php endforeach; ?>
                         </div>
@@ -76,10 +86,10 @@ $navItems = [
     </div>
     <div class="sx-mobile" id="sxMobile">
         <?php foreach ($navItems as $item): ?>
-            <?php if ($item === 'resources'): ?>
-                <details class="sx-mres"<?= $resourceActive ? ' open' : '' ?>>
-                    <summary><?= $resourceLabel ?> <i class="fa-solid fa-chevron-down"></i></summary>
-                    <?php foreach ($resourceItems as [$href, $label]): ?>
+            <?php if (isset($item['group'])): ?>
+                <details class="sx-mres"<?= $groupActive($item) ? ' open' : '' ?>>
+                    <summary><?= $item['group'] ?> <i class="fa-solid fa-chevron-down"></i></summary>
+                    <?php foreach ($item['items'] as [$href, $label]): ?>
                         <a href="<?= $href ?>"><?= $label ?></a>
                     <?php endforeach; ?>
                 </details>
