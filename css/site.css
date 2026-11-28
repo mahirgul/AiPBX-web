@@ -29,9 +29,8 @@
 .sx-links a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--sx-text) !important; text-decoration: none !important; font-weight: 600; font-size: .92rem; }
 .sx-links a:hover, .sx-links a.active { color: var(--sx-primary) !important; background: #f0f9ff; }
 /* The live demo stands out from the other menu items. */
-.sx-links a.sx-demo, .sx-mobile a.sx-demo { color: var(--sx-green) !important; }
-.sx-links a.sx-demo { background: #ecfdf5; }
-.sx-links a.sx-demo:hover { color: #fff !important; background: var(--sx-green); }
+.sx-links a.sx-demo { color: #fff !important; background: var(--sx-green); }
+.sx-links a.sx-demo:hover { color: #fff !important; background: #047857; }
 .sx-actions { display: flex; align-items: center; gap: 10px; }
 .sx-lang { position: relative; }
 .sx-lang-btn { display: flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid var(--sx-line); border-radius: 8px; background: #fff; cursor: pointer; font: inherit; font-weight: 700; font-size: .85rem; color: var(--sx-ink); }
@@ -72,6 +71,8 @@
     .sx-mobile { border-top: 1px solid var(--sx-line); background: #fff; padding: 8px 20px 18px; max-height: calc(100vh - 64px); overflow-y: auto; }
     .sx-mobile a { display: block; padding: 12px 4px; border-bottom: 1px solid #f1f5f9; color: var(--sx-ink) !important; text-decoration: none !important; font-weight: 600; }
     .sx-mobile a.sx-join { display: flex; justify-content: center; margin: 10px 0 6px; border: 0; padding: 12px 16px; color: #fff !important; }
+    .sx-mobile a.sx-demo { display: flex; justify-content: center; margin: 10px 0 6px; border: 0; border-radius: 8px; padding: 12px 16px; background: var(--sx-green); color: #fff !important; font-weight: 700; }
+    .sx-mobile a.sx-demo:hover { background: #047857; color: #fff !important; }
     .sx-mobile a.sx-sponsor { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 6px 0; border: 1px solid #fbcfe8; background: #fff0f5; color: #be185d !important; padding: 12px 16px; border-radius: 8px; font-weight: 700; }
     .sx-mobile a.sx-upcloud { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 6px 0; border: 1px solid #e9d5ff; background: #faf5ff; color: #7e22ce !important; padding: 12px 16px; border-radius: 8px; font-weight: 700; text-decoration: none !important; }
     .sx-mobile a.sx-gh { display: inline-flex; margin-top: 8px; border: 0; color: #fff !important; padding: 10px 16px; }
@@ -94,6 +95,8 @@
 .sx-btn-primary:hover { background: var(--sx-primary-dark); }
 .sx-btn-ghost { background: #fff; color: var(--sx-ink) !important; border-color: var(--sx-line); }
 .sx-btn-ghost:hover { border-color: var(--sx-primary); color: var(--sx-primary) !important; }
+.sx-btn-demo { background: var(--sx-green); color: #fff !important; }
+.sx-btn-demo:hover { background: #047857; color: #fff !important; }
 
 /* Android test strip, top of the home page */
 .sx-beta { display: block; background: linear-gradient(90deg, #047857, #059669); color: #fff !important; text-decoration: none !important; }

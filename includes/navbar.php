@@ -21,7 +21,7 @@ $navItems = [
     ['/mobile',   t('Mobil', 'Mobile', 'Mobil', az: 'Mobil'), 'mobile'],
     ['/docs',     t('Belgeler', 'Docs', 'Doku', az: 'Sənədlər'), 'docs'],
     // The portal itself with made-up data, in the visitor's language (no Azerbaijani portal copy).
-    ['https://aipbx.bid/demo/' . (in_array($LANG, ['tr', 'de'], true) ? $LANG : 'en') . '/dashboard/', t('Canlı demo', 'Live demo', 'Live-Demo', az: 'Canlı demo'), ''],
+    ['https://aipbx.bid/demo/' . (in_array($LANG, ['tr', 'de'], true) ? $LANG : 'en') . '/dashboard/', t('Dene', 'Try', 'Testen', az: 'Sına'), ''],
     ['/contact',  t('İletişim', 'Contact', 'Kontakt', az: 'Əlaqə'), 'contact'],
 ];
 ?>
