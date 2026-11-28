@@ -275,6 +275,8 @@ function getLangUrl(string $targetLang): string {
 const GITHUB_REPO = 'mahirgul/AiPBX';
 const GITHUB_ANDROID_REPO = 'mahirgul/AiPBX-Android';
 const GITHUB_IOS_REPO = 'mahirgul/AiPBX-ios';
+const GITHUB_ODOO_REPO = 'mahirgul/AiPBX-Odoo';
+const GITHUB_FRAPPE_REPO = 'mahirgul/AiPBX-Frappe';
 
 function latest_release(string $repo = GITHUB_REPO): array {
     static $rels = [];

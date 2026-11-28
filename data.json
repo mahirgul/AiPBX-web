@@ -11,10 +11,10 @@
     "website": "https://aipbx.bid",
     "repo": "https://github.com/mahirgul/AiPBX",
     "license": "MIT License",
-    "version": "1.50.35",
-    "androidVersion": "1.0.79",
+    "version": "1.82.5",
+    "androidVersion": "1.82.0",
     "build": "60",
-    "releaseDate": "2026-10-31",
+    "releaseDate": "2026-11-28",
     "turnkeyCommand": "curl -fsSL aipbx.bid/i | sudo bash",
     "gitCloneCommand": "git clone https://github.com/mahirgul/AiPBX.git /opt/aipbx && cd /opt/aipbx && sudo bash install.sh",
     "supportedOS": [
@@ -71,10 +71,10 @@
     }
   ],
   "hero": {
-    "badgeTR": "✨ AiPBX 1.12.3 — %100 Ücretsiz & Açık Kaynak Yapay Zekâ Destekli VoIP SIP Santral",
-    "badgeEN": "✨ AiPBX 1.12.3 — 100% Free & Open Source AI-Powered VoIP SIP PBX",
-    "badgeDE": "✨ AiPBX 1.12.3 — Enterprise IP-Telefonanlage",
-    "badgeAZ": "✨ AiPBX 1.12.3 — Korporativ IP Santral Platforması",
+    "badgeTR": "✨ AiPBX 1.82.5 — %100 Ücretsiz & Açık Kaynak Yapay Zekâ Destekli VoIP SIP Santral",
+    "badgeEN": "✨ AiPBX 1.82.5 — 100% Free & Open Source AI-Powered VoIP SIP PBX",
+    "badgeDE": "✨ AiPBX 1.82.5 — Enterprise IP-Telefonanlage",
+    "badgeAZ": "✨ AiPBX 1.82.5 — Korporativ IP Santral Platforması",
     "titleTR": "%100 Açık Kaynak & Yapay Zekâ Destekli Kurumsal VoIP & SIP Santral",
     "titleEN": "100% Free Open Source & AI-Powered Enterprise VoIP & SIP PBX",
     "titleDE": "Enterprise IP-Telefonie, Konsequent Durchdacht.",
@@ -87,17 +87,17 @@
   "flagshipFeatures": [
     {
       "id": "ai_voice_requests",
-      "badge": "Yapay Zekâ (v1.12)",
+      "badge": "Yapay Zekâ",
       "icon": "fa-robot",
       "color": "#7c3aed",
       "titleTR": "Yapay Zekâ Sesli Ajanlar, Realtime & Yerel TTS",
       "titleEN": "AI Voice Agents, Realtime & Local TTS",
       "titleDE": "KI-Sprachagenten, Realtime & lokale Sprachausgabe",
       "titleAZ": "Süni İntellekt Səsli Agentlər, Realtime & Yerli TTS",
-      "descTR": "Arayanı canlı konuşmayla karşılayan sesli ajanlar: Realtime (OpenAI, Gemini Live, xAI) ya da kademeli (konuşma tanıma, dil modeli, ses). Talimata yazılan araçlarla aktarma, bilgi bankası, veritabanı ve HTTP sorguları, arayanın diline göre karşılama. Sunucuda çalışan yerel TTS sesleri (EMA, Piper, Kokoro); konuşma tanıma ve dil modelleri OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini gibi bulut hesaplarıyla.",
-      "descEN": "Voice agents that talk to callers live: Realtime (OpenAI, Gemini Live, xAI) or cascade (speech to text, language model, voice). Tools are written into the instructions: transfers, knowledge bases, database and HTTP lookups, greetings in the caller's language. Local text-to-speech voices run on the server (EMA, Piper, Kokoro); speech recognition and language models use cloud accounts (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
-      "descDE": "Sprachagenten, die Anrufer live bedienen: Realtime (OpenAI, Gemini Live, xAI) oder kaskadiert (Spracherkennung, Sprachmodell, Stimme). Die Werkzeuge stehen in der Anleitung: Weiterleitungen, Wissensdatenbanken, Datenbank- und HTTP-Abfragen, Begrüßung in der Sprache des Anrufers. Lokale Sprachausgabe läuft auf dem Server (EMA, Piper, Kokoro); Spracherkennung und Sprachmodelle nutzen Cloud-Konten (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
-      "descAZ": "Zəng edəni canlı danışıqla qarşılayan səsli agentlər: Realtime (OpenAI, Gemini Live, xAI) və ya kaskad (nitq tanıma, dil modeli, səs). Alətlər təlimatın içində yazılır: yönləndirmə, bilik bazası, verilənlər bazası və HTTP sorğuları, zəng edənin dilində salamlama. Serverdə yerli TTS səsləri (EMA, Piper, Kokoro); nitq tanıma və dil modelləri OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini bulud hesabları ilə işləyir."
+      "descTR": "Arayanı canlı konuşmayla karşılayan sesli ajanlar: Realtime (OpenAI, Gemini Live, xAI) ya da kademeli (konuşma tanıma, dil modeli, ses). Talimata yazılan araçlarla aktarma, bilgi bankası, veritabanı ve HTTP sorguları, arayanın diline göre karşılama. Sunucuda yerel TTS sesleri (EMA, Piper, Kokoro); Cloud TTS ile hazır anons şablonları ve ElevenLabs bekleme müziği (MOH) üretimi; konuşma tanıma ve dil modelleri OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini bulut hesaplarıyla.",
+      "descEN": "Voice agents that talk to callers live: Realtime (OpenAI, Gemini Live, xAI) or cascade (speech to text, language model, voice). Tools are written into the instructions: transfers, knowledge bases, database and HTTP lookups, greetings in the caller's language. Local text-to-speech voices on the server (EMA, Piper, Kokoro); Cloud TTS prompt templates and ElevenLabs hold music (MOH) generation; speech recognition and language models via cloud accounts (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
+      "descDE": "Sprachagenten, die Anrufer live bedienen: Realtime (OpenAI, Gemini Live, xAI) oder kaskadiert (Spracherkennung, Sprachmodell, Stimme). Die Werkzeuge stehen in der Anleitung: Weiterleitungen, Wissensdatenbanken, Datenbank- und HTTP-Abfragen, Begrüßung in der Sprache des Anrufers. Lokale Sprachausgabe auf dem Server (EMA, Piper, Kokoro); Cloud-TTS-Ansagevorlagen und ElevenLabs-Wartemusik (MOH); Spracherkennung und Sprachmodelle über Cloud-Konten (OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini).",
+      "descAZ": "Zəng edəni canlı danışıqla qarşılayan səsli agentlər: Realtime (OpenAI, Gemini Live, xAI) və ya kaskad (nitq tanıma, dil modeli, səs). Alətlər təlimatın içində yazılır: yönləndirmə, bilik bazası, verilənlər bazası və HTTP sorğuları, zəng edənin dilində salamlama. Serverdə yerli TTS səsləri (EMA, Piper, Kokoro); Cloud TTS hazır anons şablonları və ElevenLabs gözləmə musiqisi (MOH) yaradılması; nitq tanıma və dil modelləri OpenAI, Groq, Deepgram, Azure, ElevenLabs, Gemini bulud hesabları ilə işləyir."
     },
     {
       "id": "passkey",
@@ -214,17 +214,17 @@
     },
     {
       "id": "i18n_portal",
-      "badge": "22 Dil %100",
+      "badge": "23 Dil %100",
       "icon": "fa-language",
       "color": "#2563eb",
-      "titleTR": "22 Dilde %100 Eksiksiz Web Portalı",
-      "titleEN": "100% Complete in 22 Portal Languages",
-      "titleDE": "100 % Vollständig in 22 Portalsprachen",
-      "titleAZ": "22 Dildə 100% Tam Veb Portalı",
-      "descTR": "Türkçe ve İngilizce'nin yanı sıra Almanca, Azerbaycan dili, Fransızca, İspanyolca, İtalyanca, Rusça, Felemenkçe, Lehçe ve diğer dillerde (4.244 dize) sıfır eksik çeviri. Küresel ekipler ve çok dilli işletmeler için tam yerelleştirilmiş yönetim.",
-      "descEN": "Fully translated in 22 languages (4,244 strings each) including Turkish, English, German, Azerbaijani, French, Spanish, Italian, Russian, Dutch, Polish, Czech, and more. Zero missing translations for global enterprises.",
-      "descDE": "Vollständig in 22 Sprachen übersetzt (je 4.244 Texte), darunter Deutsch, Englisch, Türkisch, Aserbaidschanisch, Französisch, Spanisch, Italienisch, Russisch, Niederländisch, Polnisch und mehr. Keine fehlenden Texte für globale Teams.",
-      "descAZ": "Türk və ingilis dilləri ilə yanaşı alman, azərbaycan, fransız, ispan, italyan, rus, holland, polyak, çex və digər bütün dillərdə (4.244 sətir) 100% tam tərcümə. Qlobal komandalar və çoxdilli müəssisələr üçün tam yerliləşdirilmiş idarəetmə."
+      "titleTR": "23 Dilde %100 Eksiksiz Web Portalı",
+      "titleEN": "100% Complete in 23 Portal Languages",
+      "titleDE": "100 % Vollständig in 23 Portalsprachen",
+      "titleAZ": "23 Dildə 100% Tam Veb Portalı",
+      "descTR": "Türkçe ve İngilizce'nin yanı sıra Almanca, Azerbaycan dili, Fransızca, İspanyolca, İtalyanca, Rusça, Felemenkçe, Lehçe ve diğer dillerde (7.211 dize) sıfır eksik çeviri. Küresel ekipler ve çok dilli işletmeler için tam yerelleştirilmiş yönetim.",
+      "descEN": "Fully translated in 23 languages (7,211 strings each) including Turkish, English, German, Azerbaijani, French, Spanish, Italian, Russian, Dutch, Polish, Czech, and more. Zero missing translations for global enterprises.",
+      "descDE": "Vollständig in 23 Sprachen übersetzt (je 7.211 Texte), darunter Deutsch, Englisch, Türkisch, Aserbaidschanisch, Französisch, Spanisch, Italienisch, Russisch, Niederländisch, Polnisch und mehr. Keine fehlenden Texte für globale Teams.",
+      "descAZ": "Türk və ingilis dilləri ilə yanaşı alman, azərbaycan, fransız, ispan, italyan, rus, holland, polyak, çex və digər bütün dillərdə (7.211 sətir) 100% tam tərcümə. Qlobal komandalar və çoxdilli müəssisələr üçün tam yerliləşdirilmiş idarəetmə."
     }
   ],
   "tables": {
@@ -665,11 +665,11 @@
         "detailsDE": "Läuft auf eigener Hardware mit unbegrenzten Nebenstellen ohne laufende Gebühren.",
         "detailsAZ": "Öz serverinizdə limitsiz daxili nömrə və xarici xətlə xərcsiz işləyir.",
         "aipbxTR": "✅ 0 TL / 0 $ (Tamamen Ücretsiz)",
-        "aipbxEN": "✅ bash / Completely Free (MIT)",
+        "aipbxEN": "✅ $0 / Completely Free (MIT)",
         "aipbxDE": "✅ 0 € / Völlig Kostenlos (MIT)",
         "aipbxAZ": "✅ 0 AZN / 0 $ (Tamamilə Pulsuz)",
         "legacyTR": "❌ 1.000$+ Donanım & Dahili Lisansı",
-        "legacyEN": "❌ ,000+ Hardware & Ext Licenses",
+        "legacyEN": "❌ $1,000+ Hardware & Ext Licenses",
         "legacyDE": "❌ 1.000€+ Hardware- & Lizenzkosten",
         "legacyAZ": "❌ 1.000$+ Avadanlıq & Daxili Nömrə Lisenziyası"
       },
