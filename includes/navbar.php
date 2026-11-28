@@ -2,7 +2,7 @@
 /**
  * aipbx.bid — navigation bar (all pages).
  *
- * Five pages in words (features, install, videos, mobile, docs); sponsor,
+ * Pages in words (docs, FAQ, Why PHP and videos under one Resources menu); sponsor,
  * YouTube and GitHub as icons, so the bar stays uncrowded. The hamburger menu
  * below 860 px is the same list with words.
  */
@@ -14,15 +14,24 @@ $langFlags = [
     'de' => '<svg class="flag-icon" viewBox="0 0 900 600" width="20" height="14" aria-hidden="true"><rect width="900" height="600" fill="#fff"/><rect width="900" height="200" fill="#ed2939"/><rect y="400" width="900" height="200" fill="#ed2939"/></svg>', 'az' => '<svg class="flag-icon" viewBox="0 0 1200 800" width="20" height="14" aria-hidden="true"><rect width="1200" height="800" fill="#00B5E2"/><rect y="267" width="1200" height="266" fill="#EF3340"/><rect y="533" width="1200" height="267" fill="#509E2F"/><circle cx="580" cy="400" r="92" fill="#fff"/><circle cx="604" cy="400" r="76" fill="#EF3340"/><polygon fill="#fff" points="680,354 673,382 647,367 662,393 634,400 662,407 647,433 673,418 680,446 687,418 713,433 698,407 726,400 698,393 713,367 687,382"/></svg>',
 ];
 
+// Docs, FAQ, Why PHP and Videos sit under one "Resources" menu on a wide screen, so the bar stays short.
+$resourceItems = [
+    ['/docs',      t('Belgeler', 'Docs', 'Doku', az: 'Sənədlər'), 'docs'],
+    ['/faq',       t('SSS & Teknolojiler', 'FAQ & Tech', 'FAQ & Technik', az: 'Suallar & Texnologiya'), 'faq'],
+    ['/why-php',   t('Neden PHP?', 'Why PHP?', 'Warum PHP?', az: 'Niyə PHP?'), 'why-php'],
+    ['/videos',    t('Videolar', 'Videos', 'Videos', az: 'Videolar'), 'videos'],
+];
+$resourceLabel = t('Kaynaklar', 'Resources', 'Ressourcen', az: 'Resurslar');
+$resourceActive = in_array($page ?? '', array_column($resourceItems, 2), true) || str_starts_with((string) $PAGE_SLUG, '/faq');
+// The portal itself with made-up data, in the visitor's language (no Azerbaijani portal copy).
+$demoItem = ['https://aipbx.bid/demo/' . (in_array($LANG, ['tr', 'de'], true) ? $LANG : 'en') . '/dashboard/', t('Dene', 'Try', 'Testen', az: 'Sına'), ''];
 $navItems = [
     ['/features', t('Özellikler', 'Features', 'Funktionen', az: 'Xüsusiyyətlər'), 'features'],
     ['/integrations', t('Entegrasyonlar', 'Integrations', 'Integrationen', az: 'İnteqrasiyalar'), 'integrations'],
     ['/install',  t('Kurulum', 'Install', 'Installation', az: 'Quraşdırma'), 'install'],
-    ['/videos',   t('Videolar', 'Videos', 'Videos', az: 'Videolar'), 'videos'],
     ['/mobile',   t('Mobil', 'Mobile', 'Mobil', az: 'Mobil'), 'mobile'],
-    ['/docs',     t('Belgeler', 'Docs', 'Doku', az: 'Sənədlər'), 'docs'],
-    // The portal itself with made-up data, in the visitor's language (no Azerbaijani portal copy).
-    ['https://aipbx.bid/demo/' . (in_array($LANG, ['tr', 'de'], true) ? $LANG : 'en') . '/dashboard/', t('Dene', 'Try', 'Testen', az: 'Sına'), ''],
+    'resources',
+    $demoItem,
     ['/contact',  t('İletişim', 'Contact', 'Kontakt', az: 'Əlaqə'), 'contact'],
 ];
 ?>
@@ -32,8 +41,19 @@ $navItems = [
             <img src="/img/logo-68.png" alt="" width="32" height="32"><span>AiPBX</span>
         </a>
         <ul class="sx-links">
-            <?php foreach ($navItems as [$href, $label, $key]): ?>
-                <li><a href="<?= $href ?>"<?= str_contains($href, '/demo/') ? ' class="sx-demo"' : (($key !== '' && ($page ?? '') === $key) ? ' class="active"' : '') ?>><?= $label ?></a></li>
+            <?php foreach ($navItems as $item): ?>
+                <?php if ($item === 'resources'): ?>
+                    <li class="sx-res" id="sxRes">
+                        <button type="button" class="sx-res-btn<?= $resourceActive ? ' active' : '' ?>" aria-haspopup="true" aria-expanded="false"><?= $resourceLabel ?> <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="sx-res-menu">
+                            <?php foreach ($resourceItems as [$href, $label, $key]): ?>
+                                <a href="<?= $href ?>"<?= ($page ?? '') === $key ? ' class="active"' : '' ?>><?= $label ?></a>
+                            <?php endforeach; ?>
+                        </div>
+                    </li>
+                <?php else: [$href, $label, $key] = $item; ?>
+                    <li><a href="<?= $href ?>"<?= str_contains($href, '/demo/') ? ' class="sx-demo"' : (($key !== '' && ($page ?? '') === $key) ? ' class="active"' : '') ?>><?= $label ?></a></li>
+                <?php endif; ?>
             <?php endforeach; ?>
         </ul>
         <div class="sx-actions">
@@ -55,8 +75,10 @@ $navItems = [
         </div>
     </div>
     <div class="sx-mobile" id="sxMobile">
-        <?php foreach ($navItems as [$href, $label]): ?>
-            <a href="<?= $href ?>"<?= str_contains($href, '/demo/') ? ' class="sx-demo"' : '' ?>><?= $label ?></a>
+        <?php foreach ($navItems as $item): ?>
+            <?php foreach ($item === 'resources' ? $resourceItems : [$item] as [$href, $label]): ?>
+                <a href="<?= $href ?>"<?= str_contains($href, '/demo/') ? ' class="sx-demo"' : '' ?>><?= $label ?></a>
+            <?php endforeach; ?>
         <?php endforeach; ?>
         <a href="https://github.com/sponsors/mahirgul" class="sx-sponsor" target="_blank" rel="noopener"><i class="fa-solid fa-heart"></i> <?= t('GitHub\'da Sponsor Olun', 'Sponsor on GitHub', 'Auf GitHub sponsern', az: 'GitHub-da sponsor olun') ?></a>
         <a href="https://signup.upcloud.com/?promo=affiliate-aipbx250&amp;utm_source=aipbx&amp;utm_medium=affiliate&amp;utm_campaign=affiliate-aipbx250" class="sx-upcloud" target="_blank" rel="noopener sponsored"><i class="fa-solid fa-cloud"></i> <?= t('UpCloud ($250 Ücretsiz Kredi)', 'UpCloud ($250 Free Credit)', 'UpCloud ($250 Startguthaben)', az: 'UpCloud ($250 Pulsuz Kredit)') ?></a>

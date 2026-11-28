@@ -19,6 +19,12 @@
         document.addEventListener('click', function () { lang.classList.remove('open'); });
     }
 
+    var res = document.getElementById('sxRes');
+    if (res) {
+        res.querySelector('button').addEventListener('click', function (e) { e.stopPropagation(); res.classList.toggle('open'); });
+        document.addEventListener('click', function () { res.classList.remove('open'); });
+    }
+
     document.querySelectorAll('[data-shot-tab]').forEach(function (tab) {
         tab.addEventListener('click', function () {
             var id = tab.getAttribute('data-shot-tab');

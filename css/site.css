@@ -25,12 +25,20 @@
 .sx-nav-in { max-width: var(--sx-max); margin: 0 auto; padding: 0 20px; height: 64px; display: flex; align-items: center; gap: 28px; }
 .sx-brand { display: flex; align-items: center; gap: 10px; text-decoration: none !important; color: var(--sx-ink) !important; font-weight: 800; font-size: 1.2rem; letter-spacing: -.02em; }
 .sx-brand img { width: 32px; height: 32px; }
-.sx-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; flex: 1; }
+.sx-links { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; flex: 1; }
 .sx-links a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--sx-text) !important; text-decoration: none !important; font-weight: 600; font-size: .92rem; }
 .sx-links a:hover, .sx-links a.active { color: var(--sx-primary) !important; background: #f0f9ff; }
 /* The live demo stands out from the other menu items. */
 .sx-links a.sx-demo { color: #fff !important; background: var(--sx-green); }
 .sx-links a.sx-demo:hover { color: #fff !important; background: #047857; }
+/* "Resources": the links the bar would otherwise crowd. */
+.sx-res { position: relative; }
+.sx-res-btn { display: block; padding: 8px 12px; border: 0; border-radius: 8px; background: none; cursor: pointer; font: inherit; font-weight: 600; font-size: .92rem; color: var(--sx-text); }
+.sx-res-btn i { font-size: .65rem; margin-left: 3px; }
+.sx-res-btn:hover, .sx-res-btn.active, .sx-res.open .sx-res-btn { color: var(--sx-primary); background: #f0f9ff; }
+.sx-res-menu { display: none; position: absolute; left: 0; top: calc(100% + 6px); background: #fff; border: 1px solid var(--sx-line); border-radius: 10px; box-shadow: 0 12px 30px rgba(15, 23, 42, .12); padding: 6px; min-width: 200px; z-index: 5; }
+.sx-res.open .sx-res-menu, .sx-res:hover .sx-res-menu { display: block; }
+.sx-links .sx-res-menu a { white-space: nowrap; text-align: left; }
 .sx-actions { display: flex; align-items: center; gap: 10px; }
 .sx-lang { position: relative; }
 .sx-lang-btn { display: flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid var(--sx-line); border-radius: 8px; background: #fff; cursor: pointer; font: inherit; font-weight: 700; font-size: .85rem; color: var(--sx-ink); }
