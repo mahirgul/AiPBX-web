@@ -37,6 +37,13 @@ $faq = [
         'aDE' => 'Es verbindet sich mit jedem Anbieter mit SIP-Trunk und mit Anlagen, die SIP sprechen (NEC …); Microsoft Teams Direct Routing wird ebenfalls unterstützt.',
         'aAZ' => 'SIP trunk verən istənilən operatorla və SIP danışan santrallarla (NEC …) qoşulur; Microsoft Teams Direct Routing da dəstəklənir.',
     ],
+    [
+        'qTR' => 'Neden PHP kullanılıyor? Performans sorunu olur mu?', 'qEN' => 'Why PHP? Does it hurt telephony performance?', 'qDE' => 'Warum PHP? Gibt es Performance-Probleme?', 'qAZ' => 'Niyə PHP istifadə olunur? Performans problemi yaradırmı?',
+        'aTR' => 'AiPBX\'te PHP hiçbir zaman ses, SIP sinyalleşme, sohbet veya canlı AI yolunda değildir — yalnızca kontrol düzlemidir (formlar, REST API ve Apply anında Asterisk ayar üretimi). SIP/RTP/WebRTC C\'de (Asterisk 22 + Nginx + coturn), sohbet Go\'da, canlı AI ve ONNX TTS/VAD Python/C++\'ta çalışır. 4 vCPU / 4 GB RAM sunucuda ~40–70 WebRTC veya ~80–120 SIP çağrısı rahat taşınır.',
+        'aEN' => 'In AiPBX, PHP is never in the media or signaling hot path — it is strictly the control plane (admin UI, REST CRUD, and generating Asterisk configs on Apply). SIP/RTP/WebRTC run in C (Asterisk 22 + Nginx + coturn), real-time chat runs in Go, and live AI/ONNX TTS run in Python/C++. A 4 vCPU / 4 GB RAM server handles ~40–70 concurrent WebRTC calls or ~80–120 SIP passthrough calls.',
+        'aDE' => 'In AiPBX liegt PHP niemals im Medien- oder Signalisierungspfad, sondern ist rein die Steuerungsebene. SIP/RTP/WebRTC laufen in C (Asterisk 22 + Nginx + coturn), Echtzeit-Chat in Go und Live-KI/ONNX in Python/C++. Ein 4-vCPU-/4-GB-RAM-Server trägt ~40–70 gleichzeitige WebRTC- oder ~80–120 SIP-Anrufe.',
+        'aAZ' => 'AiPBX-də PHP heç vaxt səs, SIP siqnalizasiya, söhbət və ya canlı AI yolunda deyil — yalnız idarəetmə müstəvisidir. SIP/RTP/WebRTC C-də, söhbət Go-da, canlı AI və ONNX TTS Python/C++-da işləyir. 4 vCPU / 4 GB RAM serverdə ~40–70 WebRTC və ya ~80–120 SIP zəngi rahat işləyir.',
+    ],
 ];
 
 $features = [

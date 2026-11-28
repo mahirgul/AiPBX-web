@@ -287,3 +287,17 @@
 @media (max-width: 600px) {
     .sx-contact-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Technical Article & Sizing Tables ─────────────────────────────────────── */
+.sx-article { max-width: 820px; margin: 0 auto; }
+.sx-article h2 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); color: var(--sx-ink); margin: 36px 0 12px; letter-spacing: -.02em; font-weight: 800; }
+.sx-article h3 { font-size: 1.1rem; color: var(--sx-ink); margin: 24px 0 10px; font-weight: 700; }
+.sx-article p, .sx-article li { color: var(--sx-text); font-size: 1rem; line-height: 1.7; }
+.sx-article ul, .sx-article ol { padding-left: 22px; margin: 12px 0 18px; }
+.sx-article li { margin-bottom: 8px; }
+.sx-callout { background: var(--sx-soft); border: 1px solid var(--sx-line); border-left: 4px solid var(--sx-primary); border-radius: 10px; padding: 16px 20px; margin: 20px 0; color: var(--sx-text); }
+.sx-table-wrap { overflow-x: auto; margin: 16px 0 24px; border: 1px solid var(--sx-line); border-radius: 12px; background: #fff; }
+.sx-table { width: 100%; border-collapse: collapse; font-size: .94rem; }
+.sx-table th, .sx-table td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--sx-line); vertical-align: top; }
+.sx-table th { background: var(--sx-soft); color: var(--sx-ink); font-weight: 700; white-space: nowrap; }
+.sx-table tr:last-child td { border-bottom: 0; }

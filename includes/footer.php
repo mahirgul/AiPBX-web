@@ -14,6 +14,7 @@ $rel = latest_release();
         </div>
         <div class="sx-footer-links">
             <a href="/docs"><?= t('Dokümantasyon', 'Documentation', 'Dokumentation', az: 'Sənədlər') ?></a>
+            <a href="/why-php"><?= t('Neden PHP?', 'Why PHP?', 'Warum PHP?', az: 'Niyə PHP?') ?></a>
             <a href="/docs/roadmap"><?= t('Yol Haritası (Roadmap)', 'Roadmap', 'Roadmap', az: 'Yol xəritəsi') ?></a>
             <a href="/contact"><?= t('İletişim', 'Contact', 'Kontakt', az: 'Əlaqə') ?></a>
             <a href="https://github.com/mahirgul/AiPBX/releases" target="_blank" rel="noopener"><?= t('Sürüm notları', 'Release notes', 'Versionshinweise', az: 'Buraxılış qeydləri') ?></a>

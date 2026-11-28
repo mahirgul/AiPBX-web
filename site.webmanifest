@@ -1,7 +1,7 @@
 {
-    "name": "AiPBX — Açık Kaynak Kurumsal IP Telefon Santrali",
+    "name": "AiPBX — Open-Source AI-Powered Enterprise IP PBX",
     "short_name": "AiPBX",
-    "description": "Asterisk 22, WebRTC, Nginx L4 ALPN stream multiplexing, ve yerel mobil softphone destekli kurumsal IP santral.",
+    "description": "Self-hosted Asterisk 22 IP PBX with AI voice agents, WebRTC, Port 443 ALPN multiplexing, CRM connectors, and native mobile apps.",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",

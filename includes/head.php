@@ -12,6 +12,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="AiPBX">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt">
 
 <!-- Favicons -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">

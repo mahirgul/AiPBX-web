@@ -1,0 +1,52 @@
+# AiPBX (v1.82.5) — Open-Source AI-Powered Enterprise IP PBX
+> Free, MIT-licensed enterprise IP telephony platform built on Asterisk 22 LTS, PJSIP, WebRTC, Nginx Port 443 ALPN multiplexing, Go WebSocket chat, 23 interface languages (100% translated, 7,211 strings), and a modular plugin system with an Ed25519-signed community catalog.
+
+## Core Platform
+- **Telephony Engine**: Asterisk 22 LTS, PJSIP dual-endpoint extensions (`{ext}-sip` desk/mobile + `{ext}-webrtc` browser/mobile), IVR, ring groups, call queues, call center wallboard & supervisor monitoring (`*90` spy, `*91` whisper, `*92` barge), T.38 Fax-to-Email, ConfBridge SFU / Follow-Talker video meetings, call parking, blacklist, and 6-tier call barring.
+- **Single-Port 443 Ingress**: Nginx L4 `stream` with `ssl_preread` inspects ALPN/SNI without terminating TLS — HTTP/WSS (`/`, `/ws`, `/chat/ws`) routes to Apache (:8443), WebRTC TURNS relays to `coturn` (:5349), and remote desk phone SIP-TLS by phone region routes to Asterisk (:5061).
+- **One-Command Installer & Rollback Upgrades**: Ubuntu 26.04 LTS+, Debian 13+, Raspberry Pi OS (64-bit), and Armbian (`x86_64` & `ARM64`); automated database backups (`aipbx-backup`), `aipbx-update` with automatic rollback, `aipbx-selftest`, `firewalld` + `fail2ban` jails, Passkeys (WebAuthn/FIDO2), and TOTP 2FA.
+- **Privacy & Telecom Compliance**: 100% opt-in compliance presets for GDPR, KVKK (Turkey Law 6698), US CCPA/FCC, HIPAA, PCI-DSS v4.0, and LGPD; pre-call DTMF consent/opt-out, periodic recording beep, live Luhn PII redaction, nightly retention purge, SAR JSON export, Right to Erasure, and Cloud AI Lock.
+
+## AI & Voice Automation (`v1.82.5`)
+- **Built-in AI Voice Agents (`/ai-agent`)**: Realtime (OpenAI Realtime, Gemini Live, xAI, Qwen, OpenAI-compatible) and Cascade (`STT -> LLM -> TTS`) agents bridged over Asterisk ARI or AudioSocket, Guided Setup Wizard (`/ai-wizard`), per-agent call recording with CDR playback, Knowledge Base RAG (`ai-knowledge`), saved external SQL/HTTP tools, DTMF collection/sending, and autonomous outbound IVR navigation (`dial_and_navigate`).
+- **Local TTS & Detectors (`ailocal` / `aipbx-ai`)**: On-premise CPU/GPU ONNX voices — **EMA Lightning** (Turkish), **Piper**, and **Kokoro** — plus optional **Silero VAD** and **Smart Turn** end-of-turn detectors (`https://aipbx.bid/docs/local-ai`).
+- **Cloud AI (`aicloud`)**: Multi-account provider management with `SecretBox` encryption and monthly quota tracking for OpenAI, Google Gemini, Groq, Deepgram, ElevenLabs, Microsoft Azure AI Speech, Amazon Polly, OpenRouter, NVIDIA NIM, Qwen, and any OpenAI-compatible endpoint including self-hosted Ollama (`https://aipbx.bid/docs/cloud-ai`).
+- **Cloud TTS Studio & Hold Music (`ai-tts`)**: 8 built-in Asterisk/PBX prompt templates plus the **ElevenLabs Hold Music (MOH)** generator (`POST /v1/music`, 5 telephony-tuned instrumental presets, `30–180 s`, `music_v1` / `music_v2` / `music_v2_5`) saving straight into Sounds (`custom/`) or any Asterisk MOH class as 8 kHz 16-bit mono WAV (`https://aipbx.bid/docs/cloud-tts`).
+- **AI Voicemail (`ai-voicemail`), Call Quality Review (`ai-call-analysis`) & PBX Assistant (`pbx-assistant`)**: Voicemail transcription and urgency summaries, automated call quality scoring (Auto-QA), and natural-language PBX change previews with undo (`https://aipbx.bid/docs/assistant`).
+
+## CRM, ERP, UC & Developer Integrations
+- **Odoo ERP & CRM (17 / 18 / 19)**:
+  - AiPBX Connector: https://apps.odoo.com/apps/modules/19.0/aipbx_connector
+  - AiPBX Connector - CRM: https://apps.odoo.com/apps/modules/19.0/aipbx_connector_crm
+  - Source: https://github.com/mahirgul/AiPBX-Odoo
+- **ERPNext / Frappe** (self-hosted & Frappe Cloud): Free official **AiPBX Connector** with click-to-call, caller screen pop, Call Log with recordings and AI summaries, missed-call ToDo, and Contacts/Leads phonebook sync (https://github.com/mahirgul/AiPBX-Frappe).
+- **VoIP Billing (`voip-billing`)**: Multi-account ClientFence / FOSSBilling draft invoice creation from answered outbound CDRs with extension mapping and longest-prefix rates (`https://github.com/mahirgul/AiPBX-plugins`).
+- **Other CRMs & Automation**: HubSpot, Zoho CRM, Pipedrive, Bitrix24, Salesforce via n8n, Make, or Zapier using HMAC-SHA256 signed webhooks (`https://aipbx.bid/docs/crm-integrations`).
+- **REST API v1 & OpenAPI 3.1**: 100+ endpoints with scoped Bearer API tokens (`apbx_...`), IP allowlists, click-to-call (`POST /api/v1/calls/originate`), and one-time mobile QR onboarding (`POST /api/v1/extensions/{id}/pairing`) (`https://aipbx.bid/docs/rest-api-v1`).
+- **Microsoft Teams & Cisco CUCM**: Built-in Direct Routing SIP-TLS SBC & Teams channel Adaptive Cards (`ms-teams`), plus bidirectional Cisco CallManager SIP trunking (`https://aipbx.bid/docs/cisco-callmanager`).
+- **Enterprise SSO & Directory**: SAML 2.0 (`saml-auth`), OpenID Connect (`oidc-auth`), Microsoft Entra ID (`microsoft-auth`), Google Workspace OAuth 2.0 (`google-auth`), and LDAP / Active Directory phonebook sync (`https://aipbx.bid/docs/sso`).
+- **Plugin SDK & Signed Community Catalog**: Custom `.zip` plugins (`plugin.json`, `plg_*` tables, Safe Mode circuit breaker) plus Ed25519-signed community catalog (Auto Dialer & AMD, CNAM, SMS/MMS, LDAP Sync, SIP Provider Templates, VoIP Billing) at https://github.com/mahirgul/AiPBX-plugins.
+
+## Mobile Apps & Hardware Provisioning
+- **Android App (Kotlin)**: WebRTC + Push wake-up (FCM), video calls, Go WebSocket chat, directory — Google Play (https://play.google.com/store/apps/details?id=com.mhrgl.AiPBX) and GitHub Releases APK (https://github.com/mahirgul/AiPBX-Android).
+- **iOS App (SwiftUI / CallKit)**: WebRTC + CallKit, chat, directory, DND/forwarding — GitHub Releases (`AiPBX-unsigned.ipa`, `AiPBX-Simulator.zip`, v1.50.36+) at https://github.com/mahirgul/AiPBX-ios.
+- **Desk Phones & Network Services**: Zero-touch HTTPS/TFTP/FTP/DHCP/NTP provisioning for Yealink (including OpenVPN `.tar` builder), Grandstream, Fanvil, Snom, Poly, and Cisco (`https://aipbx.bid/docs/phones`).
+
+## Key Pages
+- Home (EN): https://aipbx.bid/
+- Home (TR): https://aipbx.bid/tr/
+- Home (DE): https://aipbx.bid/de/
+- Home (AZ): https://aipbx.bid/az/
+- Features: https://aipbx.bid/features
+- Integrations: https://aipbx.bid/integrations
+- Why PHP? (Architecture & Sizing): https://aipbx.bid/why-php
+- One-Command Install: https://aipbx.bid/install
+- Video Guides: https://aipbx.bid/videos
+- Mobile Apps & Connectors: https://aipbx.bid/mobile
+- Documentation: https://aipbx.bid/docs
+- Live Interactive Demo (EN / TR / DE): https://aipbx.bid/demo/en/dashboard/
+
+## Author & Repositories
+- Author: Mahir Gül — https://www.mhrgl.com
+- Core PBX: https://github.com/mahirgul/AiPBX
+- Documentation Sitemap: https://aipbx.bid/sitemap-docs.xml

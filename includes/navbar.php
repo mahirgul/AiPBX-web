@@ -16,6 +16,7 @@ $langFlags = [
 
 $navItems = [
     ['/features', t('Özellikler', 'Features', 'Funktionen', az: 'Xüsusiyyətlər'), 'features'],
+    ['/integrations', t('Entegrasyonlar', 'Integrations', 'Integrationen', az: 'İnteqrasiyalar'), 'integrations'],
     ['/install',  t('Kurulum', 'Install', 'Installation', az: 'Quraşdırma'), 'install'],
     ['/videos',   t('Videolar', 'Videos', 'Videos', az: 'Videolar'), 'videos'],
     ['/mobile',   t('Mobil', 'Mobile', 'Mobil', az: 'Mobil'), 'mobile'],

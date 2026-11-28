@@ -1,4 +1,5 @@
 # robots.txt — AiPBX (https://aipbx.bid)
+# GEO / LLM index: https://aipbx.bid/llms.txt
 User-agent: *
 Allow: /
 Disallow: /admin/
